@@ -7,15 +7,16 @@ import NavLink from "../ui/Nav-Link"
 import DropDownMenu from "../blocks/DropDownMenu"
 import { MenuItems } from "@/contant/Nav-Items"
 import { IoIosMenu } from "react-icons/io";
+import { redirect } from "next/navigation"
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [dropdownOpen, setDropDownOpen] = useState(null);
 
     return (
-        <nav className="bg-sky-700/80 text-gray-300">
+        <nav className="bg-[#ececec] text-gray-500/75 shadow-md">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-24">
                     {/* LOGO */}
                     <Logo />
 
@@ -34,14 +35,22 @@ export default function Navbar() {
                                 <button>{link.name}</button>
                                 )}
 
-                                {link.children && dropdownOpen === link.name && (
-                                    <DropDownMenu items={link.children} />
+                                {link.children &&  (
+                                    <DropDownMenu 
+                                        items={link.children} 
+                                        isOpen={dropdownOpen === link.name}
+                                    />
                                 )}
                             </div>
                         ))}
 
                         {/* Layanan & Kontak Button */}
-                        <Button>Pelayanan & Kontak</Button>
+                        <Button 
+                            className="bg-[#1A2CA3] text-white font-bold rounded-3xl hover:bg-[#ffb700]"
+                            onClick = {() => redirect("/")}
+                        >
+                            Kontak & Pengaduan
+                        </Button>
                     </div>
 
                     {/* Mobile Button */}

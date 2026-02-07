@@ -25,6 +25,7 @@ export const MenuItems = [
     },
     {
         name: "Profil",
+        href: "/profile",
         children: [
             {
                 name: "LLDIKTI XIV",
