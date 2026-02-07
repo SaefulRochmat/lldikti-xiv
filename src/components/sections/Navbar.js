@@ -8,15 +8,35 @@ import DropDownMenu from "../blocks/DropDownMenu"
 import { MenuItems } from "@/contant/Nav-Items"
 import { IoIosMenu } from "react-icons/io";
 import { redirect } from "next/navigation"
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [dropdownOpen, setDropDownOpen] = useState(null);
 
     return (
-        <nav className="bg-[#ececec] text-gray-500/75 shadow-md">
+        <nav className="bg-[#fffffff1] text-gray-500/75 shadow-md">
+                <div className="flex justify-between items-center text-[#e0e0e0f1] text-[15px]  mx-auto px-12 py-4 h-10 bg-[#1A2CA3]">
+                    <div className="flex items-center space-x-4 ">
+                        <BsFillTelephoneFill />
+                        <p>081-223-487-355</p>
+                        <FaWhatsapp />
+                        <p>Whatsapp</p>
+                    </div>
+                    <div className="flex justify-between items-center space-x-5">
+                        <FaInstagram />
+                        <FaTiktok />
+                        <FaYoutube />
+                        <FaFacebookF />
+                    </div>
+                </div>
             <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center h-24">
+                <div className="flex justify-between items-center h-20">
                     {/* LOGO */}
                     <Logo />
 
