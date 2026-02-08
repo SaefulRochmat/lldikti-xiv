@@ -2,8 +2,18 @@
 
 export const MenuItems = [
     {
-        name: "Beranda",
-        href: "/",
+        name: "Profil",
+        href: "/profile",
+        children: [
+            {
+                name: "LLDIKTI XIV",
+                href: "/profile-LLDIKTI-XIV",
+            },
+            {
+                name: "VISI & MISI",
+                href: "/visi-misi",
+            },
+        ]
     },
     {
         name: "Layanan",
@@ -24,16 +34,20 @@ export const MenuItems = [
         ]
     },
     {
-        name: "Profil",
-        href: "/profile",
+        name: "Publikasi",
+        href: "/publikasi",
         children: [
-            {
-                name: "LLDIKTI XIV",
-                href: "/profile-LLDIKTI-XIV",
+            {  
+                name: "Lapor",
+                href: "/layanan-pelaporan",
             },
             {
-                name: "VISI & MISI",
-                href: "/visi-misi",
+                name: "Data Publik",
+                href: "/data-publik"
+            },
+            {
+                name: "SIKAS",
+                href: "/sikas",
             },
         ]
     },

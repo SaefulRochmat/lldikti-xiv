@@ -14,28 +14,31 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import Link from "next/link"
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [dropdownOpen, setDropDownOpen] = useState(null);
 
     return (
-        <nav className="bg-[#fffffff1] text-gray-500/75 shadow-md">
-                <div className="flex justify-between items-center text-[#e0e0e0f1] text-[15px]  mx-auto px-12 py-4 h-10 bg-[#1A2CA3]">
-                    <div className="flex items-center space-x-4 ">
+        <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md">
+                <div className="flex  md:justify-between items-center text-[#e0e0e0f1] text-[15px]  mx-auto px-8  md:px-28 py-4  md:h-10 bg-[#1A2CA3]">
+                    <div className="hidden md:flex items-center space-x-4 ">
                         <BsFillTelephoneFill />
                         <p>081-223-487-355</p>
-                        <FaWhatsapp />
-                        <p>Whatsapp</p>
+                        <Link href={"https://wa.me/081223487355"} className="flex items-center space-x-2">
+                            <FaWhatsapp />
+                            <p>Whatsapp</p>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center space-x-5">
-                        <FaInstagram />
-                        <FaTiktok />
-                        <FaYoutube />
-                        <FaFacebookF />
+                    <div className="flex justify-between items-center space-x-5 text-[20px]">
+                       <Link href={"https://www.instagram.com"} className="hover:text-[#ffd000]"><FaInstagram /></Link>
+                       <Link href={"https://www.tiktok.com"} className="hover:text-[#ffd000]"><FaTiktok /></Link>
+                       <Link href={"https://www.youtube.com"} className="hover:text-[#ffd000]"><FaYoutube /></Link>
+                       <Link href={"https://www.facebook.com"} className="hover:text-[#ffd000]"><FaFacebookF /></Link>
                     </div>
                 </div>
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="mx-auto px-8  md:px-28">
                 <div className="flex justify-between items-center h-20">
                     {/* LOGO */}
                     <Logo />
@@ -66,7 +69,7 @@ export default function Navbar() {
 
                         {/* Layanan & Kontak Button */}
                         <Button 
-                            className="bg-[#1A2CA3] text-white font-bold rounded-3xl hover:bg-[#ffb700]"
+                            className="bg-[#1A2CA3] text-white font-medium rounded-3xl hover:bg-[#ffb700] cursor-pointer"
                             onClick = {() => redirect("/")}
                         >
                             Kontak & Pengaduan
