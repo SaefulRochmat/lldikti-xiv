@@ -38,21 +38,43 @@ export const MenuItems = [
         href: "/publikasi",
         children: [
             {  
-                name: "Lapor",
-                href: "/layanan-pelaporan",
+                name: "Berita LLDIKTI Wilayah XIV",
+                href: "/berita-lldikti-wilayah-xiv",
             },
             {
-                name: "Data Publik",
-                href: "/data-publik"
+                name: "Info LLDIKTI Wilayah XIV",
+                href: "/info-lldikti-wilayah-xiv"
             },
             {
-                name: "SIKAS",
-                href: "/sikas",
+                name: "Buletin LLDIKTI Wilayah XIV",
+                href: "/buletin-lldikti-wilayah-xiv",
             },
         ]
     },
     {
-        name: "Kontak",
-        href: "/kontak",
+        name: "Informasi Publik",
+        href: "/informasi-publik",
+        children: [
+            {
+                name: "Galeri",
+                href: "/galeri",
+            },
+            {
+                name: "Akuntabilitas",
+                href: "/akuntabilitas",
+            },
+            {
+                name: "Agenda Kegiatan",
+                href: "/agenda-kegiatan",
+            },
+        ]
     },
+    {
+        name: "PPID",
+        href: "/ppid",
+    },
+    {
+        name: "FAQ",
+        href: "/faq",
+    }
 ]

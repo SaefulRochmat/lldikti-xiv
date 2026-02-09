@@ -4,14 +4,13 @@ import Link from "next/link";
 export default function Logo () {
     return (
         <Link href="/">
-            {/* <Image
-                src="/public/vercel.svg"
+            <Image
+                src="/Logos/Logo.png"
                 alt="Logo LLDIKTI XIV"
-                width={300}
-                height={300}
+                width={75}
+                height={75}
                 className=""
-            /> */}
-            LLDIKTI XIV
+            /> 
         </Link>
     );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function DropDownMenu ({ items, isOpen }) {
     return (
-        <div className={`absolute top-full mt-2 bg-[#fffffff1] rounded-xl shadow-md min-w-52 transition-all duration-500 ease-in-out
+        <div className={`absolute top-full mt-4 bg-[#fffffff1] rounded-xl shadow-md min-w-62 transition-all duration-500 ease-in-out
             ${isOpen 
                 ? "opacity-100 translate-y-0 visible"
                 : "opacity-0 -translate-y-2 invisible"
