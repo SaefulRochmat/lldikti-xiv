@@ -9,6 +9,8 @@ import { MenuItems } from "@/contant/Nav-Items";
 import { IoIosMenu } from "react-icons/io";
 import { redirect } from "next/navigation";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { SlArrowDown } from "react-icons/sl";
+import { IoMdClose } from "react-icons/io";
 import {
   FaInstagram,
   FaWhatsapp,
@@ -128,9 +130,9 @@ export default function Navbar() {
           <Logo />
           <button
             onClick={() => setMobileOpen(false)}
-            className="text-2xl text-gray-600 hover:text-[#1A2CA3]"
+            className="text-4xl text-gray-600 hover:text-[#1A2CA3]"
           >
-            ✕
+            <IoMdClose />
           </button>
         </div>
 
@@ -174,7 +176,7 @@ export default function Navbar() {
                       className={`transition-transform duration-300
                       ${dropdownOpen === link.name ? "rotate-180" : ""}`}
                     >
-                      ▼
+                      <SlArrowDown />
                     </span>
                   </button>
 
