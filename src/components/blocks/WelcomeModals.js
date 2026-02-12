@@ -65,7 +65,7 @@ export default function WelcomeModal({
           data-aos-delay="400"
         >
           <Button
-            className="bg-[#1A2CA3] text-white px-6 py-2 rounded-full hover:bg-[#ffb700] transition"
+            className="bg-[#1A2CA3] text-white px-6 py-2 rounded-full hover:bg-[#ffb700] transition cursor-pointer"
             onClick={() => setOpen(false)}
           >
             Masuk Website
