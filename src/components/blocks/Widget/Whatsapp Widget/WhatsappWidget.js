@@ -1,5 +1,5 @@
 "use client";
-import FloatingButton from "../ui/WhastsappWidgetButton";
+import FloatingButton from "@/components/ui/WhastsappWidgetButton";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsappWidget() {

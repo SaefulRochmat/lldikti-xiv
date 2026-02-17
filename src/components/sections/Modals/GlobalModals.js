@@ -1,4 +1,4 @@
-import WelcomeModal from "../blocks/WelcomeModals";
+import WelcomeModal from "@/components/blocks/Welcome Modals/WelcomeModals";
 
 export default function GlobalModals() {
   return (

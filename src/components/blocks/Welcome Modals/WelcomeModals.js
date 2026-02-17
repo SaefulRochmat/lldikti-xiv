@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ModalContainer from "../ui/ModalsContainer";
+import ModalContainer from "@/components/ui/ModalsContainer";
 import Image from "next/image";
-import Button from "../ui/Button";
+import Button from "@/components/ui/Button";
 
 export default function WelcomeModal({
   title = "Selamat Datang",

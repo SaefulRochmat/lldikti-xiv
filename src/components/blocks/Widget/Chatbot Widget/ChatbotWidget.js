@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import FloatingButton from "../ui/WhastsappWidgetButton";
-import ChatContainer from "../ui/ChatContainer";
-import ChatBubble from "../ui/ChatBubble";
-import ChatInput from "../ui/ChatInput";
+import FloatingButton from "@/components/ui/WhastsappWidgetButton";
+import ChatContainer from "@/components/ui/ChatContainer";
+import ChatBubble from "@/components/ui/ChatBubble";
+import ChatInput from "@/components/ui/ChatInput";
 import { getBotResponse } from "@/utils/ChatbotLogic";
 import { FaComments } from "react-icons/fa";
 

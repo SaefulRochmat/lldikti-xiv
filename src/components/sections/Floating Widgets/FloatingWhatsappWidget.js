@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import WhatsappWidget from "../blocks/WhatsappWidget";
-import ChatbotWidget from "../blocks/ChatbotWidget";
+import WhatsappWidget from "@/components/blocks/Widget/Whatsapp Widget/WhatsappWidget";
+import ChatbotWidget from "@/components/blocks/Widget/Chatbot Widget/ChatbotWidget";
 
 export default function FloatingWidgets() {
   const [mounted, setMounted] = useState(false);

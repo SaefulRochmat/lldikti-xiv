@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Logo from "../ui/Logo";
-import Button from "../ui/Button";
-import NavLink from "../ui/Nav-Link";
-import DropDownMenu from "../blocks/DropDownMenu";
+import Logo from "@/components/ui/Logo";
+import Button from "@/components/ui/Button";
+import NavLink from "@/components/ui/Nav-Link";
+import DropDownMenu from "@/components/blocks/Drop Down Menu/DropDownMenu";
 import { MenuItems } from "@/contant/Nav-Items";
 import { IoIosMenu } from "react-icons/io";
 import { redirect } from "next/navigation";
@@ -30,7 +30,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md relative z-50">
+    <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
       {/* ===== TOP BAR ===== */}
       <div className="flex md:justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]">
         <div className="hidden md:flex items-center space-x-8">
