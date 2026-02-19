@@ -1,0 +1,128 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { linkTerkait, layanan, frofil } from "./FooterData";
+import FooterBottom from "./FooterBottom.js";
+
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaClock,
+  FaEnvelope,
+  FaInstagram,
+  FaYoutube,
+  FaFacebookF,
+} from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#153C91] text-white">
+      {/* MAIN FOOTER */}
+      <div className="Flex max-w-full mx-auto px-20 py-16 grid md:grid-cols-4 gap-8">
+        {/* LEFT SIDE */}
+        <div>
+          {/* Logo & Title */}
+          <div className="flex items-center gap-6 mb-8">
+            <Image
+              src="/Logos/logo-tutwuri.png"
+              alt="Tut Wuri"
+              width={80}
+              height={80}
+            />
+
+            <Image src="/Logos/Logo.png" alt="LLDIKTI" width={80} height={80} />
+
+            <h2 className="text-3xl font-semibold leading-tight">
+              LLDikti <br /> Wilayah XIV
+            </h2>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4 text-sm">
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className="mt-1 text-lg" />
+              <p>
+                R38M+C3M, Fandoi, Biak Kota, Biak Numfor Regency, Papua 98111
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-lg" />
+              <p>09812911065</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <FaClock className="text-lg" />
+              <p>8.00 am–3.00 pm</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-lg" />
+              <p>09812911065</p>
+            </div>
+          </div>
+
+          {/* Social */}
+          <div className="mt-8">
+            <p className="mb-3">Connected With us!</p>
+            <div className="flex gap-4 text-xl">
+              <FaInstagram className="hover:text-gray-300 cursor-pointer transition" />
+              <FaYoutube className="hover:text-gray-300 cursor-pointer transition" />
+              <FaFacebookF className="hover:text-gray-300 cursor-pointer transition" />
+            </div>
+          </div>
+        </div>
+
+        {/* LINK TERKAIT */}
+        <div>
+          <h3 className="text-xl font-semibold mb-6">Link Terkait</h3>
+          <div className="space-y-3 text-sm">
+            {linkTerkait.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="block hover:text-[#ffd000]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* LAYANAN */}
+        <div>
+          <h3 className="text-xl font-semibold mb-6">Layanan</h3>
+          <div className="space-y-3 text-sm">
+            {layanan.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="block hover:text-[#ffd000]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* PROFIL */}
+        <div>
+          <h3 className="text-xl font-semibold mb-6">Profil</h3>
+          <div className="space-y-3 text-sm">
+            {frofil.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="block hover:text-[#ffd000]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <FooterBottom />
+    </footer>
+  );
+}
