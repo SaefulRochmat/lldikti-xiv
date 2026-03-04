@@ -5,11 +5,15 @@ import HeroCarouselSection from "@/components/sections/Carousel Image/HeroCarous
 import IntroductionSection from "@/components/sections/Sections Introduction/IntroductionSections";
 import NewsSection from "@/components/sections/NewsSection/NewsSection";
 import Footer from "@/components/sections/Footer/Footer";
+import ApplicationSection from "@/components/sections/ApplicationTabsSection/ApplicationTabs";
+import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
 export default function Home() {
   return (
     <div className="w-full h-screen">
       <HeroCarouselSection />
       <IntroductionSection />
+      <ApplicationSection />
+      <DataSebaranSection />
       <NewsSection />
 
       <FloatingWidgets />
