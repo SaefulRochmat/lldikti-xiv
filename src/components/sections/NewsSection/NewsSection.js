@@ -4,7 +4,7 @@ import { useState } from "react";
 import NewsCard from "./NewsCard";
 import AnnouncementList from "./AnnouncementList";
 import Pagination from "./Pagination";
-import { newsList, announcementList } from "@/content/NewsData";
+import { newsList, announcementList } from "@/constant/NewsData";
 import Link from "next/link";
 
 export default function NewsSection() {

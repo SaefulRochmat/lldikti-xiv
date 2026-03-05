@@ -3,7 +3,7 @@
 import IntroImage from "@/components/ui/IntroImage";
 import IntroHeadline from "@/components/ui/IntroHeadline";
 import IntroContent from "@/components/ui/IntroContent";
-import { introductionData } from "@/contant/IntroductionData";
+import { introductionData } from "@/constant/IntroductionData";
 
 export default function IntroductionBlock() {
   return (

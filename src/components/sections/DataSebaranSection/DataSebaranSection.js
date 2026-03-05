@@ -5,7 +5,7 @@ import AOS from "aos";
 
 import SectionTitle from "@/components/ui/DataSebaranTitle";
 import StatCard from "@/components/blocks/DataSebaranBlock/StatCard";
-import { DATA_SEBARAN } from "@/contant/DataSebaran";
+import { DATA_SEBARAN } from "@/constant/DataSebaran";
 
 const DataSebaranSection = () => {
   useEffect(() => {

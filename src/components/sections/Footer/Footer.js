@@ -33,7 +33,7 @@ export default function Footer() {
             <Image src="/Logos/Logo.png" alt="LLDIKTI" width={80} height={80} />
 
             <h2 className="text-3xl font-semibold leading-tight">
-              LLDikti <br /> Wilayah XIV
+              LLDIKTI <br /> Wilayah XIV
             </h2>
           </div>
 

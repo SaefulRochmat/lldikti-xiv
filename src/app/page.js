@@ -9,7 +9,7 @@ import ApplicationSection from "@/components/sections/ApplicationTabsSection/App
 import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
 export default function Home() {
   return (
-    <div className="w-full h-screen">
+    <div>
       <HeroCarouselSection />
       <IntroductionSection />
       <ApplicationSection />
