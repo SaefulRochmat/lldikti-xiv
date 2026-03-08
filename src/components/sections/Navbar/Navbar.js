@@ -5,7 +5,7 @@ import Logo from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
 import NavLink from "@/components/ui/Nav-Link";
 import DropDownMenu from "@/components/blocks/Drop Down Menu/DropDownMenu";
-import { MenuItems } from "@/contant/Nav-Items";
+import { MenuItems } from "@/constant/Nav-Items";
 import { IoIosMenu } from "react-icons/io";
 import { redirect } from "next/navigation";
 import { BsFillTelephoneFill } from "react-icons/bs";

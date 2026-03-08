@@ -4,7 +4,7 @@ import { useState } from "react";
 import NewsCard from "./NewsCard";
 import AnnouncementList from "./AnnouncementList";
 import Pagination from "./Pagination";
-import { newsList, announcementList } from "@/content/NewsData";
+import { newsList, announcementList } from "@/constant/NewsData";
 import Link from "next/link";
 
 export default function NewsSection() {
@@ -20,7 +20,8 @@ export default function NewsSection() {
         {/* Title */}
         <div className="flex justify-between items-center mb-12">
           <div>
-            <h2 className="text-3xl font-bold">Berita LLDikti Wilayah XIV</h2>
+            <h2 className="text-3xl font-bold text-[#1A2CA3]">Berita LLDIKTI XIV</h2>
+            <span className="block w-28 h-1 bg-yellow-400 mt-2"></span>
             <div className="w-28 h-1 bg-accent mt-3"></div>
           </div>
           <Link

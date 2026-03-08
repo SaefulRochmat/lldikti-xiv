@@ -7,7 +7,7 @@ export default function NewsCard({ item }) {
   return (
     <div className="bg-white rounded-md shadow-md overflow-hidden w-full">
       {/* IMAGE */}
-      <div className="relative w-full h-[260px]">
+      <div className="relative w-full h-65">
         <Image
           src="/Assets/Gedung-lldikti.jpg" // langsung pakai default
           alt={item.title}
