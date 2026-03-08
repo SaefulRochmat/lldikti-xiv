@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <h2 className="text-lg font-medium mb-8">
             Kementerian Pendidikan Tinggi, Sains dan Teknologi Lembaga Layanan
-            Pendidikan Tinggi Wilayah V{" "}
+            Pendidikan Tinggi Wilayah XIV{" "}
           </h2>
 
           {/* Contact Info */}
