@@ -16,10 +16,10 @@ export default function IntroductionBlock() {
     ">
 
       {/* Image Left */}
-      <IntroImage image={introductionData.image} />
+      <IntroImage image={introductionData.image}/>
 
       {/* Text Right */}
-      <div className="space-y-6">
+      <div className="space-y-6" data-aos="fade-left" data-aos-duration="1000">
         <IntroHeadline headline={introductionData.headline} />
         <IntroContent content={introductionData.content} />
       </div>

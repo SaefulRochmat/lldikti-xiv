@@ -4,10 +4,8 @@ import GlobalModals from "@/components/sections/Modals/GlobalModals";
 import HeroCarouselSection from "@/components/sections/Carousel Image/HeroCarouselImage";
 import IntroductionSection from "@/components/sections/Sections Introduction/IntroductionSections";
 import NewsSection from "@/components/sections/NewsSection/NewsSection";
-import Footer from "@/components/sections/Footer/Footer";
 import ApplicationSection from "@/components/sections/ApplicationTabsSection/ApplicationTabs";
 import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
-import ScrollToTop from "@/components/sections/ScrollToTop/ScrollToTop";
 export default function Home() {
   return (
     <div>
@@ -19,8 +17,6 @@ export default function Home() {
 
       <FloatingWidgets />
       <GlobalModals />
-      <ScrollToTop />
-      <Footer />
     </div>
   );
 }

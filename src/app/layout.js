@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/sections/Navbar/Navbar";
+import Footer from "@/components/sections/Footer/Footer";
+import ScrollToTop from "@/components/sections/ScrollToTop/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,8 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.variable} antialiased`}>
         <Navbar />
         {children}
+        <ScrollToTop />
+        <Footer />
       </body>
     </html>
   );

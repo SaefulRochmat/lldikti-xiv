@@ -14,7 +14,7 @@ export default function ApplicationSection() {
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-right" data-aos-duration="1000">
           <h2 className="text-white text-2xl sm:text-3xl font-bold tracking-wide relative inline-block">
             APLIKASI LLDIKTI XIV
             <span className="block w-28 h-1 bg-yellow-400 mt-2"></span>

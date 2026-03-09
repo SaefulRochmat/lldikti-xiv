@@ -16,7 +16,7 @@ export default function ApplicationTabsBlock() {
     <div>
 
       {/* Tabs */}
-      <div className="flex flex-wrap gap-4 justify-center mt-6">
+      <div className="flex flex-wrap gap-4 justify-center mt-6" data-aos="fade-up" data-aos-duration="800" >
         {applicationData.map((app) => (
           <AppTabButton
             key={app.id}

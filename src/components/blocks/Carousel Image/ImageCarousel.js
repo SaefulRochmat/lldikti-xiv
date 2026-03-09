@@ -40,7 +40,7 @@ export default function ImageCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[780px] overflow-hidden">
+    <div className="relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden">
       {carouselData.map((slide, index) => (
         <div
           key={index}

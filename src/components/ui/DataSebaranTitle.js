@@ -1,6 +1,7 @@
 const SectionTitle = ({ title, subtitle }) => {
   return (
-    <div className="mb-12">
+    <div className="mb-12"
+      data-aos="fade-right">
       <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
         {title}
       </h2>

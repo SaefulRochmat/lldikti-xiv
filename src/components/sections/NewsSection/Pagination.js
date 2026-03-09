@@ -2,7 +2,7 @@ export default function Pagination({ total, perPage, currentPage, setPage }) {
   const pages = Math.ceil(total / perPage);
 
   return (
-    <div className="flex gap-2 mt-10 justify-center">
+    <div className="flex gap-2 mt-10 justify-center" data-aos="fade-up" data-aos-duration="1000">
       {Array.from({ length: pages }, (_, i) => (
         <button
           key={i}

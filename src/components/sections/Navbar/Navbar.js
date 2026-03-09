@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
       {/* ===== TOP BAR ===== */}
-      <div className="flex md:justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]">
+      <div className="flex md:justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex items-center space-x-2">
             <BsFillTelephoneFill />
@@ -65,11 +65,11 @@ export default function Navbar() {
 
       {/* ===== MAIN NAV ===== */}
       <div className="mx-auto px-8 md:px-28">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-20" data-aos="fade-down" data-aos-duration="500">
           <Logo />
 
           {/* ===== DESKTOP MENU ===== */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             {MenuItems.map((link) => (
               <div
                 key={link.name}
@@ -104,7 +104,7 @@ export default function Navbar() {
 
           {/* ===== MOBILE TOGGLE ===== */}
           <button
-            className="md:hidden text-3xl text-[#1A2CA3]"
+            className="lg:hidden text-3xl text-[#1A2CA3]"
             onClick={() => setMobileOpen(true)}
           >
             <IoIosMenu />
