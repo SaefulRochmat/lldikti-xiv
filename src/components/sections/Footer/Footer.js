@@ -84,7 +84,7 @@ export default function Footer() {
         {/* LINK TERKAIT */}
         <div>
           <h3 className="text-xl font-semibold mb-2">Link Terkait</h3>
-          <span className="block w-28 h-0.5 bg-yellow-400 mb-6"></span>
+          <span className="block w-14 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {linkTerkait.map((item, i) => (
               <Link
@@ -101,7 +101,7 @@ export default function Footer() {
         {/* LAYANAN */}
         <div>
           <h3 className="text-xl font-semibold mb-2">Layanan</h3>
-          <span className="block w-20 h-0.5 bg-yellow-400 mb-6"></span>
+          <span className="block w-14 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {layanan.map((item, i) => (
               <Link
@@ -135,7 +135,7 @@ export default function Footer() {
         {/* PUBLIKASI */}
         <div>
           <h3 className="text-xl font-semibold mb-2">Publikasi</h3>
-          <span className="block w-22 h-0.5 bg-yellow-400 mb-6"></span>
+          <span className="block w-14 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {publikasi.map((item, i) => (
               <Link
@@ -152,7 +152,7 @@ export default function Footer() {
         {/* INFORMASI PUBLIK */}
         <div>
           <h3 className="text-xl font-semibold mb-2">Informasi Publik</h3>
-          <span className="block w-40 h-0.5 bg-yellow-400 mb-6"></span>
+          <span className="block w-14 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {informasiPublik.map((item, i) => (
               <Link

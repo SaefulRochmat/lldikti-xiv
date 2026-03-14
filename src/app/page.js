@@ -6,6 +6,7 @@ import IntroductionSection from "@/components/sections/Sections Introduction/Int
 import NewsSection from "@/components/sections/NewsSection/NewsSection";
 import ApplicationSection from "@/components/sections/ApplicationTabsSection/ApplicationTabs";
 import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
+import TestimoniSection from "@/components/sections/TestimoniSection/Index";
 export default function Home() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Home() {
 
       <FloatingWidgets />
       <GlobalModals />
+      <TestimoniSection />
     </div>
   );
 }
