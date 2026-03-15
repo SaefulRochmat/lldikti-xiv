@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#153C91] text-white">
       {/* MAIN FOOTER */}
-      <div className="Flex max-w-full mx-auto px-20 py-16 grid md:grid-cols-7 gap-5">
+      <div className="Flex max-w-full mx-auto px-20 py-16 grid md:grid-cols-2 lg:grid-cols-7 gap-5">
         {/* LEFT SIDE */}
         <div className="md:col-span-2">
           {/* Logo & Title */}
@@ -37,9 +37,14 @@ export default function Footer() {
               height={80}
             />
 
-            <Image src="/Logos/Logo.png" alt="LLDIKTI" width={80} height={80} />
+            <Image 
+              src="/Logos/Logo1.png" 
+              alt="LLDIKTI"
+              width={80} 
+              height={80} 
+            />
           </div>
-          <h2 className="text-lg font-medium mb-8">
+          <h2 className="text-base font-medium mb-8">
             Kementerian Pendidikan Tinggi, Sains dan Teknologi Lembaga Layanan
             Pendidikan Tinggi Wilayah XIV{" "}
           </h2>
