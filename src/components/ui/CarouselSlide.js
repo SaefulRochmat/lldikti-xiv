@@ -19,13 +19,15 @@ export default function CarouselSlide({
           isInitialLoad ? "opacity-0 scale-105" : ""
         } transition-all duration-1000 ease-out`}
         style={{
-          animation: isInitialLoad ? "carouselInitialFade 1s ease-out forwards" : "none",
+          animation: isInitialLoad
+            ? "carouselInitialFade 1s ease-out forwards"
+            : "none",
         }}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#1A2CA3]/70 flex flex-col items-center justify-center text-center px-6">
-        <h2 className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-3">
+      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center px-6">
+        <h2 className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-normal mb-3">
           {headline}
         </h2>
 

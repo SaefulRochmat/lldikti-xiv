@@ -5,7 +5,11 @@ export default function NewsCard({ item }) {
   const [day, month] = item.date?.split(" ") || [];
 
   return (
-    <div className="bg-white rounded-md shadow-md overflow-hidden w-full" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      className="bg-white rounded-xl shadow-md overflow-hidden w-full"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       {/* IMAGE */}
       <div className="relative w-full h-65">
         <Image

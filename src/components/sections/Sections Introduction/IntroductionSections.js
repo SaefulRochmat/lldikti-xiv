@@ -2,7 +2,8 @@ import IntroductionBlock from "@/components/blocks/Introduction LLDIKTI/Introduc
 
 export default function IntroductionSection() {
   return (
-    <section className="
+    <section
+      className="
       w-full 
       px-6 
       sm:px-12 
@@ -10,7 +11,8 @@ export default function IntroductionSection() {
       py-16 
       bg-white
       items-start
-    ">
+    "
+    >
       <IntroductionBlock />
     </section>
   );
