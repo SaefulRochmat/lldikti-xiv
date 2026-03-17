@@ -5,14 +5,17 @@ export default function FloatingButton({
   onClick
 }) {
   const baseStyle = `
-    fixed bottom-6 right-6
-    w-14 h-14
+    fixed bottom-4 right-4
+    sm:bottom-6 sm:right-6
+    w-12 h-12 sm:w-14 sm:h-14
     flex items-center justify-center
     rounded-full
     shadow-lg
     transition-all duration-300
     hover:scale-110
+    active:scale-95
     cursor-pointer
+    z-40
   `;
 
   if (href) {

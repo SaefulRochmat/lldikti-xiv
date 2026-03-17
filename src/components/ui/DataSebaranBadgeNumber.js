@@ -22,7 +22,7 @@ const BadgeNumber = ({ value }) => {
   }, [value]);
 
   return (
-    <div className="bg-yellow-400 text-blue-900 font-bold px-4 py-2 rounded-lg text-lg min-w-17.5 text-center">
+    <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 text-[#1A2CA3] font-extrabold px-5 py-3 rounded-2xl text-xl sm:text-2xl min-w-[80px] sm:min-w-[100px] text-center shadow-inner">
       {count.toLocaleString("id-ID")}
     </div>
   );

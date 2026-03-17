@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from '@vercel/analytics/next';
 import Navbar from "@/components/sections/Navbar/Navbar";
 import Footer from "@/components/sections/Footer/Footer";
 import ScrollToTop from "@/components/sections/ScrollToTop/ScrollToTop";
@@ -28,14 +28,19 @@ export const metadata = {
   ],
 };
 
+import AOSProvider from "@/components/AOSProvider";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <ScrollToTop />
-        <Footer />
+        <AOSProvider>
+          <Navbar />
+          {children}
+          <ScrollToTop />
+          <Footer />
+        </AOSProvider>
+        <Analytics />
       </body>
     </html>
   );

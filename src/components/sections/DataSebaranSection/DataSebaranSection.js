@@ -1,23 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
-
 import SectionTitle from "@/components/ui/DataSebaranTitle";
 import StatCard from "@/components/blocks/DataSebaranBlock/StatCard";
 import { DATA_SEBARAN } from "@/constant/DataSebaran";
 
 const DataSebaranSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
   return (
-    <section className="mt-16 p-1">
-      <div className="bg-[#1A2CA3] max-w-7xl mx-auto py-16 px-4 md:px-12 rounded-lg">
+    <section className="mt-16 p-1 px-4 md:px-0">
+      <div className="bg-[#1A2CA3] max-w-7xl mx-auto py-16 px-6 md:px-12 rounded-3xl shadow-xl">
         <SectionTitle
           title="DATA SEBARAN PERGURUAN TINGGI"
           subtitle="LLDIKTI WILAYAH XIV"

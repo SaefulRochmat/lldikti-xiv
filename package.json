@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "aos": "^2.3.4",
     "eslint-config-next": "^16.1.6",
     "next": "^16.1.6",

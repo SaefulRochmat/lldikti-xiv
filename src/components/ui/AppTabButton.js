@@ -5,14 +5,15 @@ export default function AppTabButton({ active, label, onClick }) {
     <button
       onClick={onClick}
       className={`
-        px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300
-        border-2
+        px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300
+        border-2 shadow-sm
         ${
           active
-            ? "bg-yellow-400 text-blue-900 border-yellow-400 shadow-lg scale-105"
-            : "bg-transparent text-white border-yellow-400 hover:bg-yellow-400 hover:text-blue-900"
+            ? "bg-yellow-400 text-[#1A2CA3] border-yellow-400 shadow-xl scale-110"
+            : "bg-[#1A2CA3] text-white border-white/20 hover:border-yellow-400 hover:text-yellow-400"
         }
       `}
+      aria-pressed={active}
     >
       {label}
     </button>

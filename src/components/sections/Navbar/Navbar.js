@@ -32,32 +32,33 @@ export default function Navbar() {
   return (
     <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
       {/* ===== TOP BAR ===== */}
-      <div className="flex md:justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
-        <div className="hidden md:flex items-center space-x-8">
+      <div className="flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
+        <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-8">
           <div className="flex items-center space-x-2">
-            <BsFillTelephoneFill />
-            <p>081-223-487-355</p>
+            <BsFillTelephoneFill className="text-yellow-400" />
+            <p className="font-medium">0981-2911065</p>
           </div>
           <Link
-            href="https://wa.me/081223487355"
-            className="flex items-center space-x-2 hover:text-[#ffd000]"
+            href="https://wa.me/6281223487355"
+            className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
+            aria-label="Contact us on Whatsapp"
           >
-            <FaWhatsapp />
-            <p>Whatsapp</p>
+            <FaWhatsapp className="text-green-400 text-lg" />
+            <p className="font-medium">Whatsapp</p>
           </Link>
         </div>
 
-        <div className="flex justify-between items-center space-x-5 text-[20px] mx-auto md:mx-0">
-          <Link href="https://www.instagram.com" className="hover:text-[#ffd000]">
+        <div className="flex justify-between items-center space-x-5 text-[18px]">
+          <Link href="https://www.instagram.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on Instagram">
             <FaInstagram />
           </Link>
-          <Link href="https://www.tiktok.com" className="hover:text-[#ffd000]">
+          <Link href="https://www.tiktok.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on TikTok">
             <FaTiktok />
           </Link>
-          <Link href="https://www.youtube.com" className="hover:text-[#ffd000]">
+          <Link href="https://www.youtube.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Subscribe to our YouTube">
             <FaYoutube />
           </Link>
-          <Link href="https://www.facebook.com" className="hover:text-[#ffd000]">
+          <Link href="https://www.facebook.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Like our Facebook page">
             <FaFacebookF />
           </Link>
         </div>
