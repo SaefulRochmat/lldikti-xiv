@@ -4,15 +4,15 @@ const StatCard = ({ value, label }) => {
   return (
     <div
       data-aos="fade-up"
-      className="bg-gray-100 rounded-xl px-6 py-5 flex items-center gap-4 shadow-md hover:scale-105 transition duration-900 ease-in-out"
+      className="bg-white rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-in-out border border-gray-100"
     >
       <BadgeNumber value={value} />
 
-      <div>
-        <p className="text-blue-900 font-semibold uppercase text-sm md:text-base tracking-wide relative inline-block">
+      <div className="flex-1">
+        <p className="text-[#1A2CA3] font-bold uppercase text-xs sm:text-sm md:text-base tracking-wider leading-tight">
           {label}
-          <span className="block w-8 h-1 bg-yellow-400 mt-1" />
         </p>
+        <span className="block w-10 h-1.5 bg-yellow-400 mt-2 rounded-full" />
       </div>
     </div>
   );

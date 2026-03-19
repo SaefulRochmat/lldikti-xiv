@@ -7,9 +7,10 @@ export default function Logo() {
       <Image
         src="/Logos/Logo2.png"
         alt="Logo LLDIKTI XIV"
-        width={200}
-        height={200}
-        className=""
+        width={180}
+        height={60}
+        className="w-[160px] md:w-[180px] h-auto object-contain"
+        priority
       />
     </Link>
   );

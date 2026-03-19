@@ -11,7 +11,7 @@ export default function WhatsappWidget() {
           "_blank"
         )
       }
-      className="bg-green-500 text-white hover:bg-green-600 bottom-24"
+      className="bg-green-500 text-white hover:bg-green-600 !bottom-20 sm:!bottom-24"
     >
       <FaWhatsapp size={24} />
     </FloatingButton>
