@@ -38,11 +38,11 @@ export default function Footer() {
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
             />
 
-            <Image 
-              src="/Logos/Logo1.png" 
+            <Image
+              src="/Logos/Logo1.png"
               alt="Logo LLDIKTI XIV"
-              width={60} 
-              height={60} 
+              width={60}
+              height={60}
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
             />
           </div>
@@ -62,17 +62,23 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 group">
               <FaPhoneAlt className="text-lg text-yellow-400" />
-              <p className="group-hover:text-yellow-400 transition-colors">09812911065</p>
+              <p className="group-hover:text-yellow-400 transition-colors">
+                09812911065
+              </p>
             </div>
 
             <div className="flex items-center gap-3 group">
               <FaClock className="text-lg text-yellow-400" />
-              <p className="group-hover:text-yellow-400 transition-colors">Senin - Jumat: 8.00 am – 3.00 pm</p>
+              <p className="group-hover:text-yellow-400 transition-colors">
+                Senin - Jumat: 8.00 am – 3.00 pm
+              </p>
             </div>
 
             <div className="flex items-center gap-3 group">
               <FaEnvelope className="text-lg text-yellow-400" />
-              <p className="group-hover:text-yellow-400 transition-colors">lldikti14@kemdikbud.go.id</p>
+              <p className="group-hover:text-yellow-400 transition-colors">
+                lldikti14@kemdikbud.go.id
+              </p>
             </div>
           </div>
 
@@ -80,16 +86,32 @@ export default function Footer() {
           <div className="mt-8">
             <p className="mb-4 font-semibold">Hubungi Kami!</p>
             <div className="flex gap-4 text-xl">
-              <Link href="https://instagram.com" aria-label="Instagram" className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all">
+              <Link
+                href="https://instagram.com"
+                aria-label="Instagram"
+                className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all"
+              >
                 <FaInstagram />
               </Link>
-              <Link href="https://youtube.com" aria-label="YouTube" className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all">
+              <Link
+                href="https://youtube.com"
+                aria-label="YouTube"
+                className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all"
+              >
                 <FaYoutube />
               </Link>
-              <Link href="https://facebook.com" aria-label="Facebook" className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all">
+              <Link
+                href="https://facebook.com"
+                aria-label="Facebook"
+                className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all"
+              >
                 <FaFacebookF />
               </Link>
-              <Link href="https://tiktok.com" aria-label="TikTok" className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all">
+              <Link
+                href="https://tiktok.com"
+                aria-label="TikTok"
+                className="bg-white/10 p-2 rounded-lg hover:bg-yellow-400 hover:text-blue-900 transition-all"
+              >
                 <FaTiktok />
               </Link>
             </div>
@@ -98,7 +120,9 @@ export default function Footer() {
 
         {/* LINK TERKAIT */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">Link Terkait</h3>
+          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+            Link Terkait
+          </h3>
           <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {linkTerkait.map((item, i) => (
@@ -115,7 +139,9 @@ export default function Footer() {
 
         {/* LAYANAN */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">Layanan</h3>
+          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+            Layanan
+          </h3>
           <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {layanan.map((item, i) => (
@@ -132,7 +158,9 @@ export default function Footer() {
 
         {/* PROFIL */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">Profil</h3>
+          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+            Profil
+          </h3>
           <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {frofil.map((item, i) => (
@@ -149,7 +177,9 @@ export default function Footer() {
 
         {/* PUBLIKASI */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">Publikasi</h3>
+          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+            Publikasi
+          </h3>
           <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {publikasi.map((item, i) => (
@@ -166,7 +196,9 @@ export default function Footer() {
 
         {/* INFORMASI PUBLIK */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">Informasi Publik</h3>
+          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+            Informasi Publik
+          </h3>
           <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {informasiPublik.map((item, i) => (

@@ -5,7 +5,7 @@ export const tautanData = [
     id: 1,
     name: "Kemdikbudristek",
     url: "https://www.kemdikbud.go.id",
-    logo: "/Logos/kemendikbudristek.JPG",
+    logo: "/Logos/kemendikbudristek.jpg",
   },
   {
     id: 2,
