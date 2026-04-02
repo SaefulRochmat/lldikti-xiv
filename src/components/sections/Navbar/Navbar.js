@@ -48,7 +48,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex justify-between items-center space-x-5 text-[18px]">
+        <div className="hidden md:flex lg:flex justify-between items-center space-x-5 text-[18px]">
           <Link href="https://www.instagram.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on Instagram">
             <FaInstagram />
           </Link>
