@@ -32,8 +32,8 @@ export default function Navbar() {
   return (
     <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
       {/* ===== TOP BAR ===== */}
-      <div className="flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
-        <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-8">
+      <div className="hidden md:flex lg:flex  justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
+        <div className="flex items-center space-x-4 lg:space-x-8">
           <div className="flex items-center space-x-2">
             <BsFillTelephoneFill className="text-yellow-400" />
             <p className="font-medium">0981-2911065</p>
