@@ -1,6 +1,13 @@
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 export const MenuItems = [
   {
-    name: "Profil",
+    name: (
+      <div className="flex items-center gap-1">
+        <span>Profil</span>
+        <RiArrowDropDownLine />
+      </div>
+    ),
     href: "/profil",
     children: [
       {
@@ -14,7 +21,12 @@ export const MenuItems = [
     ],
   },
   {
-    name: "Layanan",
+    name: (
+      <div className="flex items-center gap-1">
+        <span>Layanan</span>
+        <RiArrowDropDownLine />
+      </div>
+    ),
     href: "/pelayanan",
     children: [
       {
@@ -32,7 +44,12 @@ export const MenuItems = [
     ],
   },
   {
-    name: "Publikasi",
+    name: (
+      <div className="flex items-center gap-1">
+        <span>Publikasi</span>
+        <RiArrowDropDownLine />
+      </div>
+    ),
     href: "/publikasi",
     children: [
       {
@@ -50,7 +67,12 @@ export const MenuItems = [
     ],
   },
   {
-    name: "Informasi Publik",
+    name: (
+      <div className="flex items-center gap-1">
+        <span>Informasi Publik</span>
+        <RiArrowDropDownLine />
+      </div>
+    ),
     href: "/informasi-publik",
     children: [
       {

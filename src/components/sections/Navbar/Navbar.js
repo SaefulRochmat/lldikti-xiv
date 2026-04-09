@@ -30,9 +30,13 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
+    <nav className="bg-[#fffffff1] text-black shadow-md z-50 sticky top-0">
       {/* ===== TOP BAR ===== */}
-      <div className="flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
+      <div
+        className="flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]"
+        data-aos="fade-down"
+        data-aos-duration="500"
+      >
         <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-8">
           <div className="flex items-center space-x-2">
             <BsFillTelephoneFill className="text-yellow-400" />
@@ -49,16 +53,32 @@ export default function Navbar() {
         </div>
 
         <div className="flex justify-between items-center space-x-5 text-[18px]">
-          <Link href="https://www.instagram.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on Instagram">
+          <Link
+            href="https://www.instagram.com"
+            className="hover:text-yellow-400 transition-all hover:scale-110"
+            aria-label="Follow us on Instagram"
+          >
             <FaInstagram />
           </Link>
-          <Link href="https://www.tiktok.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on TikTok">
+          <Link
+            href="https://www.tiktok.com"
+            className="hover:text-yellow-400 transition-all hover:scale-110"
+            aria-label="Follow us on TikTok"
+          >
             <FaTiktok />
           </Link>
-          <Link href="https://www.youtube.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Subscribe to our YouTube">
+          <Link
+            href="https://www.youtube.com"
+            className="hover:text-yellow-400 transition-all hover:scale-110"
+            aria-label="Subscribe to our YouTube"
+          >
             <FaYoutube />
           </Link>
-          <Link href="https://www.facebook.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Like our Facebook page">
+          <Link
+            href="https://www.facebook.com"
+            className="hover:text-yellow-400 transition-all hover:scale-110"
+            aria-label="Like our Facebook page"
+          >
             <FaFacebookF />
           </Link>
         </div>
@@ -66,7 +86,11 @@ export default function Navbar() {
 
       {/* ===== MAIN NAV ===== */}
       <div className="mx-auto px-8 md:px-28">
-        <div className="flex justify-between items-center h-20" data-aos="fade-down" data-aos-duration="500">
+        <div
+          className="flex justify-between items-center h-20"
+          data-aos="fade-down"
+          data-aos-duration="500"
+        >
           <Logo />
 
           {/* ===== DESKTOP MENU ===== */}
@@ -168,7 +192,7 @@ export default function Navbar() {
                     }`}
                     onClick={() =>
                       setDropDownOpen(
-                        dropdownOpen === link.name ? null : link.name
+                        dropdownOpen === link.name ? null : link.name,
                       )
                     }
                   >
