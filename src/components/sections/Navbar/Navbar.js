@@ -11,6 +11,7 @@ import { redirect } from "next/navigation";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { SlArrowDown } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io";
+import { MdAccessTime } from "react-icons/md";
 import {
   FaInstagram,
   FaWhatsapp,
@@ -23,6 +24,53 @@ import Link from "next/link";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropDownOpen] = useState(null);
+  const [waktu, setWaktu] = useState("");
+  const [tanggal, setTanggal] = useState("");
+
+  // Realtime clock
+  useEffect(() => {
+    const hariList = [
+      "Minggu",
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jumat",
+      "Sabtu",
+    ];
+    const bulanList = [
+      "Januari",
+      "Februari",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
+    ];
+
+    const update = () => {
+      const now = new Date();
+      const hari = hariList[now.getDay()];
+      const tgl = now.getDate();
+      const bulan = bulanList[now.getMonth()];
+      const tahun = now.getFullYear();
+      const jam = String(now.getHours()).padStart(2, "0");
+      const menit = String(now.getMinutes()).padStart(2, "0");
+      const detik = String(now.getSeconds()).padStart(2, "0");
+
+      setTanggal(`${hari}, ${tgl} ${bulan} ${tahun}`);
+      setWaktu(`${jam}:${menit}:${detik} WIB`);
+    };
+
+    update();
+    const interval = setInterval(update, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // lock scroll ketika mobile menu open
   useEffect(() => {
@@ -37,7 +85,8 @@ export default function Navbar() {
         data-aos="fade-down"
         data-aos-duration="500"
       >
-        <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-8">
+        {/* Kiri: Telepon + WhatsApp + Tanggal & Waktu */}
+        <div className="hidden md:flex lg:flex items-center space-x-4 lg:space-x-6">
           <div className="flex items-center space-x-2">
             <BsFillTelephoneFill className="text-yellow-400" />
             <p className="font-medium">0981-2911065</p>
@@ -50,8 +99,21 @@ export default function Navbar() {
             <FaWhatsapp className="text-green-400 text-lg" />
             <p className="font-medium">Whatsapp</p>
           </Link>
+
+          {/* Separator */}
+          <span className="text-white/30">|</span>
+
+          {/* Tanggal & Waktu */}
+          <div className="flex items-center space-x-2 text-[13px] text-white/80">
+            <MdAccessTime className="text-yellow-400 text-base" />
+            <span>{tanggal}</span>
+            <span className="text-yellow-400 font-mono font-semibold tracking-wide">
+              {waktu}
+            </span>
+          </div>
         </div>
 
+        {/* Kanan: Sosial Media */}
         <div className="flex justify-between items-center space-x-5 text-[18px]">
           <Link
             href="https://www.instagram.com"
@@ -60,6 +122,8 @@ export default function Navbar() {
           >
             <FaInstagram />
           </Link>
+          {/* Separator */}
+          <span className="text-white/30">|</span>
           <Link
             href="https://www.tiktok.com"
             className="hover:text-yellow-400 transition-all hover:scale-110"
@@ -67,6 +131,8 @@ export default function Navbar() {
           >
             <FaTiktok />
           </Link>
+          {/* Separator */}
+          <span className="text-white/30">|</span>
           <Link
             href="https://www.youtube.com"
             className="hover:text-yellow-400 transition-all hover:scale-110"
@@ -74,6 +140,8 @@ export default function Navbar() {
           >
             <FaYoutube />
           </Link>
+          {/* Separator */}
+          <span className="text-white/30">|</span>
           <Link
             href="https://www.facebook.com"
             className="hover:text-yellow-400 transition-all hover:scale-110"
@@ -109,7 +177,6 @@ export default function Navbar() {
                     {link.name}
                   </button>
                 )}
-
                 {link.children && (
                   <DropDownMenu
                     items={link.children}
@@ -161,11 +228,19 @@ export default function Navbar() {
           </button>
         </div>
 
+        {/* Tanggal & Waktu Mobile */}
+        <div className="flex items-center gap-2 px-6 py-3 bg-[#1A2CA3]/5 border-b text-[13px] text-[#1A2CA3]">
+          <MdAccessTime className="text-[#1A2CA3] text-base flex-shrink-0" />
+          <span>{tanggal}</span>
+          <span className="font-mono font-semibold text-[#1A2CA3] ml-auto">
+            {waktu}
+          </span>
+        </div>
+
         {/* Drawer Menu */}
         <div className="p-6 space-y-3 overflow-y-auto">
           {MenuItems.map((link) => (
             <div key={link.name}>
-              {/* Normal link */}
               {!link.children && (
                 <NavLink href={link.href}>
                   <div
@@ -177,19 +252,13 @@ export default function Navbar() {
                   </div>
                 </NavLink>
               )}
-
-              {/* Dropdown link */}
               {link.children && (
                 <>
                   <button
                     className={`w-full text-left py-3 px-2 rounded-lg border-b
                     flex justify-between items-center transition-all
                     hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3]
-                    ${
-                      dropdownOpen === link.name
-                        ? "bg-[#1A2CA3]/5 text-[#1A2CA3]"
-                        : ""
-                    }`}
+                    ${dropdownOpen === link.name ? "bg-[#1A2CA3]/5 text-[#1A2CA3]" : ""}`}
                     onClick={() =>
                       setDropDownOpen(
                         dropdownOpen === link.name ? null : link.name,
@@ -204,21 +273,15 @@ export default function Navbar() {
                       <SlArrowDown />
                     </span>
                   </button>
-
                   <div
                     className={`overflow-hidden transition-all duration-300
-                    ${
-                      dropdownOpen === link.name
-                        ? "max-h-60 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
+                    ${dropdownOpen === link.name ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}
                   >
                     {link.children.map((child) => (
                       <NavLink key={child.name} href={child.href}>
                         <div
                           className="pl-6 pr-2 py-2 rounded-lg text-gray-600
-                          hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3]
-                          transition-all"
+                          hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.name}

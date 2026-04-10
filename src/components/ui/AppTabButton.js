@@ -5,7 +5,7 @@ export default function AppTabButton({ active, label, onClick }) {
     <button
       onClick={onClick}
       className={`
-        px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300
+        px-6 py-3 rounded-sm text-sm font-bold uppercase tracking-wider transition-all duration-300
         border-2 shadow-sm cursor-pointer
         ${
           active

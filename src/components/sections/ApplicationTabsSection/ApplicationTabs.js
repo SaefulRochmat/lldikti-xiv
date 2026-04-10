@@ -10,7 +10,7 @@ export default function ApplicationSection() {
       sm:px-12 
       lg:px-24 
       py-16 
-      bg-white
+      bg-[#1A2CA3]
     "
     >
       <div className="max-w-6xl mx-auto">
@@ -20,7 +20,7 @@ export default function ApplicationSection() {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          <h2 className="text-[#1A2CA3] text-2xl sm:text-3xl font-bold tracking-wide relative inline-block">
+          <h2 className="text-white text-2xl sm:text-3xl font-bold tracking-wide relative inline-block">
             APLIKASI LLDIKTI XIV
             <span className="block w-28 h-1 bg-yellow-400 mt-2 mx-auto"></span>
           </h2>

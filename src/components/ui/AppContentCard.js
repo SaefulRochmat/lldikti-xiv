@@ -6,8 +6,8 @@ export default function AppContentCard({ title, description, link }) {
   return (
     <div
       className="
-      bg-white
-      rounded-2xl 
+      bg-[#1A2CA3]
+      rounded-sm 
       p-8 
       mt-8
       backdrop-blur-sm
@@ -21,7 +21,7 @@ export default function AppContentCard({ title, description, link }) {
     >
       <div className="grid md:grid-cols-2 gap-6 items-center">
         <div>
-          <h3 className="text-2xl font-semibold tracking-wide text-gray-600 mb-4">
+          <h3 className="text-2xl font-semibold tracking-wide text-white mb-4">
             {title}
           </h3>
 
@@ -29,9 +29,7 @@ export default function AppContentCard({ title, description, link }) {
         </div>
 
         <div className="relative pl-6 border-l-4 border-yellow-400">
-          <p className="text-gray-600 text-base leading-relaxed">
-            {description}
-          </p>
+          <p className="text-white text-base leading-relaxed">{description}</p>
         </div>
       </div>
     </div>
