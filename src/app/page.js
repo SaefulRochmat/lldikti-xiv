@@ -10,7 +10,9 @@ import TestimoniSection from "@/components/sections/TestimoniSection/Index";
 import TautanTerkaitSection from "@/components/sections/TautanTerkaitSection";
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 bg-[url('/Assets/pattern.png')] bg-repeat opacity-3 pointer-events-none"></div>
+      <div className="relative z-10"></div>
       <HeroCarouselSection />
       <IntroductionSection />
       <ApplicationSection />

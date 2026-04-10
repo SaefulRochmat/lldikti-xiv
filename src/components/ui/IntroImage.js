@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function IntroImage({ image }) {
   return (
     <div
-      className="relative w-full aspect-video sm:aspect-video lg:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group"
+      className="relative w-full aspect-video sm:aspect-video lg:aspect-video rounded-lg overflow-hidden shadow-xl border-5 border-white group"
       data-aos="fade-right"
     >
       <Image

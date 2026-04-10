@@ -29,14 +29,18 @@ import AOSProvider from "@/components/AOSProvider";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
-        <AOSProvider>
-          <Navbar />
-          {children}
-          <ScrollToTop />
-          <Footer />
-        </AOSProvider>
-        <Analytics />
+      <body className={`${roboto.variable} antialiased min-h-screen relative`}>
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[url('/Assets/pattern.png')] bg-repeat opacity-3 pointer-events-none"></div>
+        <div className="relative z-10">
+          <AOSProvider>
+            <Navbar />
+            {children}
+            <ScrollToTop />
+            <Footer />
+          </AOSProvider>
+          <Analytics />
+        </div>
       </body>
     </html>
   );

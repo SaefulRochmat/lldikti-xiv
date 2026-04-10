@@ -10,7 +10,7 @@ const SectionTitle = ({ title, subtitle }) => {
           {subtitle}
         </p>
       </div>
-      <div className="w-20 sm:w-28 h-1.5 bg-yellow-400 mt-4 rounded-full" />
+      <div className="w-20 sm:w-28 h-1.5 bg-yellow-400 mt-4 rounded-lg" />
     </div>
   );
 };

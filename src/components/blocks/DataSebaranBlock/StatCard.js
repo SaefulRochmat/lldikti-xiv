@@ -4,7 +4,7 @@ const StatCard = ({ value, label }) => {
   return (
     <div
       data-aos="fade-up"
-      className="bg-white rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-in-out border border-gray-100"
+      className="bg-white rounded-lg p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-in-out border border-gray-100"
     >
       <BadgeNumber value={value} />
 
