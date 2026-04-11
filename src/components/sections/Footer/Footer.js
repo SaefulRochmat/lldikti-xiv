@@ -25,13 +25,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#153C91] text-white">
       {/* MAIN FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-5">
+      <div className="max-w-8xl mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-5">
         {/* LEFT SIDE */}
         <div className="md:col-span-2 lg:col-span-2">
           {/* Logo & Title */}
           <div className="flex items-center gap-4 mb-4">
             <Image
-              src="/Logos/logo-tutwuri.png"
+              src="/Logos/logo-tutwuri1.png"
               alt="Logo Tut Wuri Handayani"
               width={60}
               height={60}

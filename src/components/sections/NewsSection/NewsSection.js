@@ -20,7 +20,7 @@ export default function NewsSection() {
         {/* Title */}
         <div className="flex justify-between items-center mb-12">
           <div data-aos="fade-right" data-aos-duration="1000">
-            <h2 className="text-3xl font-bold text-[#1A2CA3]">
+            <h2 className="text-2xl font-bold text-[#1A2CA3]">
               BERITA LLDIKTI XIV
             </h2>
             <span className="block w-28 h-1 bg-yellow-400 mt-2"></span>

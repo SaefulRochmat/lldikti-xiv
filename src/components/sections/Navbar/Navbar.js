@@ -14,6 +14,7 @@ import { IoMdClose } from "react-icons/io";
 import { MdAccessTime } from "react-icons/md";
 import {
   FaInstagram,
+  FaEnvelope,
   FaWhatsapp,
   FaTiktok,
   FaYoutube,
@@ -91,6 +92,8 @@ export default function Navbar() {
             <BsFillTelephoneFill className="text-yellow-400" />
             <p className="font-medium">0981-2911065</p>
           </div>
+          {/* Separator */}
+          <span className="text-white/30">|</span>
           <Link
             href="https://wa.me/6281223487355"
             className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
@@ -104,7 +107,7 @@ export default function Navbar() {
           <span className="text-white/30">|</span>
 
           {/* Tanggal & Waktu */}
-          <div className="flex items-center space-x-2 text-[13px] text-white/80">
+          <div className="flex items-center space-x-2 text-[15px] text-white/80">
             <MdAccessTime className="text-yellow-400 text-base" />
             <span>{tanggal}</span>
             <span className="text-yellow-400 font-mono font-semibold tracking-wide">
@@ -114,7 +117,15 @@ export default function Navbar() {
         </div>
 
         {/* Kanan: Sosial Media */}
-        <div className="flex justify-between items-center space-x-5 text-[18px]">
+        <div className="flex justify-between items-center space-x-5 text-[15px]">
+          <div className="flex items-center gap-3 group">
+            <FaEnvelope className="text-yellow-400" />
+            <p className="group-hover:text-yellow-400 transition-colors font-medium">
+              lldikti14@kemdikbud.go.id
+            </p>
+          </div>
+          {/* Separator */}
+          <span className="text-white/30">|</span>
           <Link
             href="https://www.instagram.com"
             className="hover:text-yellow-400 transition-all hover:scale-110"
