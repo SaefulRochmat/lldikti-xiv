@@ -6,7 +6,7 @@ export default function AppContentCard({ title, description, link }) {
   return (
     <div
       className="
-      bg-[#1A2CA3]
+      bg-[#153C91]
       rounded-sm 
       p-8 
       mt-8

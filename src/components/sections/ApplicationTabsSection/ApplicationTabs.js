@@ -10,7 +10,7 @@ export default function ApplicationSection() {
       sm:px-12 
       lg:px-24 
       py-16 
-      bg-[#1A2CA3]
+      bg-[#153C91]
     "
     >
       <div className="max-w-6xl mx-auto">

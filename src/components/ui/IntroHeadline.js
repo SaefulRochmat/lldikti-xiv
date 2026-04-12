@@ -10,7 +10,7 @@ export default function IntroHeadline({ headline }) {
         </p>
       </div>
 
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#1A2CA3] leading-[1.15] tracking-wide">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#153C91] leading-[1.15] tracking-wide">
         {headline}
       </h2>
     </div>

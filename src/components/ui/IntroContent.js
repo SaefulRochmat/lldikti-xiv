@@ -10,11 +10,11 @@ export default function IntroContent({ content }) {
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 bg-[#1A2CA3] rounded-full flex items-center justify-center text-white font-bold">
+        <div className="w-12 h-12 bg-[#153C91] rounded-full flex items-center justify-center text-white font-bold">
           XIV
         </div>
         <div>
-          <p className="text-[#1A2CA3] font-black uppercase tracking-widest text-sm">
+          <p className="text-[#153C91] font-black uppercase tracking-widest text-sm">
             Kepala LLDIKTI Wilayah XIV
           </p>
           <p className="text-gray-500 text-xs font-medium">Tanah Papua</p>

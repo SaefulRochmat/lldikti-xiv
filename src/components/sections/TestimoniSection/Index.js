@@ -24,7 +24,7 @@ export default function TestimoniSection() {
           {/* <span className="inline-block text-sm font-semibold tracking-widest text-[#1a4f7a] uppercase mb-4">
             TESTIMONI
           </span>*/}
-          <h2 className="text-4xl font-bold text-[#1A2CA3] leading-snug mb-1.5">
+          <h2 className="text-4xl font-bold text-[#153C91] leading-snug mb-1.5">
             Bersama membangun Tanah Papua.
           </h2>
           <span className="w-20 md:w-28 lg:w-36 h-1 bg-yellow-400 rounded-full block mb-3" />

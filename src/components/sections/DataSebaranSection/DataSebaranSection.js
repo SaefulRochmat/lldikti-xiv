@@ -8,7 +8,7 @@ import { DATA_SEBARAN } from "@/constant/DataSebaran";
 const DataSebaranSection = () => {
   return (
     <section className="mt-16 p-1 px-4 md:px-0">
-      <div className="bg-[#1A2CA3] max-w-7xl mx-auto py-16 px-6 md:px-12 rounded-lg shadow-xl">
+      <div className="bg-[#153C91] max-w-7xl mx-auto py-16 px-6 md:px-12 rounded-lg shadow-xl">
         <SectionTitle
           title="DATA SEBARAN PERGURUAN TINGGI"
           subtitle="LLDIKTI WILAYAH XIV"

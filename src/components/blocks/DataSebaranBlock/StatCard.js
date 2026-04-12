@@ -9,7 +9,7 @@ const StatCard = ({ value, label }) => {
       <BadgeNumber value={value} />
 
       <div className="flex-1">
-        <p className="text-[#1A2CA3] font-bold uppercase text-xs sm:text-sm md:text-base tracking-wider leading-tight">
+        <p className="text-[#153C91] font-bold uppercase text-xs sm:text-sm md:text-base tracking-wider leading-tight">
           {label}
         </p>
         <span className="block w-10 h-1.5 bg-yellow-400 mt-2 rounded-full" />

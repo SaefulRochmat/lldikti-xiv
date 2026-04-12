@@ -24,7 +24,7 @@ export default function NewsCard({ item }) {
         </div>
 
         {/* Date Box */}
-        <div className="absolute bottom-0 left-0 bg-[#1A2CA3] text-white px-5 py-3 text-center leading-tight rounded-tr-2xl shadow-lg">
+        <div className="absolute bottom-0 left-0 bg-[#153C91] text-white px-5 py-3 text-center leading-tight rounded-tr-2xl shadow-lg">
           <div className="text-xl font-black">{day}</div>
           <div className="text-[10px] uppercase font-bold tracking-tighter">
             {month}

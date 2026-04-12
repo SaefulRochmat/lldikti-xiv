@@ -15,14 +15,14 @@ export default function NewsSection() {
   const selectedNews = newsList.slice(start, start + perPage);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20">
+      <div className="max-w-7xl mx-auto px-6 py-6 sm:px-12 bg-gray-100 rounded-lg">
         {/* Title */}
         <div className="flex justify-between items-center mb-12">
           <div data-aos="fade-right" data-aos-duration="1000">
-            <h2 className="text-2xl font-bold text-[#1A2CA3]">
+            <h3 className="text-xl font-bold text-[#153C91] max-w-7xl tracking-wide">
               BERITA LLDIKTI XIV
-            </h2>
+            </h3>
             <span className="block w-28 h-1 bg-yellow-400 mt-2"></span>
             <div className="w-28 h-1 bg-accent mt-3"></div>
           </div>

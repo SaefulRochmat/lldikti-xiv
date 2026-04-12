@@ -47,7 +47,7 @@ export default function TautanTerkaitSection() {
     <section className="w-full py-12 bg-white">
       {/* Title */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-[#1A2CA3] uppercase">
+        <h2 className="text-2xl font-bold text-[#153C91] uppercase">
           Tautan Terkait
         </h2>
         <div className="mx-auto mt-2 w-12 h-[3px] bg-[#f5c842]" />
