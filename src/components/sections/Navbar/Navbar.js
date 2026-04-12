@@ -461,6 +461,7 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
+        <div className="md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-1 md:px-1 py-1 md:h-1 bg-[#153C91]"></div>
       </nav>
 
       {/* ===== SEARCH MODAL ===== */}
