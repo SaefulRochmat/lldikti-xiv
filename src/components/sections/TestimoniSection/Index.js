@@ -49,7 +49,7 @@ export default function TestimoniSection() {
         </div>
 
         {/* Right: Card */}
-        <div className="relative overflow-hidden shadow-lg rounded-2xl border-left border-2 border-yellow-400 ">
+        <div className="relative overflow-hidden shadow-lg rounded-lg border-left border-2 border-yellow-400 ">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}

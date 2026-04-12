@@ -6,7 +6,7 @@ export default function NewsCard({ item }) {
 
   return (
     <div
-      className="bg-white rounded-2xl shadow-lg overflow-hidden w-full group hover:shadow-2xl transition-all duration-500"
+      className="bg-white rounded-lg shadow-lg overflow-hidden w-full group hover:shadow-2xl transition-all duration-500"
       data-aos="fade-up"
     >
       {/* IMAGE */}
@@ -24,7 +24,7 @@ export default function NewsCard({ item }) {
         </div>
 
         {/* Date Box */}
-        <div className="absolute bottom-0 left-0 bg-[#153C91] text-white px-5 py-3 text-center leading-tight rounded-tr-2xl shadow-lg">
+        <div className="absolute bottom-0 left-0 bg-[#153C91] text-white px-5 py-3 text-center leading-tight rounded-tr-lg shadow-lg">
           <div className="text-xl font-black">{day}</div>
           <div className="text-[10px] uppercase font-bold tracking-tighter">
             {month}

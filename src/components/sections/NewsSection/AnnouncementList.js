@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function AnnouncementList({ data }) {
   return (
     <div
-      className="bg-[#153C91] text-white rounded-2xl p-8 h-full shadow-xl"
+      className="bg-[#153C91] text-white rounded-lg p-8 h-full shadow-xl"
       data-aos="fade-left"
     >
       <div className="flex justify-between items-baseline mb-8">

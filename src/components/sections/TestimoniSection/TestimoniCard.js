@@ -42,7 +42,7 @@ export default function TestimoniCard({ data }) {
         </div>
 
         {/* Decorative quote mark */}
-        <span className="absolute right-0 bottom-[-4px] text-[64px] text-[#e0eaf4] font-serif leading-none select-none pointer-events-none">
+        <span className="absolute right-0 bottom-[-4px] text-[40px] text-[#e0eaf4] font-serif leading-none select-none pointer-events-none">
           &#8221;
         </span>
       </div>
