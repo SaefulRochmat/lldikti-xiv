@@ -226,7 +226,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#fffffff1] text-black shadow-md z-50 sticky top-0">
+      <nav className="bg-[#fffffff1] text-black shadow-md z-50  top-0 fixed w-full">
         {/* ===== TOP BAR ===== */}
         <div
           className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-64 py-4 md:h-10 bg-[#153C91]"
@@ -336,7 +336,7 @@ export default function Navbar() {
               {/* Search Icon */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-[#1A2CA3] hover:bg-[#1A2CA3]/10 transition-all duration-200 hover:scale-110"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-white bg-[#153C91] hover:bg-[#ffb700] transition-all duration-200 hover:scale-110"
                 aria-label="Cari"
               >
                 <IoSearchOutline className="text-xl" />
@@ -461,7 +461,7 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
-        <div className="md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-1 md:px-1 py-1 md:h-1 bg-[#153C91]"></div>
+        <div className="md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-0.5 md:px-0.5 py-0.5 md:h-0.5 bg-[#153C91]"></div>
       </nav>
 
       {/* ===== SEARCH MODAL ===== */}
