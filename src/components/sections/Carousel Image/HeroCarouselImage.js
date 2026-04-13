@@ -5,7 +5,7 @@ export default function HeroCarouselSection() {
     <section className="w-full" data-aos="fade-up" data-aos-duration="1000">
       <div
         className="
-        bg-black/90
+        bg-black/90 pt-20
       "
       >
         <ImageCarousel />
