@@ -111,6 +111,14 @@ export const MenuItems = [
         name: "Recana Umum Pengadaan",
         href: "/rencana-umum-pengadaan",
       },
+      {
+        name: "Standar Pelayanan Publik",
+        href: "/standar-pelayanan-publik",
+      },
+      {
+        name: "Laporan Tahunan LLDIKTI XIV",
+        href: "/laporan-tahunan-lldikti-xiv",
+      },
     ],
   },
   {
