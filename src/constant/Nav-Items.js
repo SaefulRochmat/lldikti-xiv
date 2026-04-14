@@ -30,16 +30,16 @@ export const MenuItems = [
     href: "/pelayanan",
     children: [
       {
-        name: "Lapor",
-        href: "/layanan-pelaporan",
+        name: "Layanan Publik LLDIKTI XIV",
+        href: "/layanan-publik-lldikti-xiv",
       },
       {
-        name: "Data Publik",
-        href: "/data-publik",
+        name: "Layanan Kami",
+        href: "/layanan",
       },
       {
-        name: "SIKAS",
-        href: "/sikas",
+        name: "Cara Pengajuan Layanan",
+        href: "/cara-pengajuan-layanan",
       },
     ],
   },
@@ -64,6 +64,10 @@ export const MenuItems = [
         name: "Buletin LLDIKTI Wilayah XIV",
         href: "/buletin-lldikti-wilayah-xiv",
       },
+      {
+        name: "DIrektori Perguruan Tinggi",
+        href: "/direktori-perguruan-tinggi",
+      },
     ],
   },
   {
@@ -76,12 +80,12 @@ export const MenuItems = [
     href: "/informasi-publik",
     children: [
       {
-        name: "Galeri",
-        href: "/galeri",
-      },
-      {
         name: "Akuntabilitas",
         href: "/akuntabilitas",
+      },
+      {
+        name: "Galeri",
+        href: "/galeri",
       },
       {
         name: "Agenda Kegiatan",
@@ -92,6 +96,10 @@ export const MenuItems = [
   {
     name: "PPID",
     href: "/ppid",
+  },
+  {
+    name: "Zona Integritas",
+    href: "/zona-integritas",
   },
   {
     name: "FAQ",
