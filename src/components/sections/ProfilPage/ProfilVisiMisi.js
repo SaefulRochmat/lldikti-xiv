@@ -9,7 +9,7 @@ const misiList = [
 
 export default function ProfilVisiMisi() {
   return (
-    <section className="w-full py-20 bg-[#f8fafc]" id="visi-misi">
+    <section className="w-full py-20 pt-44 bg-[#f8fafc]" id="visi-misi">
       <div className="max-w-6xl mx-auto px-10">
         <div className="mb-12">
           <span className="text-xs font-semibold tracking-widest text-[#1a4f7a] uppercase">

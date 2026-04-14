@@ -25,7 +25,7 @@ export default function TestimoniSection() {
             TESTIMONI
           </span>*/}
           <h2 className="text-4xl font-bold text-[#153C91] leading-snug mb-1.5">
-            Bersama membangun Tanah Papua.
+            Bersama Membangun Tanah Papua
           </h2>
           <span className="w-20 md:w-28 lg:w-36 h-1 bg-yellow-400 rounded-full block mb-3" />
           <p className="text-[20px] text-[#6b7a8d] leading-relaxed mb-9 max-w-xs">

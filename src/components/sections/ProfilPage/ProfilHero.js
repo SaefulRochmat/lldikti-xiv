@@ -1,6 +1,6 @@
 export default function ProfilHero() {
   return (
-    <section className="w-full bg-[#1A2CA3] py-16">
+    <section className="w-full bg-[#1A2CA3] py-16 pt-40">
       <div className="max-w-6xl mx-auto px-10">
         <p className="text-xs font-semibold tracking-widest text-[#f5c842] uppercase mb-3">
           Tentang Kami
