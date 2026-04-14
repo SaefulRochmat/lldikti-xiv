@@ -22,7 +22,7 @@ export default function SurveyForm() {
         <div className="absolute inset-0 bg-transparent"></div>
 
         {/* Content kiri */}
-        <div className="pt--20 relative z-10 max-w-6xl px-6 sm:px-10 lg:px-16">
+        <div className="relative z-10 max-w-6xl px-6 sm:px-10 lg:px-24">
           <h1
             className="
               text-3xl
@@ -44,9 +44,10 @@ export default function SurveyForm() {
               sm:max-w-2xl
               md:text-lg
               lg:text-xl
-              text-[#153C91]
+              text-gray-700
               max-w-2xl
               leading-relaxed
+              text-justify
             "
           >
             Kami mengundang Anda untuk berpartisipasi dalam survei online ini

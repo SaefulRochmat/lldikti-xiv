@@ -336,7 +336,7 @@ export default function Navbar() {
               {/* Search Icon */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="w-8 h-8 rounded-full flex items-center justify-center text-white bg-[#153C91] hover:bg-[#ffb700] transition-all duration-200 hover:scale-110"
+                className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-500 hover:bg-[#ffb700] transition-all duration-200 hover:scale-110"
                 aria-label="Cari"
               >
                 <IoSearchOutline className="text-xl" />
@@ -437,7 +437,7 @@ export default function Navbar() {
                       {link.children.map((child) => (
                         <NavLink key={child.name} href={child.href}>
                           <div
-                            className="pl-6 pr-2 py-2 rounded-lg text-gray-600 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
+                            className=" text-sm pl-6 pr-2 py-2 rounded-lg text-gray-600 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.name}

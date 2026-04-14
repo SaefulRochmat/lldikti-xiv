@@ -91,6 +91,26 @@ export const MenuItems = [
         name: "Agenda Kegiatan",
         href: "/agenda-kegiatan",
       },
+      {
+        name: "Indeks Kepuasan Masyarakat",
+        href: "/indeks-kepuasan-masyarakat",
+      },
+      {
+        name: "Materi Kegiatan",
+        href: "/materi-kegiatan",
+      },
+      {
+        name: "Peta Proses Bisnis LLDIKTI Wilayah XIV",
+        href: "/peta-proses-bisnis-lldikti-xiv",
+      },
+      {
+        name: "Prosedur Operasional Standar",
+        href: "/prosedur-operasional-standar",
+      },
+      {
+        name: "Recana Umum Pengadaan",
+        href: "/rencana-umum-pengadaan",
+      },
     ],
   },
   {

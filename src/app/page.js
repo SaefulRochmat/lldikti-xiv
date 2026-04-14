@@ -23,8 +23,8 @@ export default function Home() {
 
       <FloatingWidgets />
       <GlobalModals />
-      <TautanTerkaitSection />
       <TestimoniSection />
+      <TautanTerkaitSection />
     </div>
   );
 }
