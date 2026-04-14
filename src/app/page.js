@@ -8,6 +8,7 @@ import ApplicationSection from "@/components/sections/ApplicationTabsSection/App
 import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
 import TestimoniSection from "@/components/sections/TestimoniSection/Index";
 import TautanTerkaitSection from "@/components/sections/TautanTerkaitSection";
+import SurveyForm from "@/components/sections/SurveyForm/SurveyForm";
 export default function Home() {
   return (
     <div className="min-h-screen relative">
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="relative z-10"></div>
       <HeroCarouselSection />
       <IntroductionSection />
+      <SurveyForm />
       <ApplicationSection />
       <DataSebaranSection />
       <NewsSection />
