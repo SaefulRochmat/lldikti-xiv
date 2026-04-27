@@ -226,7 +226,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#fffffff1] text-black shadow-md z-50  top-0 fixed w-full">
+      <nav className="bg-[#ffffff] text-black shadow-md z-50  top-0 fixed w-full">
         {/* ===== TOP BAR ===== */}
         <div
           className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-64 py-4 md:h-10 bg-[#153C91]"
@@ -313,14 +313,14 @@ export default function Navbar() {
               {MenuItems.map((link) => (
                 <div
                   key={link.name}
-                  className="relative"
+                  className="relative text-sm font-semibold"
                   onMouseEnter={() => setDropDownOpen(link.name)}
                   onMouseLeave={() => setDropDownOpen(null)}
                 >
                   {link.href ? (
                     <NavLink href={link.href}>{link.name}</NavLink>
                   ) : (
-                    <button className="hover:text-[#153C91] transition-colors">
+                    <button className="hover:text-[#153C91] transition-colors text-sm">
                       {link.name}
                     </button>
                   )}
