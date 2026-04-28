@@ -12,11 +12,11 @@ export const MenuItems = [
     children: [
       {
         name: "Profil LLDIKTI XIV",
-        href: "/profil",
+        href: "/category/profil",
       },
       {
         name: "VISI & MISI",
-        href: "/visi-misi",
+        href: "/category/visi-misi",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const MenuItems = [
     children: [
       {
         name: "Berita LLDIKTI Wilayah XIV",
-        href: "/berita-lldikti-wilayah-xiv",
+        href: "/category/berita",
       },
       {
         name: "Info LLDIKTI Wilayah XIV",

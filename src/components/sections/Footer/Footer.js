@@ -120,10 +120,10 @@ export default function Footer() {
 
         {/* LINK TERKAIT */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+          <h3 className="text-sm font-bold mb-2 uppercase tracking-wider">
             Link Terkait
           </h3>
-          <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
+          <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {linkTerkait.map((item, i) => (
               <Link
@@ -139,10 +139,10 @@ export default function Footer() {
 
         {/* LAYANAN */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+          <h3 className="text-sm font-bold mb-2 uppercase tracking-wider">
             Layanan
           </h3>
-          <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
+          <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {layanan.map((item, i) => (
               <Link
@@ -158,10 +158,10 @@ export default function Footer() {
 
         {/* PROFIL */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+          <h3 className="text-sm font-bold mb-2 uppercase tracking-wider">
             Profil
           </h3>
-          <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
+          <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {frofil.map((item, i) => (
               <Link
@@ -177,10 +177,10 @@ export default function Footer() {
 
         {/* PUBLIKASI */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+          <h3 className="text-sm font-bold mb-2 uppercase tracking-wider">
             Publikasi
           </h3>
-          <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
+          <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {publikasi.map((item, i) => (
               <Link
@@ -196,10 +196,10 @@ export default function Footer() {
 
         {/* INFORMASI PUBLIK */}
         <div className="lg:col-span-1">
-          <h3 className="text-lg font-bold mb-2 uppercase tracking-wider">
+          <h3 className="text-sm font-bold mb-2 uppercase tracking-wider">
             Informasi Publik
           </h3>
-          <span className="block w-12 h-1 bg-yellow-400 mb-6"></span>
+          <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
             {informasiPublik.map((item, i) => (
               <Link
