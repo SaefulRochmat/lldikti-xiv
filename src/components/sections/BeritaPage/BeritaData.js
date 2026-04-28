@@ -20,7 +20,7 @@ export const beritaData = [
     kategori: "Akreditasi & Mutu",
     tanggal: "28 Maret 2026",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ export const beritaData = [
     kategori: "Kerja Sama",
     tanggal: "13 Oktober 2025",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: true,
   },
   {
@@ -45,7 +45,7 @@ export const beritaData = [
     kategori: "Dosen & SDM",
     tanggal: "25 Juni 2025",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
   {
@@ -58,7 +58,7 @@ export const beritaData = [
     kategori: "Beasiswa",
     tanggal: "14 Mei 2025",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
   {
@@ -70,7 +70,7 @@ export const beritaData = [
     kategori: "Akreditasi & Mutu",
     tanggal: "27 September 2025",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
   {
@@ -83,7 +83,7 @@ export const beritaData = [
     kategori: "Monitoring",
     tanggal: "15 September 2025",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
   {
@@ -96,7 +96,7 @@ export const beritaData = [
     kategori: "Akreditasi & Mutu",
     tanggal: "4 September 2023",
     penulis: "Tim Humas LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
   {
@@ -109,7 +109,7 @@ export const beritaData = [
     kategori: "Pengumuman",
     tanggal: "1 Februari 2025",
     penulis: "Sekretariat LLDikti XIV",
-    gambar: null,
+    gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
 ];

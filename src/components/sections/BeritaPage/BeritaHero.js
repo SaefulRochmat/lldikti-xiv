@@ -1,7 +1,7 @@
 export default function BeritaHero() {
   return (
     <section className="w-full bg-[#1A2CA3] py-16 pt-40">
-      <div className="max-w-9xl mx-auto px-8 md:px-64">
+      <div className="max-w-[1700px] mx-auto px-8 md:px-64">
         <p className="text-xs font-semibold tracking-widest text-[#f5c842] uppercase mb-3">
           Informasi Terkini
         </p>
