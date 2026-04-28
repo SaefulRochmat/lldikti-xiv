@@ -110,7 +110,7 @@ export default function BeritaList() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Cari berita..."
-              className="w-full pl-11 pr-4 py-3 rounded-xl border border-[#e8eef5] bg-white text-sm text-[#1a2e4a] placeholder-gray-400 outline-none focus:border-[#1A2CA3] focus:ring-2 focus:ring-[#1A2CA3]/10 transition-all"
+              className="w-full pl-11 pr-4 py-3 rounded-lg border border-[#e8eef5] bg-white text-sm text-[#1a2e4a] placeholder-gray-400 outline-none focus:border-[#1A2CA3] focus:ring-2 focus:ring-[#1A2CA3]/10 transition-all"
             />
           </div>
 
@@ -120,7 +120,7 @@ export default function BeritaList() {
               <button
                 key={kat}
                 onClick={() => setAktifKategori(kat)}
-                className={`flex-shrink-0 px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition-all ${
+                className={`flex-shrink-0 px-4 py-2 rounded-lg text-xs md:text-sm font-medium transition-all ${
                   aktifKategori === kat
                     ? "bg-[#1A2CA3] text-white shadow"
                     : "bg-white text-[#6b7a8d] border border-[#e8eef5] hover:border-[#1A2CA3] hover:text-[#1A2CA3]"
