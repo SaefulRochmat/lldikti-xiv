@@ -99,8 +99,22 @@ export const beritaData = [
     gambar: "/Assets/Gedung-lldikti.jpg",
     featured: false,
   },
+
   {
     id: 8,
+    judul:
+      "Surat Edaran Validasi dan Verifikasi Data Mahasiswa Calon Wisudawan 2025",
+    ringkasan:
+      "LLDikti XIV mengeluarkan surat edaran resmi kepada seluruh PTS di Tanah Papua mengenai prosedur validasi dan verifikasi data mahasiswa calon wisudawan tahun akademik 2025.",
+    isi: `LLDikti Wilayah XIV Papua mengeluarkan surat edaran mengenai validasi dan verifikasi data mahasiswa calon wisudawan tahun 2025. Seluruh perguruan tinggi swasta diwajibkan melakukan pemutakhiran data mahasiswa melalui sistem PDDikti sebelum pelaksanaan wisuda untuk memastikan keabsahan ijazah dan gelar akademik yang diterbitkan.`,
+    kategori: "Pengumuman",
+    tanggal: "1 Februari 2025",
+    penulis: "Sekretariat LLDikti XIV",
+    gambar: "/Assets/Gedung-lldikti.jpg",
+    featured: false,
+  },
+  {
+    id: 9,
     judul:
       "Surat Edaran Validasi dan Verifikasi Data Mahasiswa Calon Wisudawan 2025",
     ringkasan:
