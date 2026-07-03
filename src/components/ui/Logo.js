@@ -3,15 +3,21 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex items-center">
+    <Link href="/" className="flex items-center gap-3">
       <Image
-        src="/Logos/Logo2.png"
+        src="/Logos/Logo_LLDIKTI14.png"
         alt="Logo LLDIKTI XIV"
-        width={180}
-        height={60}
-        className="w-[160px] md:w-[180px] h-auto object-contain"
+        width={80}
+        height={80}
+        className="w-[50px] md:w-[70px] h-auto object-contain"
         priority
       />
+      <span className="hidden sm:inline-block text-sm md:text-sm font-semibold text-[#153C91] leading-tight">
+        <span className="block">LEMBAGA LAYANAN</span>
+        <span className="block">PENDIDIKAN TINGGI
+        </span>
+        <span className="block">XIV PAPUA</span>
+      </span>
     </Link>
   );
 }
