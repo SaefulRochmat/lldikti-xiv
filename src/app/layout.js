@@ -1,17 +1,18 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import Navbar from "@/components/sections/Navbar/Navbar";
-import Footer from "@/components/sections/Footer/Footer";
-import ScrollToTop from "@/components/sections/ScrollToTop/ScrollToTop";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/layout/ScrollToTop";
+import AOSProvider from "@/components/AOSProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const roboto = Geist({
-  variable: "--font-roboto",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -20,27 +21,23 @@ export const metadata = {
   description:
     "Website resmi Lembaga Layanan Pendidikan Tinggi Wilayah XIV, menyediakan informasi terkini tentang pendidikan tinggi, layanan, dan pengumuman penting untuk mahasiswa dan masyarakat umum.",
   icons: {
-    icon: "/images/favicon.ico",
+    icon: "/Logos/favicon.ico",
   },
 };
 
-import AOSProvider from "@/components/AOSProvider";
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} antialiased min-h-screen relative`}>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('/Assets/pattern.png')] bg-repeat opacity-3 pointer-events-none"></div>
-        <div className="relative z-10">
-          <AOSProvider>
-            <Navbar />
-            {children}
-            <ScrollToTop />
-            <Footer />
-          </AOSProvider>
-          <Analytics />
-        </div>
+    <html lang="id">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#f8fafc]`}
+      >
+        <AOSProvider>
+          <Navbar />
+          <main>{children}</main>
+          <ScrollToTop />
+          <Footer />
+        </AOSProvider>
+        <Analytics />
       </body>
     </html>
   );

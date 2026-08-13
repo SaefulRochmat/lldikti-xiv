@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import CarouselSlide from "@/components/ui/CarouselSlide";
-import { carouselData } from "@/constant/CarouselData";
+import { carouselData } from "@/data/carousel";
 
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

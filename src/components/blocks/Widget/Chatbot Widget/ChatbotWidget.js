@@ -5,7 +5,7 @@ import FloatingButton from "@/components/ui/WhastsappWidgetButton";
 import ChatContainer from "@/components/ui/ChatContainer";
 import ChatBubble from "@/components/ui/ChatBubble";
 import ChatInput from "@/components/ui/ChatInput";
-import { getBotResponse } from "@/utils/ChatbotLogic";
+import { getBotResponse } from "@/lib/chatbot";
 import { FaComments } from "react-icons/fa";
 
 export default function ChatbotWidget() {

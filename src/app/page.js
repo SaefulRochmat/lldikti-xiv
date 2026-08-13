@@ -1,30 +1,31 @@
-import Image from "next/image";
-import FloatingWidgets from "@/components/sections/Floating Widgets/FloatingWhatsappWidget";
-import GlobalModals from "@/components/sections/Modals/GlobalModals";
-import HeroCarouselSection from "@/components/sections/Carousel Image/HeroCarouselImage";
-import IntroductionSection from "@/components/sections/Sections Introduction/IntroductionSections";
-import NewsSection from "@/components/sections/NewsSection/NewsSection";
-import ApplicationSection from "@/components/sections/ApplicationTabsSection/ApplicationTabs";
-import DataSebaranSection from "@/components/sections/DataSebaranSection/DataSebaranSection";
-import TestimoniSection from "@/components/sections/TestimoniSection/Index";
-import TautanTerkaitSection from "@/components/sections/TautanTerkaitSection";
-import SurveyForm from "@/components/sections/SurveyForm/SurveyForm";
+import HeroSection from "@/components/sections/HeroSection";
+import IntroductionSection from "@/components/sections/IntroductionSection";
+import SurveySection from "@/components/sections/SurveySection";
+import ApplicationSection from "@/components/sections/ApplicationSection";
+import StatsSection from "@/components/sections/StatsSection";
+import NewsSection from "@/components/sections/NewsSection";
+import TestimoniSection from "@/components/features/testimonials/TestimoniSection";
+import TautanSection from "@/components/sections/TautanSection";
+import FloatingWidgets from "@/components/features/widgets/FloatingWidgets";
+import WelcomeModal from "@/components/features/modals/WelcomeModal";
+
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
-      <div className="absolute inset-0 bg-[url('/Assets/pattern.png')] bg-repeat opacity-3 pointer-events-none"></div>
-      <div className="relative z-10"></div>
-      <HeroCarouselSection />
+    <div className="min-h-screen">
+      <HeroSection />
       <IntroductionSection />
-      <SurveyForm />
+      <SurveySection />
       <ApplicationSection />
-      <DataSebaranSection />
+      <StatsSection />
       <NewsSection />
-
-      <FloatingWidgets />
-      <GlobalModals />
       <TestimoniSection />
-      <TautanTerkaitSection />
+      <TautanSection />
+      <FloatingWidgets />
+      <WelcomeModal
+        title="Selamat Datang di Website LLDIKTI Wilayah XIV"
+        description="Portal resmi layanan informasi, pelaporan, dan data pendidikan tinggi."
+        image="/Assets/Image-Modals.jpg"
+      />
     </div>
   );
 }

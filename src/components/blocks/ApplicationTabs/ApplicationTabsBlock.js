@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { applicationData } from "@/constant/ApplicationData";
+import { applicationData } from "@/data/applications";
 import AppTabButton from "@/components/ui/AppTabButton";
 import AppContentCard from "@/components/ui/AppContentCard";
 

@@ -1,6 +1,6 @@
 import BeritaHero from "@/components/sections/BeritaPage/BeritaHero";
 import BeritaList from "@/components/sections/BeritaPage/BeritaList";
-import FloatingWidgets from "@/components/sections/Floating Widgets/FloatingWhatsappWidget";
+import FloatingWidgets from "@/components/features/widgets/FloatingWidgets";
 
 export const metadata = {
   title: "Berita - LLDikti Wilayah XIV Papua",
@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function BeritaPage() {
   return (
-    <main>
+    <>
       <BeritaHero />
       <BeritaList />
       <FloatingWidgets />
-    </main>
+    </>
   );
 }

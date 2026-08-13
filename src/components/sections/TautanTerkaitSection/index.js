@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { tautanData } from "@/constant/tautanData";
+import { tautanData } from "@/data/links";
 
 export default function TautanTerkaitSection() {
   const trackRef = useRef(null);

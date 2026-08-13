@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import TestimoniCard from "./TestimoniCard";
-import { testimoniData } from "./TestimoniData";
+import { testimoniData } from "@/data/testimonials";
 
 export default function TestimoniSection() {
   const [activeIndex, setActiveIndex] = useState(0);

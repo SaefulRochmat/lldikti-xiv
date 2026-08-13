@@ -1,17 +1,27 @@
 @import "tailwindcss";
+@import "aos/dist/aos.css";
 
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-roboto: var(--font-roboto);
   --font-quicksand: var(--font-quicksand);
+
+  /* Brand Colors */
+  --color-brand-primary: #1A2CA3;
+  --color-brand-dark: #153C91;
+  --color-brand-accent: #f5c842;
+  --color-brand-surface: #f8fafc;
+  --color-brand-border: #e8eef5;
 }
 
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif, Quicksand;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -32,4 +42,24 @@ body {
 
 .carousel-image-in {
   animation: carouselFadeInScale 1s ease-out forwards;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

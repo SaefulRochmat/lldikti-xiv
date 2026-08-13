@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { beritaData, kategoriList } from "./BeritaData";
+import { beritaData, kategoriList } from "@/components/sections/BeritaPage/BeritaData";
 import { IoSearchOutline } from "react-icons/io5";
 import { BsCalendar3, BsPerson } from "react-icons/bs";
 import { HiOutlineTag } from "react-icons/hi";

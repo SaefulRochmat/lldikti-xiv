@@ -1,0 +1,31 @@
+export const linkTerkait = [
+  { name: "Kementerian Pendidikan Tinggi, Sains dan Teknologi", href: "https://kemdiktisaintek.go.id/" },
+  { name: "Pangkalan Data Pendidikan Tinggi", href: "https://pddikti.kemdiktisaintek.go.id/" },
+  { name: "Penomoran Ijazah dan Sertifikat Nasional", href: "https://pisn.kemdiktisaintek.go.id/" },
+  { name: "BAN PT", href: "https://www.banpt.or.id/" },
+];
+
+export const layanan = [
+  { name: "Lapor", href: "/layanan-pelaporan" },
+  { name: "Data Publik", href: "/data-publik" },
+  { name: "SIKAS", href: "/sikas" },
+];
+
+export const profil = [
+  { name: "Sejarah", href: "/category/profil#sejarah" },
+  { name: "Visi & Misi", href: "/category/visi-misi" },
+  { name: "Struktur Organisasi", href: "/category/profil#struktur-organisasi" },
+  { name: "Tugas Pokok & Fungsi", href: "/category/profil#tugas-fungsi" },
+];
+
+export const publikasi = [
+  { name: "Berita LLDIKTI Wilayah XIV", href: "/category/berita" },
+  { name: "Info LLDIKTI Wilayah XIV", href: "/info-lldikti-wilayah-xiv" },
+  { name: "Buletin LLDIKTI Wilayah XIV", href: "/buletin-lldikti-wilayah-xiv" },
+];
+
+export const informasiPublik = [
+  { name: "Galeri", href: "/galeri" },
+  { name: "PPID", href: "/ppid" },
+  { name: "Pengumuman", href: "/pengumuman" },
+];

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import SectionTitle from "@/components/ui/DataSebaranTitle";
-import StatCard from "@/components/blocks/DataSebaranBlock/StatCard";
+import StatCard from "@/components/features/stats/StatCard";
 import { DATA_SEBARAN } from "@/constant/DataSebaran";
 
 const DataSebaranSection = () => {
