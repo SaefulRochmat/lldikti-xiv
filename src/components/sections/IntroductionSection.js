@@ -4,7 +4,7 @@ import { introductionData } from "@/data/introduction";
 
 export default function IntroductionSection() {
   return (
-    <section className="w-full px-6 sm:px-12 lg:px-24 py-20 bg-white">
+    <section id="introduction" className="w-full px-6 sm:px-12 lg:px-24 py-20 bg-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Image */}
         <div

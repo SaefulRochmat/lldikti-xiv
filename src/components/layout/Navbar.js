@@ -263,14 +263,15 @@ export default function Navbar() {
                 <IoSearchOutline className="text-lg" />
               </button>
 
-              <Button
-                variant="primary"
-                size="sm"
-                className="ml-2 rounded-lg"
-                onClick={() => {}}
-              >
-                Kontak & Pengaduan
-              </Button>
+              <Link href="/kontak">
+                <Button
+                  variant="primary"
+                  size="sm"
+                  className="ml-2 rounded-lg"
+                >
+                  Kontak & Pengaduan
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile right */}
@@ -382,14 +383,15 @@ export default function Navbar() {
           </div>
 
           <div className="mt-6 pt-4 border-t border-gray-100">
-            <Button
-              variant="primary"
-              size="md"
-              className="w-full rounded-lg"
-              onClick={() => setMobileOpen(false)}
-            >
-              Kontak & Pengaduan
-            </Button>
+            <Link href="/kontak" onClick={() => setMobileOpen(false)}>
+              <Button
+                variant="primary"
+                size="md"
+                className="w-full rounded-lg"
+              >
+                Kontak & Pengaduan
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
