@@ -76,9 +76,9 @@ export default function UnderDevelopment({
         {/* Info Cards */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
-            { icon: "🚀", label: "Coming Soon", desc: "Segera Hadir" },
-            { icon: "⚡", label: "Fast Updates", desc: "Update Cepat" },
-            { icon: "✨", label: "Best Quality", desc: "Kualitas Terbaik" },
+            { icon: "", label: "Coming Soon", desc: "Segera Hadir" },
+            { icon: "", label: "Fast Updates", desc: "Update Cepat" },
+            { icon: "", label: "Best Quality", desc: "Kualitas Terbaik" },
           ].map((item, i) => (
             <div
               key={i}

@@ -2,7 +2,7 @@
 
 export default function IntroContent({ content }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-prose mx-auto lg:mx-0">
       <div className="relative pl-6 border-l-4 border-yellow-400">
         <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed text-justify italic">
           "{content}"

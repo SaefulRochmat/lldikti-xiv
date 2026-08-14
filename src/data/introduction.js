@@ -1,5 +1,5 @@
 export const introductionData = {
-  image: "/Assets/Gedung-lldikti.jpg",
+  image: "/Assets/LLDIKTI.png",
   headline:
     "Mewujudkan Pendidikan Tinggi yang Unggul, Transparan, dan Berdaya Saing.",
   content: `LLDIKTI Wilayah XIV hadir sebagai mitra strategis perguruan tinggi dalam meningkatkan mutu, tata kelola, dan daya saing pendidikan tinggi di tingkat nasional maupun global. Kami berkomitmen memberikan layanan yang profesional, akuntabel, dan responsif bagi perguruan tinggi serta masyarakat.
