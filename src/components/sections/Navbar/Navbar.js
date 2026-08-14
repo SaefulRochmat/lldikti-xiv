@@ -225,148 +225,29 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <>
-      <nav className="bg-[#ffffff] text-black shadow-md z-50  top-0 fixed w-full">
-        {/* ===== TOP BAR ===== */}
-        <div
-          className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-64 py-4 md:h-10 bg-[#153C91]"
-          data-aos="fade-down"
-          data-aos-duration="500"
-        >
-          <div className="flex items-center space-x-4 lg:space-x-6">
-            <div className="flex items-center space-x-2">
-              <BsFillTelephoneFill className="text-yellow-400" />
-              <p className="font-medium">0981-2911065</p>
-            </div>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://wa.me/6281223487355"
-              className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
-              aria-label="Contact us on Whatsapp"
-            >
-              <FaWhatsapp className="text-green-400 text-lg" />
-              <p className="font-medium">Whatsapp</p>
-            </Link>
-            <span className="text-white/30">|</span>
-            <div className="flex items-center space-x-2 text-[15px] text-white/80">
-              <MdAccessTime className="text-yellow-400 text-base" />
-              <span>{tanggal}</span>
-              <span className="text-yellow-400 font-mono font-semibold tracking-wide">
-                {waktu}
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between items-center space-x-5 text-[15px]">
-            <div className="flex items-center gap-3 group">
-              <FaEnvelope className="text-yellow-400" />
-              <p className="group-hover:text-yellow-400 transition-colors font-medium">
-                lldikti14@kemdikbud.go.id
-              </p>
-            </div>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.instagram.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.tiktok.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="TikTok"
-            >
-              <FaTiktok />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.youtube.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.facebook.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </Link>
+    <nav className="bg-[#fffffff1] text-gray-500/80 shadow-md z-50 sticky top-0">
+      {/* ===== TOP BAR ===== */}
+      <div className="hidden md:flex lg:flex  justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-28 py-4 md:h-10 bg-[#1A2CA3]" data-aos="fade-down" data-aos-duration="500">
+        <div className="flex items-center space-x-4 lg:space-x-8">
+          <div className="flex items-center space-x-2">
+            <BsFillTelephoneFill className="text-yellow-400" />
+            <p className="font-medium">0981-2911065</p>
           </div>
         </div>
 
-        {/* ===== MAIN NAV ===== */}
-        <div className="mx-auto px-8 md:px-64">
-          <div
-            className="flex justify-between items-center h-20"
-            data-aos="fade-down"
-            data-aos-duration="500"
-          >
-            <Logo />
-
-            {/* ===== DESKTOP MENU ===== */}
-            <div className="hidden lg:flex items-center space-x-6">
-              {MenuItems.map((link) => (
-                <div
-                  key={link.name}
-                  className="relative text-sm font-semibold"
-                  onMouseEnter={() => setDropDownOpen(link.name)}
-                  onMouseLeave={() => setDropDownOpen(null)}
-                >
-                  {link.href ? (
-                    <NavLink href={link.href}>{link.name}</NavLink>
-                  ) : (
-                    <button className="hover:text-[#153C91] transition-colors text-sm">
-                      {link.name}
-                    </button>
-                  )}
-                  {link.children && (
-                    <DropDownMenu
-                      items={link.children}
-                      isOpen={dropdownOpen === link.name}
-                    />
-                  )}
-                </div>
-              ))}
-
-              {/* Search Icon */}
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-500 hover:bg-[#ffb700] transition-all duration-200 hover:scale-110"
-                aria-label="Cari"
-              >
-                <IoSearchOutline className="text-xl" />
-              </button>
-
-              <Button
-                className="bg-[#153C91] text-white font-medium rounded-3xl hover:bg-[#ffb700]"
-                onClick={() => redirect("/")}
-              >
-                Kontak & Pengaduan
-              </Button>
-            </div>
-
-            {/* ===== MOBILE RIGHT (search + hamburger) ===== */}
-            <div className="lg:hidden flex items-center gap-3">
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-[#1A2CA3] hover:bg-[#1A2CA3]/10 transition-all"
-                aria-label="Cari"
-              >
-                <IoSearchOutline className="text-xl" />
-              </button>
-              <button
-                className="text-3xl text-[#1A2CA3]"
-                onClick={() => setMobileOpen(true)}
-              >
-                <IoIosMenu />
-              </button>
-            </div>
-          </div>
+        <div className="hidden md:flex lg:flex justify-between items-center space-x-5 text-[18px]">
+          <Link href="https://www.instagram.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on Instagram">
+            <FaInstagram />
+          </Link>
+          <Link href="https://www.tiktok.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Follow us on TikTok">
+            <FaTiktok />
+          </Link>
+          <Link href="https://www.youtube.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Subscribe to our YouTube">
+            <FaYoutube />
+          </Link>
+          <Link href="https://www.facebook.com" className="hover:text-yellow-400 transition-all hover:scale-110" aria-label="Like our Facebook page">
+            <FaFacebookF />
+          </Link>
         </div>
 
         {/* ===== MOBILE OVERLAY ===== */}
