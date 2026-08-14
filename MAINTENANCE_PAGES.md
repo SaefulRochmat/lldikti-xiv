@@ -1,41 +1,41 @@
-# 🚧 Halaman Maintenance - LLDIKTI XIV
+#  Halaman Maintenance - LLDIKTI XIV
 
 ## Daftar Halaman dengan Status "Under Development"
 
 Berikut adalah daftar halaman yang saat ini menampilkan halaman maintenance/under development:
 
-### ✅ Halaman Utama (Menu Top Level)
+###  Halaman Utama (Menu Top Level)
 
 | No | Halaman | Path | Status |
 |----|---------|------|--------|
-| 1 | Profil | `/profil` | 🚧 Under Development |
-| 2 | Pelayanan | `/pelayanan` | 🚧 Under Development |
-| 3 | Publikasi | `/publikasi` | 🚧 Under Development |
-| 4 | Informasi Publik | `/informasi-publik` | 🚧 Under Development |
-| 5 | PPID | `/ppid` | 🚧 Under Development |
-| 6 | Zona Integritas | `/zona-integritas` | 🚧 Under Development |
-| 7 | FAQ | `/faq` | 🚧 Under Development |
+| 1 | Profil | `/profil` |  Under Development |
+| 2 | Pelayanan | `/pelayanan` |  Under Development |
+| 3 | Publikasi | `/publikasi` |  Under Development |
+| 4 | Informasi Publik | `/informasi-publik` |  Under Development |
+| 5 | PPID | `/ppid` |  Under Development |
+| 6 | Zona Integritas | `/zona-integritas` |  Under Development |
+| 7 | FAQ | `/faq` |  Under Development |
 
-### ✅ Halaman Layanan
-
-| No | Halaman | Path | Status |
-|----|---------|------|--------|
-| 1 | Layanan Kami | `/layanan` | 🚧 Under Development |
-| 2 | Kontak & Pengaduan | `/kontak` | 🚧 Under Development |
-| 3 | Galeri | `/galeri` | 🚧 Under Development |
-
-### ✅ Halaman yang Sudah Selesai
+###  Halaman Layanan
 
 | No | Halaman | Path | Status |
 |----|---------|------|--------|
-| 1 | Beranda | `/` | ✅ Live |
-| 2 | Berita | `/category/berita` | ✅ Live |
-| 3 | Profil LLDIKTI XIV | `/category/profil` | ✅ Live |
-| 4 | Visi & Misi | `/category/visi-misi` | ✅ Live |
+| 1 | Layanan Kami | `/layanan` |  Under Development |
+| 2 | Kontak & Pengaduan | `/kontak` |  Under Development |
+| 3 | Galeri | `/galeri` |  Under Development |
+
+###  Halaman yang Sudah Selesai
+
+| No | Halaman | Path | Status |
+|----|---------|------|--------|
+| 1 | Beranda | `/` |  Live |
+| 2 | Berita | `/category/berita` |  Live |
+| 3 | Profil LLDIKTI XIV | `/category/profil` |  Live |
+| 4 | Visi & Misi | `/category/visi-misi` |  Live |
 
 ---
 
-## 🎨 Komponen UnderDevelopment
+##  Komponen UnderDevelopment
 
 ### Lokasi File
 ```
@@ -43,12 +43,12 @@ src/components/ui/UnderDevelopment.js
 ```
 
 ### Features
-- ✨ Animated icon dengan rotating border
-- 📊 Progress bar dengan animasi
-- 🎯 2 CTA buttons (Beranda & Back)
-- 💳 3 info cards (Coming Soon, Fast Updates, Best Quality)
-- 🎭 Smooth animations (spin, wiggle, bounce)
-- 📱 Fully responsive
+-  Animated icon dengan rotating border
+-  Progress bar dengan animasi
+-  2 CTA buttons (Beranda & Back)
+-  3 info cards (Coming Soon, Fast Updates, Best Quality)
+-  Smooth animations (spin, wiggle, bounce)
+-  Fully responsive
 
 ### Props
 
@@ -87,7 +87,7 @@ export default function YourPage() {
 
 ---
 
-## 📝 Cara Menambah Halaman Baru
+##  Cara Menambah Halaman Baru
 
 ### 1. Buat File Page
 
@@ -141,9 +141,9 @@ npm run dev
 
 ---
 
-## 🎯 Roadmap Development
+##  Roadmap Development
 
-### Phase 1: Foundation ✅
+### Phase 1: Foundation 
 - [x] Setup clean architecture
 - [x] Create maintenance component
 - [x] Apply to all empty pages
@@ -165,7 +165,7 @@ npm run dev
 
 ---
 
-## 🔧 Customization
+##  Customization
 
 ### Mengubah Warna Theme
 
@@ -195,7 +195,7 @@ import { FiYourIcon } from "react-icons/fi";
 
 ---
 
-## 📞 Support
+##  Support
 
 Jika ada pertanyaan tentang maintenance pages atau development:
 - Email: lldikti14@kemdikbud.go.id
@@ -203,10 +203,10 @@ Jika ada pertanyaan tentang maintenance pages atau development:
 
 ---
 
-**Build Status:** ✅ All pages building successfully  
+**Build Status:**  All pages building successfully  
 **Total Pages:** 17 (4 live + 10 maintenance + 3 system pages)  
 **Last Updated:** 2026-08-13
 
 ---
 
-Made with ❤️ by LLDIKTI Wilayah XIV Development Team
+Made with  by LLDIKTI Wilayah XIV Development Team
