@@ -1,6 +1,6 @@
-# 📘 Dokumentasi Refactoring - LLDIKTI XIV Website
+#  Dokumentasi Refactoring - LLDIKTI XIV Website
 
-## 🎯 Tujuan
+##  Tujuan
 Refactoring website LLDIKTI XIV dengan:
 1. **Clean Architecture** — struktur folder yang lebih terorganisir
 2. **SaaS-style UI** — tampilan modern, clean, dan profesional
@@ -9,7 +9,7 @@ Refactoring website LLDIKTI XIV dengan:
 
 ---
 
-## 📂 Struktur Baru
+##  Struktur Baru
 
 ### Before → After
 
@@ -36,7 +36,7 @@ src/
 │       └── visi-misi/
 │
 ├── components/
-│   ├── features/           # ✨ Feature-specific components
+│   ├── features/           # Feature-specific components
 │   │   ├── hero/           # VideoHero
 │   │   ├── carousel/       # ImageCarousel (old)
 │   │   ├── navigation/     # DropdownMenu
@@ -46,7 +46,7 @@ src/
 │   │   ├── widgets/        # FloatingWidgets, Chatbot, WhatsApp
 │   │   └── modals/         # WelcomeModal
 │   │
-│   ├── layout/             # ✨ Layout components
+│   ├── layout/             #  Layout components
 │   │   ├── Navbar.js
 │   │   ├── Footer.js
 │   │   └── ScrollToTop.js
@@ -67,7 +67,7 @@ src/
 │   │
 │   └── AOSProvider.js      # AOS animation wrapper
 │
-├── data/                   # ✨ Static data (no JSX, no logic)
+├── data/                   #  Static data (no JSX, no logic)
 │   ├── carousel.js
 │   ├── applications.js
 │   ├── stats.js
@@ -78,7 +78,7 @@ src/
 │   ├── links.js
 │   └── introduction.js
 │
-├── lib/                    # ✨ Business logic
+├── lib/                    #  Business logic
 │   └── chatbot.js
 │
 ├── constant/               # Re-exports for backward compatibility
@@ -87,7 +87,7 @@ src/
 
 ---
 
-## 🐛 Bug Fixes
+##  Bug Fixes
 
 ### 1. **SurveyForm - `setOpen` undefined**
 **Before:**
@@ -136,29 +136,29 @@ children: [...]
 **Before:**
 ```js
 // AOSProvider.js
-import "aos/dist/aos.css";  // ❌ Turbopack error
+import "aos/dist/aos.css";  //  Turbopack error
 ```
 
 **After:**
 ```css
 /* globals.css */
-@import "aos/dist/aos.css";  /* ✅ Works */
+@import "aos/dist/aos.css";  /*  Works */
 ```
 
 ### 5. **IoSearchOutline Import**
 **Before:**
 ```js
-import { IoSearchOutline } from "react-icons/io";  // ❌ Wrong package
+import { IoSearchOutline } from "react-icons/io";  //  Wrong package
 ```
 
 **After:**
 ```js
-import { IoSearchOutline } from "react-icons/io5";  // ✅ Correct
+import { IoSearchOutline } from "react-icons/io5";  //  Correct
 ```
 
 ---
 
-## 🎨 UI/UX Improvements (SaaS Style)
+##  UI/UX Improvements (SaaS Style)
 
 ### Hero Section
 - **Before:** Image carousel dengan teks overlay sederhana
@@ -207,7 +207,7 @@ import { IoSearchOutline } from "react-icons/io5";  // ✅ Correct
 
 ---
 
-## 🎥 Video Hero Features
+##  Video Hero Features
 
 ### File Location
 ```
@@ -242,7 +242,7 @@ Edit di `src/components/features/hero/VideoHero.js`:
 
 ---
 
-## 🚀 Cara Pakai
+##  Cara Pakai
 
 ### Development
 ```bash
@@ -273,7 +273,7 @@ npm start
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 Tidak ada dependency baru yang ditambahkan. Semua menggunakan:
 - Next.js 16.1.6
@@ -285,7 +285,7 @@ Tidak ada dependency baru yang ditambahkan. Semua menggunakan:
 
 ---
 
-## ✅ Checklist
+##  Checklist
 
 - [x] Clean architecture structure
 - [x] Fix all bugs
@@ -301,7 +301,7 @@ Tidak ada dependency baru yang ditambahkan. Semua menggunakan:
 
 ---
 
-## 📝 Notes
+##  Notes
 
 ### Backward Compatibility
 Semua file lama di `constant/` dan folder dengan spasi tetap ada sebagai **re-exports**. Kode lama tidak akan break.
@@ -320,7 +320,7 @@ Pastikan file `video-cp.mp4` ada di `public/Assets/`. Jika file besar, pertimban
 
 ---
 
-## 🚧 Maintenance Pages
+##  Maintenance Pages
 
 ### Komponen UnderDevelopment
 
