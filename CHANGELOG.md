@@ -1,10 +1,10 @@
-# 📋 Changelog - LLDIKTI XIV Website
+#  Changelog - LLDIKTI XIV Website
 
 ## [2.0.0] - 2026-08-13
 
-### 🎉 Major Refactoring
+###  Major Refactoring
 
-#### ✨ Added
+####  Added
 - **Clean Architecture** — Struktur folder yang terorganisir (`features/`, `layout/`, `data/`, `lib/`)
 - **Video Hero Section** — Background video dengan overlay text, animations, dan CTA buttons
 - **SaaS-style UI Components** — Modern button system, section headings, dan consistent styling
@@ -12,7 +12,7 @@
 - **Navbar Search Modal** — Search dengan keyboard shortcuts dan filtered suggestions
 - **Improved Dropdown Menu** — Fixed flicker issue dengan invisible bridge
 
-#### 🐛 Fixed
+####  Fixed
 - `SurveyForm.js` — undefined `setOpen` variable
 - `DataLinkTerkait.js` — JSX `<Image>` tanpa import
 - `Nav-Items.js` — JSX di data file
@@ -20,14 +20,14 @@
 - `IoSearchOutline` — Wrong import from `react-icons/io` → fixed to `react-icons/io5`
 - Navbar dropdown — Hilang-hilangan saat hover (added invisible bridge)
 
-#### 🎨 Changed
+####  Changed
 - Hero carousel → Video background dengan overlay
 - Button component → Sistem variant & size
 - Footer layout → More compact dan organized
 - Navbar → Gradient accent line, improved mobile menu
 - All section titles → Menggunakan `SectionHeading` component
 
-#### 📁 File Structure
+####  File Structure
 ```
 src/
 ├── components/
@@ -40,7 +40,7 @@ src/
 └── app/               (Next.js pages)
 ```
 
-#### 📊 Statistics
+####  Statistics
 - **Total Pages:** 17 (4 live + 10 maintenance + 3 system)
 - **Components Created:** 25+
 - **Files Refactored:** 50+
@@ -64,7 +64,7 @@ src/
 
 ---
 
-## 🔮 Upcoming Features
+##  Upcoming Features
 
 ### Version 2.1.0 (Next Sprint)
 - [ ] Layanan page dengan cards
@@ -91,7 +91,7 @@ src/
 
 ---
 
-## 📝 Migration Guide
+##  Migration Guide
 
 ### From v1.0 to v2.0
 
@@ -120,7 +120,7 @@ import StatCard from "@/components/features/stats/StatCard";
 
 ---
 
-## 🛠️ Technical Details
+##  Technical Details
 
 ### Build Configuration
 - **Framework:** Next.js 16.1.6 (Turbopack)
@@ -144,7 +144,7 @@ import StatCard from "@/components/features/stats/StatCard";
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 - Development Team LLDIKTI XIV
 - UI/UX Design: Kiro AI Assistant
@@ -152,7 +152,7 @@ import StatCard from "@/components/features/stats/StatCard";
 
 ---
 
-## 📄 License
+##  License
 
 Copyright © 2026 LLDIKTI Wilayah XIV Papua. All rights reserved.
 
