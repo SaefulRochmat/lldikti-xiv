@@ -11,7 +11,7 @@ __turbopack_context__.s([
 const menuItems = [
     {
         name: "Profil",
-        href: "/profil",
+        href: "",
         hasDropdown: true,
         children: [
             {
@@ -26,7 +26,7 @@ const menuItems = [
     },
     {
         name: "Layanan",
-        href: "/pelayanan",
+        href: "",
         hasDropdown: true,
         children: [
             {
@@ -45,7 +45,7 @@ const menuItems = [
     },
     {
         name: "Publikasi",
-        href: "/publikasi",
+        href: "",
         hasDropdown: true,
         children: [
             {
@@ -68,7 +68,7 @@ const menuItems = [
     },
     {
         name: "Informasi Publik",
-        href: "/informasi-publik",
+        href: "",
         hasDropdown: true,
         children: [
             {
@@ -199,40 +199,57 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d
 ;
 ;
 function DropdownMenu({ items, isOpen }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `absolute top-full mt-3 bg-white rounded-xl shadow-xl border border-[#e8eef5] min-w-56 transition-all duration-200 ease-out z-50
-        ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible pointer-events-none"}
-      `,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "py-1.5",
-            children: items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    href: item.href,
-                    className: "flex items-center gap-2 px-4 py-2.5 text-sm text-[#374151] hover:text-[#1A2CA3] hover:bg-[#1A2CA3]/5 transition-colors",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "w-1 h-1 rounded-full bg-[#f5c842] flex-shrink-0"
-                        }, void 0, false, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute left-0 right-0 h-2 ${isOpen ? '' : 'pointer-events-none'}`,
+                style: {
+                    top: '100%'
+                }
+            }, void 0, false, {
+                fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute left-0 bg-white rounded-xl shadow-xl border border-[#e8eef5] min-w-56 overflow-hidden transition-all duration-200 ease-out z-50
+          ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible pointer-events-none"}
+        `,
+                style: {
+                    top: 'calc(100% + 8px)'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "py-1.5",
+                    children: items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: item.href,
+                            className: "flex items-center gap-2 px-4 py-2.5 text-sm text-[#374151] hover:text-[#1A2CA3] hover:bg-[#1A2CA3]/5 transition-colors",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "w-1 h-1 rounded-full bg-[#f5c842] flex-shrink-0"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
+                                    lineNumber: 29,
+                                    columnNumber: 15
+                                }, this),
+                                item.name
+                            ]
+                        }, item.name, true, {
                             fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
-                            lineNumber: 20,
+                            lineNumber: 24,
                             columnNumber: 13
-                        }, this),
-                        item.name
-                    ]
-                }, item.name, true, {
+                        }, this))
+                }, void 0, false, {
                     fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
-                    lineNumber: 15,
-                    columnNumber: 11
-                }, this))
-        }, void 0, false, {
-            fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
-            lineNumber: 13,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this);
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/features/navigation/DropdownMenu.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
 }
 _c = DropdownMenu;
 var _c;
@@ -615,7 +632,7 @@ function Navbar() {
                 "Navbar.useEffect.update": ()=>{
                     const now = new Date();
                     setTanggal(`${hariList[now.getDay()]}, ${now.getDate()} ${bulanList[now.getMonth()]} ${now.getFullYear()}`);
-                    setWaktu(`${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")} WIT`);
+                    setWaktu(`${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")} WIB`);
                 }
             }["Navbar.useEffect.update"];
             update();
@@ -940,12 +957,18 @@ function Navbar() {
                                             lineNumber: 258,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            variant: "primary",
-                                            size: "sm",
-                                            className: "ml-2 rounded-lg",
-                                            onClick: ()=>{},
-                                            children: "Kontak & Pengaduan"
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            href: "/kontak",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                variant: "primary",
+                                                size: "sm",
+                                                className: "ml-2 rounded-lg",
+                                                children: "Kontak & Pengaduan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/layout/Navbar.js",
+                                                lineNumber: 267,
+                                                columnNumber: 17
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/Navbar.js",
                                             lineNumber: 266,
@@ -968,12 +991,12 @@ function Navbar() {
                                                 className: "text-xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                                lineNumber: 283,
+                                                lineNumber: 284,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/Navbar.js",
-                                            lineNumber: 278,
+                                            lineNumber: 279,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -984,18 +1007,18 @@ function Navbar() {
                                                 className: "text-2xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                                lineNumber: 290,
+                                                lineNumber: 291,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/Navbar.js",
-                                            lineNumber: 285,
+                                            lineNumber: 286,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                    lineNumber: 277,
+                                    lineNumber: 278,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1013,7 +1036,7 @@ function Navbar() {
                         className: "h-0.5 bg-gradient-to-r from-[#153C91] via-yellow-400 to-[#153C91]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/Navbar.js",
-                        lineNumber: 297,
+                        lineNumber: 298,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1028,7 +1051,7 @@ function Navbar() {
                 onClick: ()=>setMobileOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/components/layout/Navbar.js",
-                lineNumber: 301,
+                lineNumber: 302,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1046,7 +1069,7 @@ function Navbar() {
                                 className: "h-auto object-contain"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 313,
+                                lineNumber: 314,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1057,18 +1080,18 @@ function Navbar() {
                                     className: "text-xl"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                    lineNumber: 325,
+                                    lineNumber: 326,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 320,
+                                lineNumber: 321,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/layout/Navbar.js",
-                        lineNumber: 312,
+                        lineNumber: 313,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1078,14 +1101,14 @@ function Navbar() {
                                 className: "flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 330,
+                                lineNumber: 331,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: tanggal
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 331,
+                                lineNumber: 332,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1093,13 +1116,13 @@ function Navbar() {
                                 children: waktu
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 332,
+                                lineNumber: 333,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/layout/Navbar.js",
-                        lineNumber: 329,
+                        lineNumber: 330,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1115,7 +1138,7 @@ function Navbar() {
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/Navbar.js",
-                                            lineNumber: 340,
+                                            lineNumber: 341,
                                             columnNumber: 19
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                             children: [
@@ -1129,13 +1152,13 @@ function Navbar() {
                                                             className: `text-xs transition-transform duration-300 ${dropdownOpen === item.name ? "rotate-180" : ""}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/layout/Navbar.js",
-                                                            lineNumber: 357,
+                                                            lineNumber: 358,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                                    lineNumber: 349,
+                                                    lineNumber: 350,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1149,68 +1172,75 @@ function Navbar() {
                                                                     className: "w-1 h-1 rounded-full bg-yellow-400 flex-shrink-0"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                                                    lineNumber: 373,
+                                                                    lineNumber: 374,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 child.name
                                                             ]
                                                         }, child.name, true, {
                                                             fileName: "[project]/src/components/layout/Navbar.js",
-                                                            lineNumber: 367,
+                                                            lineNumber: 368,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                                    lineNumber: 361,
+                                                    lineNumber: 362,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true)
                                     }, item.name, false, {
                                         fileName: "[project]/src/components/layout/Navbar.js",
-                                        lineNumber: 338,
+                                        lineNumber: 339,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 336,
+                                lineNumber: 337,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mt-6 pt-4 border-t border-gray-100",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    variant: "primary",
-                                    size: "md",
-                                    className: "w-full rounded-lg",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/kontak",
                                     onClick: ()=>setMobileOpen(false),
-                                    children: "Kontak & Pengaduan"
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        variant: "primary",
+                                        size: "md",
+                                        className: "w-full rounded-lg",
+                                        children: "Kontak & Pengaduan"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/layout/Navbar.js",
+                                        lineNumber: 387,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/Navbar.js",
-                                    lineNumber: 385,
+                                    lineNumber: 386,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Navbar.js",
-                                lineNumber: 384,
+                                lineNumber: 385,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/layout/Navbar.js",
-                        lineNumber: 335,
+                        lineNumber: 336,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/layout/Navbar.js",
-                lineNumber: 308,
+                lineNumber: 309,
                 columnNumber: 7
             }, this),
             searchOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SearchModal, {
                 onClose: ()=>setSearchOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/components/layout/Navbar.js",
-                lineNumber: 398,
+                lineNumber: 400,
                 columnNumber: 22
             }, this)
         ]

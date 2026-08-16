@@ -1,7 +1,7 @@
 export const menuItems = [
   {
     name: "Profil",
-    href: "/profil",
+    href: "",
     hasDropdown: true,
     children: [
       { name: "Profil LLDIKTI XIV", href: "/category/profil" },
@@ -10,7 +10,7 @@ export const menuItems = [
   },
   {
     name: "Layanan",
-    href: "/pelayanan",
+    href: "",
     hasDropdown: true,
     children: [
       { name: "Layanan Publik LLDIKTI XIV", href: "/layanan-publik-lldikti-xiv" },
@@ -20,7 +20,7 @@ export const menuItems = [
   },
   {
     name: "Publikasi",
-    href: "/publikasi",
+    href: "",
     hasDropdown: true,
     children: [
       { name: "Berita LLDIKTI Wilayah XIV", href: "/category/berita" },
@@ -31,7 +31,7 @@ export const menuItems = [
   },
   {
     name: "Informasi Publik",
-    href: "/informasi-publik",
+    href: "",
     hasDropdown: true,
     children: [
       { name: "Akuntabilitas", href: "/akuntabilitas" },

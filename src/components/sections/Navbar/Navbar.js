@@ -261,7 +261,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3 group">
               <FaEnvelope className="text-yellow-400" />
               <p className="group-hover:text-yellow-400 transition-colors font-medium">
-                lldikti14@kemdikbud.go.id
+                lldikti14@kemdiktisaintek.go.id
               </p>
             </div>
             <span className="text-white/30">|</span>

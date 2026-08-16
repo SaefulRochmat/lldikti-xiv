@@ -9,7 +9,7 @@ export default function DirektoriHero() {
           Dokumen & Publikasi LLDIKTI XIV
         </h1>
         <p className="text-[#b8d4e8] text-base max-w-2xl leading-relaxed">
-          Akses dokumentasi resmi, kebijakan, laporan kinerja, dan rencana strategis LLDIKTI Wilayah XIV Papua dan Papua Barat Daya.
+          Akses dokumentasi resmi, kebijakan, laporan kinerja, dan rencana strategis LLDIKTI Wilayah XIV.
         </p>
         <div className="flex items-center gap-2 mt-6 text-sm text-[#b8d4e8]">
           <a href="/" className="hover:text-white transition-colors">

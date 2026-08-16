@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   linkTerkait,
   layanan,
-  frofil,
+  profil,
   publikasi,
   informasiPublik,
 } from "./FooterData";
@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="flex items-start gap-3 group">
               <FaMapMarkerAlt className="mt-1 text-lg text-yellow-400" />
               <p className="group-hover:text-yellow-400 transition-colors">
-                R38M+C3M, Fandoi, Biak Kota, Biak Numfor Regency, Papua 98111
+                Jalan Bosnik Raya, Biak Timur, Bindusi, Biak Papua 98152
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 group">
               <FaEnvelope className="text-lg text-yellow-400" />
               <p className="group-hover:text-yellow-400 transition-colors">
-                lldikti14@kemdikbud.go.id
+                lldikti14@kemdiktisaintek.go.id
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Footer() {
           </h3>
           <span className="block w-12 h-0.5 bg-yellow-400 mb-6"></span>
           <div className="space-y-3 text-sm">
-            {frofil.map((item, i) => (
+            {profil.map((item, i) => (
               <Link
                 key={i}
                 href={item.href}

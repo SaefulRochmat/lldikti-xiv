@@ -16,7 +16,7 @@ export default function Logo() {
         <span className="block">LEMBAGA LAYANAN</span>
         <span className="block">PENDIDIKAN TINGGI
         </span>
-        <span className="block">XIV PAPUA</span>
+        <span className="block">XIV</span>
       </span>
     </Link>
   );

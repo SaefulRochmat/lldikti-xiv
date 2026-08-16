@@ -1326,8 +1326,8 @@ __turbopack_context__.s([
 const tautanData = [
     {
         id: 1,
-        name: "Kemdikbudristek",
-        url: "https://www.kemdikbud.go.id",
+        name: "Kemdiktisaintek",
+        url: "https://kemdiktisaintek.go.id/",
         logo: "/Logos/kemendikbudristek.jpg"
     },
     {
@@ -1339,7 +1339,7 @@ const tautanData = [
     {
         id: 3,
         name: "PDDikti",
-        url: "https://pddikti.kemdikbud.go.id",
+        url: "https://pddikti.kemdiktisaintek.go.id/",
         logo: "/Logos/pddikti.svg"
     },
     {
@@ -1369,7 +1369,7 @@ const tautanData = [
     {
         id: 8,
         name: "PIN Ijazah",
-        url: "https://pin.kemdikbud.go.id",
+        url: "https://pisn.kemdiktisaintek.go.id/",
         logo: "/Logos/logo-tutwuri.png"
     },
     {
