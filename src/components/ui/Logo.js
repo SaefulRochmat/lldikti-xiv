@@ -7,16 +7,15 @@ export default function Logo() {
       <Image
         src="/Logos/Logo_LLDIKTI14.png"
         alt="Logo LLDIKTI XIV"
-        width={80}
-        height={80}
+        width={70}
+        height={70}
         className="w-[50px] md:w-[70px] h-auto object-contain"
         priority
       />
       <span className="hidden sm:inline-block text-sm md:text-sm font-semibold text-[#153C91] leading-tight">
         <span className="block">LEMBAGA LAYANAN</span>
-        <span className="block">PENDIDIKAN TINGGI
-        </span>
-        <span className="block">XIV</span>
+        <span className="block">PENDIDIKAN TINGGI</span>
+        <span className="block">WILAYAH XIV</span>
       </span>
     </Link>
   );

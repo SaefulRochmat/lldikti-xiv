@@ -20,7 +20,7 @@ export const layanan = [
   { name: "SIKAS", href: "/sikas" },
 ];
 
-export const frofil = [
+export const profil = [
   { name: "Sejarah", href: "/sejarah" },
   { name: "Visi & Misi", href: "/visi-misi" },
   { name: "Struktur Organisasi", href: "/struktur-organisasi" },

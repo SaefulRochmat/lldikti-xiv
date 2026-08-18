@@ -6,10 +6,7 @@ import Image from "next/image";
 import { menuItems, searchSuggestions } from "@/data/navigation";
 import DropdownMenu from "@/components/features/navigation/DropdownMenu";
 import Button from "@/components/ui/Button";
-import {
-  IoIosMenu,
-  IoMdClose,
-} from "react-icons/io";
+import { IoIosMenu, IoMdClose } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { SlArrowDown } from "react-icons/sl";
@@ -30,7 +27,7 @@ function SearchModal({ onClose }) {
 
   const filtered = query.trim()
     ? searchSuggestions.filter((s) =>
-        s.label.toLowerCase().includes(query.toLowerCase())
+        s.label.toLowerCase().includes(query.toLowerCase()),
       )
     : searchSuggestions.slice(0, 6);
 
@@ -50,18 +47,18 @@ function SearchModal({ onClose }) {
         className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60]"
         onClick={onClose}
       />
-      <div className="fixed top-[72px] left-1/2 -translate-x-1/2 z-[70] w-full max-w-xl px-4 animate-slideDown">
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-[#e8eef5]">
+      <div className="fixed top-[77px] left-1/2 -translate-x-1/2 z-[70] w-full max-w-xl px-4 animate-slideDown">
+        <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
           {/* Input */}
-          <div className="flex items-center gap-3 px-5 py-4 border-b border-[#f0f4f8]">
-            <IoSearchOutline className="text-[#1A2CA3] text-xl flex-shrink-0" />
+          <div className="flex items-center gap-3 px-4 py-3.5 border-b border-gray-100">
+            <IoSearchOutline className="text-[#1A2CA3] text-lg flex-shrink-0" />
             <input
               ref={inputRef}
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Cari halaman, layanan, atau informasi..."
-              className="flex-1 text-sm text-[#1a2e4a] placeholder-gray-400 outline-none bg-transparent"
+              className="flex-1 text-[13px] font-medium text-[#1a2e4a] placeholder-gray-400 outline-none bg-transparent"
             />
             {query && (
               <button
@@ -71,7 +68,7 @@ function SearchModal({ onClose }) {
                 <IoMdClose className="text-lg" />
               </button>
             )}
-            <kbd className="hidden sm:inline-flex items-center px-2 py-1 text-[10px] font-medium text-gray-400 bg-gray-100 rounded border border-gray-200">
+            <kbd className="hidden sm:inline-flex items-center px-2 py-1 text-[10px] font-semibold text-gray-400 bg-gray-50 rounded border border-gray-200">
               ESC
             </kbd>
           </div>
@@ -80,7 +77,7 @@ function SearchModal({ onClose }) {
           <div className="py-2 max-h-72 overflow-y-auto">
             {filtered.length > 0 ? (
               <>
-                <p className="px-5 pt-1 pb-2 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
+                <p className="px-4 pt-1 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
                   {query ? `Hasil untuk "${query}"` : "Halaman populer"}
                 </p>
                 {filtered.map((item, i) => (
@@ -88,12 +85,12 @@ function SearchModal({ onClose }) {
                     key={i}
                     href={item.href}
                     onClick={onClose}
-                    className="flex items-center gap-3 px-5 py-3 hover:bg-[#1A2CA3]/5 transition-colors group"
+                    className="flex items-center gap-3 px-4 py-2.5 hover:bg-[#1A2CA3]/5 transition-colors group"
                   >
                     <div className="w-7 h-7 rounded-lg bg-[#1A2CA3]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#1A2CA3]/20 transition-colors">
                       <IoSearchOutline className="text-[#1A2CA3] text-sm" />
                     </div>
-                    <span className="text-sm text-[#1a2e4a] group-hover:text-[#1A2CA3] transition-colors">
+                    <span className="text-[13px] font-medium text-[#1a2e4a] group-hover:text-[#1A2CA3] transition-colors">
                       {item.label}
                     </span>
                     <span className="ml-auto text-xs text-gray-300 group-hover:text-[#1A2CA3]/50 transition-colors">
@@ -106,30 +103,40 @@ function SearchModal({ onClose }) {
               <div className="py-10 text-center text-gray-400 text-sm">
                 <IoSearchOutline className="text-3xl mx-auto mb-2 text-gray-300" />
                 Tidak ada hasil untuk{" "}
-                <span className="font-medium text-[#1A2CA3]">"{query}"</span>
+                <span className="font-semibold text-[#1A2CA3]">"{query}"</span>
               </div>
             )}
           </div>
 
-          <div className="px-5 py-3 bg-[#f8fafc] border-t border-[#f0f4f8] flex items-center justify-between">
-            <p className="text-[11px] text-gray-400">
+          <div className="px-4 py-2.5 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+            <p className="text-[10px] font-medium text-gray-400">
               Tekan{" "}
-              <kbd className="px-1.5 py-0.5 bg-white border border-gray-200 rounded text-[10px] font-medium">
+              <kbd className="px-1.5 py-0.5 bg-white border border-gray-200 rounded text-[10px] font-semibold">
                 ↵
               </kbd>{" "}
               untuk membuka
             </p>
-            <p className="text-[11px] text-gray-400">LLDikti Wilayah XIV Papua</p>
+            <p className="text-[10px] font-medium text-gray-400">
+              LLDikti Wilayah XIV Papua
+            </p>
           </div>
         </div>
       </div>
 
       <style jsx global>{`
         @keyframes slideDown {
-          from { opacity: 0; transform: translateX(-50%) translateY(-12px); }
-          to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-12px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+          }
         }
-        .animate-slideDown { animation: slideDown 0.2s ease-out forwards; }
+        .animate-slideDown {
+          animation: slideDown 0.2s ease-out forwards;
+        }
       `}</style>
     </>
   );
@@ -145,13 +152,38 @@ export default function Navbar() {
 
   // Realtime clock
   useEffect(() => {
-    const hariList = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-    const bulanList = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+    const hariList = [
+      "Minggu",
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jumat",
+      "Sabtu",
+    ];
+    const bulanList = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mei",
+      "Jun",
+      "Jul",
+      "Agu",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Des",
+    ];
 
     const update = () => {
       const now = new Date();
-      setTanggal(`${hariList[now.getDay()]}, ${now.getDate()} ${bulanList[now.getMonth()]} ${now.getFullYear()}`);
-      setWaktu(`${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")} WIB`);
+      setTanggal(
+        `${hariList[now.getDay()]}, ${now.getDate()} ${bulanList[now.getMonth()]} ${now.getFullYear()}`,
+      );
+      setWaktu(
+        `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")} WIB`,
+      );
     };
 
     update();
@@ -161,50 +193,74 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
-    return () => { document.body.style.overflow = "auto"; };
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [mobileOpen]);
 
   return (
     <>
       <nav className="bg-white text-black shadow-sm z-50 top-0 fixed w-full">
         {/* ── Top bar ── */}
-        <div className="hidden md:flex justify-between items-center bg-[#153C91] text-white/90 text-[13px] px-6 lg:px-16 xl:px-24 h-10">
-          <div className="flex items-center gap-5">
-            <div className="flex items-center gap-2">
-              <BsFillTelephoneFill className="text-yellow-400 text-xs" />
-              <span>0981-2911065</span>
+        <div className="hidden md:flex justify-between items-center bg-[#153C91] text-white/90 text-[12px] px-6 lg:px-16 xl:px-24 h-9 gap-4">
+          <div className="flex items-center gap-3 xl:gap-4">
+            <div className="flex items-center gap-1.5">
+              <BsFillTelephoneFill className="text-yellow-400 text-[10px]" />
+              <span className="font-medium">0981-2911065</span>
             </div>
             <span className="text-white/20">|</span>
             <Link
               href="https://wa.me/6281223487355"
-              className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
+              className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors"
               aria-label="WhatsApp"
             >
-              <FaWhatsapp className="text-green-400" />
-              <span>WhatsApp</span>
+              <FaWhatsapp className="text-green-400 text-xs" />
+              <span className="font-medium">WhatsApp</span>
             </Link>
             <span className="text-white/20">|</span>
-            <div className="flex items-center gap-2 text-white/70">
-              <MdAccessTime className="text-yellow-400" />
-              <span>{tanggal}</span>
-              <span className="text-yellow-400 font-mono font-semibold">{waktu}</span>
+            <div className="flex items-center gap-2 text-white/80">
+              <MdAccessTime className="text-yellow-400 text-sm" />
+              <span className="font-medium">{tanggal}</span>
+              <span className="text-yellow-400 font-mono font-semibold">
+                {waktu}
+              </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-400" />
-              <span>lldikti14@kemdikbud.go.id</span>
+          <div className="flex items-center gap-3 xl:gap-4">
+            <div className="flex items-center gap-1.5">
+              <FaEnvelope className="text-yellow-400 text-[10px]" />
+              <span className="font-medium">lldikti14@kemdiktisaintek.go.id</span>
             </div>
             <span className="text-white/20">|</span>
             {[
-              { href: "https://www.instagram.com", icon: <FaInstagram />, label: "Instagram" },
-              { href: "https://www.tiktok.com", icon: <FaTiktok />, label: "TikTok" },
-              { href: "https://www.youtube.com", icon: <FaYoutube />, label: "YouTube" },
-              { href: "https://www.facebook.com", icon: <FaFacebookF />, label: "Facebook" },
+              {
+                href: "https://www.instagram.com",
+                icon: <FaInstagram />,
+                label: "Instagram",
+              },
+              {
+                href: "https://www.tiktok.com",
+                icon: <FaTiktok />,
+                label: "TikTok",
+              },
+              {
+                href: "https://www.youtube.com",
+                icon: <FaYoutube />,
+                label: "YouTube",
+              },
+              {
+                href: "https://www.facebook.com",
+                icon: <FaFacebookF />,
+                label: "Facebook",
+              },
             ].map(({ href, icon, label }, i, arr) => (
-              <span key={label} className="flex items-center gap-4">
-                <Link href={href} className="hover:text-yellow-400 transition-all hover:scale-110" aria-label={label}>
+              <span key={label} className="flex items-center gap-3">
+                <Link
+                  href={href}
+                  className="hover:text-yellow-400 transition-all hover:scale-110 text-sm"
+                  aria-label={label}
+                >
                   {icon}
                 </Link>
                 {i < arr.length - 1 && <span className="text-white/20">|</span>}
@@ -215,7 +271,7 @@ export default function Navbar() {
 
         {/* ── Main nav ── */}
         <div className="px-6 lg:px-16 xl:px-24">
-          <div className="flex justify-between items-center h-16 md:h-20">
+          <div className="flex justify-between items-center h-[68px]">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
               <Image
@@ -229,21 +285,25 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop menu */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center justify-end gap-1 xl:gap-2 flex-1 ml-6">
               {menuItems.map((item) => (
                 <div
                   key={item.name}
                   className="relative"
-                  onMouseEnter={() => item.hasDropdown && setDropdownOpen(item.name)}
+                  onMouseEnter={() =>
+                    item.hasDropdown && setDropdownOpen(item.name)
+                  }
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#1A2CA3] rounded-lg hover:bg-[#1A2CA3]/5 transition-all"
+                    className="flex items-center gap-1.5 px-3 xl:px-4 py-2.5 text-[13px] font-semibold text-gray-700 hover:text-[#1A2CA3] rounded-lg hover:bg-[#1A2CA3]/5 transition-all whitespace-nowrap"
                   >
                     {item.name}
                     {item.hasDropdown && (
-                      <SlArrowDown className={`text-[10px] transition-transform duration-200 ${dropdownOpen === item.name ? "rotate-180" : ""}`} />
+                      <SlArrowDown
+                        className={`text-[9px] transition-transform duration-200 ${dropdownOpen === item.name ? "rotate-180" : ""}`}
+                      />
                     )}
                   </Link>
                   {item.hasDropdown && item.children && (
@@ -257,17 +317,17 @@ export default function Navbar() {
 
               <button
                 onClick={() => setSearchOpen(true)}
-                className="ml-2 w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-[#1A2CA3]/10 hover:text-[#1A2CA3] transition-all"
+                className="ml-1 w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-[#1A2CA3]/10 hover:text-[#1A2CA3] transition-all"
                 aria-label="Cari"
               >
-                <IoSearchOutline className="text-lg" />
+                <IoSearchOutline className="text-[19px]" />
               </button>
 
               <Link href="/kontak">
                 <Button
                   variant="primary"
                   size="sm"
-                  className="ml-2 rounded-lg"
+                  className="ml-2 rounded-lg whitespace-nowrap text-[13px] font-semibold"
                 >
                   Kontak & Pengaduan
                 </Button>
@@ -327,7 +387,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="flex items-center gap-2 px-5 py-2.5 bg-[#1A2CA3]/5 border-b border-gray-100 text-xs text-[#1A2CA3]">
+        <div className="flex items-center gap-2 px-4 py-2.5 bg-[#1A2CA3]/5 border-b border-gray-100 text-[11px] text-[#1A2CA3] font-medium">
           <MdAccessTime className="flex-shrink-0" />
           <span>{tanggal}</span>
           <span className="font-mono font-semibold ml-auto">{waktu}</span>
@@ -341,27 +401,31 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
+                    className="block px-4 py-3 rounded-lg text-[13px] font-semibold text-gray-700 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
                   >
                     {item.name}
                   </Link>
                 ) : (
                   <>
                     <button
-                      className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium flex justify-between items-center transition-all
+                      className={`w-full text-left px-4 py-3 rounded-lg text-[13px] font-semibold flex justify-between items-center transition-all
                         ${dropdownOpen === item.name ? "bg-[#1A2CA3]/5 text-[#1A2CA3]" : "text-gray-700 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3]"}`}
                       onClick={() =>
-                        setDropdownOpen(dropdownOpen === item.name ? null : item.name)
+                        setDropdownOpen(
+                          dropdownOpen === item.name ? null : item.name,
+                        )
                       }
                     >
                       {item.name}
                       <SlArrowDown
-                        className={`text-xs transition-transform duration-300 ${dropdownOpen === item.name ? "rotate-180" : ""}`}
+                        className={`text-[10px] transition-transform duration-300 ${dropdownOpen === item.name ? "rotate-180" : ""}`}
                       />
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        dropdownOpen === item.name ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+                        dropdownOpen === item.name
+                          ? "max-h-80 opacity-100"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
                       {item.children?.map((child) => (
@@ -369,7 +433,7 @@ export default function Navbar() {
                           key={child.name}
                           href={child.href}
                           onClick={() => setMobileOpen(false)}
-                          className="flex items-center gap-2 pl-8 pr-4 py-2.5 text-sm text-gray-500 hover:text-[#1A2CA3] hover:bg-[#1A2CA3]/5 rounded-lg transition-all"
+                          className="flex items-center gap-2 pl-8 pr-4 py-2.5 text-[13px] font-medium text-gray-600 hover:text-[#1A2CA3] hover:bg-[#1A2CA3]/5 rounded-lg transition-all"
                         >
                           <span className="w-1 h-1 rounded-full bg-yellow-400 flex-shrink-0" />
                           {child.name}
@@ -384,11 +448,7 @@ export default function Navbar() {
 
           <div className="mt-6 pt-4 border-t border-gray-100">
             <Link href="/kontak" onClick={() => setMobileOpen(false)}>
-              <Button
-                variant="primary"
-                size="md"
-                className="w-full rounded-lg"
-              >
+              <Button variant="primary" size="md" className="w-full rounded-lg text-[13px] font-semibold">
                 Kontak & Pengaduan
               </Button>
             </Link>

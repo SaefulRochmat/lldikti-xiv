@@ -228,79 +228,81 @@ export default function Navbar() {
     <>
       <nav className="bg-[#ffffff] text-black shadow-md z-50  top-0 fixed w-full">
         {/* ===== TOP BAR ===== */}
-        <div
-          className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-8 md:px-64 py-4 md:h-10 bg-[#153C91]"
-          data-aos="fade-down"
-          data-aos-duration="500"
-        >
-          <div className="flex items-center space-x-4 lg:space-x-6">
-            <div className="flex items-center space-x-2">
-              <BsFillTelephoneFill className="text-yellow-400" />
-              <p className="font-medium">0981-2911065</p>
+        <div className="w-full bg-[#153C91]">
+          <div
+            className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[13px] mx-auto px-6 md:px-10 lg:px-16 py-4 md:h-10 max-w-7xl"
+            data-aos="fade-down"
+            data-aos-duration="500"
+          >
+            <div className="flex items-center space-x-4 lg:space-x-6">
+              <div className="flex items-center space-x-2">
+                <BsFillTelephoneFill className="text-yellow-400" />
+                <p className="font-medium">0981-2911065</p>
+              </div>
+              <span className="text-white/30">|</span>
+              <Link
+                href="https://wa.me/6281223487355"
+                className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
+                aria-label="Contact us on Whatsapp"
+              >
+                <FaWhatsapp className="text-green-400 text-lg" />
+                <p className="font-medium">Whatsapp</p>
+              </Link>
+              <span className="text-white/30">|</span>
+              <div className="flex items-center space-x-2 text-[13px] text-white/80">
+                <MdAccessTime className="text-yellow-400 text-base" />
+                <span>{tanggal}</span>
+                <span className="text-yellow-400 font-mono font-semibold tracking-wide">
+                  {waktu}
+                </span>
+              </div>
             </div>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://wa.me/6281223487355"
-              className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
-              aria-label="Contact us on Whatsapp"
-            >
-              <FaWhatsapp className="text-green-400 text-lg" />
-              <p className="font-medium">Whatsapp</p>
-            </Link>
-            <span className="text-white/30">|</span>
-            <div className="flex items-center space-x-2 text-[15px] text-white/80">
-              <MdAccessTime className="text-yellow-400 text-base" />
-              <span>{tanggal}</span>
-              <span className="text-yellow-400 font-mono font-semibold tracking-wide">
-                {waktu}
-              </span>
-            </div>
-          </div>
 
-          <div className="flex justify-between items-center space-x-5 text-[15px]">
-            <div className="flex items-center gap-3 group">
-              <FaEnvelope className="text-yellow-400" />
-              <p className="group-hover:text-yellow-400 transition-colors font-medium">
-                lldikti14@kemdiktisaintek.go.id
-              </p>
+            <div className="flex justify-between items-center space-x-5 text-[13px]">
+              <div className="flex items-center gap-3 group">
+                <FaEnvelope className="text-yellow-400" />
+                <p className="group-hover:text-yellow-400 transition-colors font-medium">
+                  lldikti14@kemdiktisaintek.go.id
+                </p>
+              </div>
+              <span className="text-white/30">|</span>
+              <Link
+                href="https://www.instagram.com"
+                className="hover:text-yellow-400 transition-all hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </Link>
+              <span className="text-white/30">|</span>
+              <Link
+                href="https://www.tiktok.com"
+                className="hover:text-yellow-400 transition-all hover:scale-110"
+                aria-label="TikTok"
+              >
+                <FaTiktok />
+              </Link>
+              <span className="text-white/30">|</span>
+              <Link
+                href="https://www.youtube.com"
+                className="hover:text-yellow-400 transition-all hover:scale-110"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </Link>
+              <span className="text-white/30">|</span>
+              <Link
+                href="https://www.facebook.com"
+                className="hover:text-yellow-400 transition-all hover:scale-110"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </Link>
             </div>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.instagram.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.tiktok.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="TikTok"
-            >
-              <FaTiktok />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.youtube.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </Link>
-            <span className="text-white/30">|</span>
-            <Link
-              href="https://www.facebook.com"
-              className="hover:text-yellow-400 transition-all hover:scale-110"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </Link>
           </div>
         </div>
 
         {/* ===== MAIN NAV ===== */}
-        <div className="mx-auto px-8 md:px-64">
+        <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-7xl">
           <div
             className="flex justify-between items-center h-20"
             data-aos="fade-down"
@@ -313,15 +315,33 @@ export default function Navbar() {
               {MenuItems.map((link) => (
                 <div
                   key={link.name}
-                  className="relative text-sm font-semibold"
+                  className="relative text-[11px] font-semibold"
                   onMouseEnter={() => setDropDownOpen(link.name)}
                   onMouseLeave={() => setDropDownOpen(null)}
                 >
                   {link.href ? (
-                    <NavLink href={link.href}>{link.name}</NavLink>
+                    <NavLink href={link.href}>
+                      <div className="flex items-center gap-1.5">
+                        {link.name}
+                        {link.children && (
+                          <SlArrowDown
+                            className={`text-[10px] transition-transform duration-200 ${
+                              dropdownOpen === link.name ? "rotate-180" : ""
+                            }`}
+                          />
+                        )}
+                      </div>
+                    </NavLink>
                   ) : (
-                    <button className="hover:text-[#153C91] transition-colors text-sm">
+                    <button className="flex items-center gap-1.5 hover:text-[#153C91] transition-colors text-[11px]">
                       {link.name}
+                      {link.children && (
+                        <SlArrowDown
+                          className={`text-[10px] transition-transform duration-200 ${
+                            dropdownOpen === link.name ? "rotate-180" : ""
+                          }`}
+                        />
+                      )}
                     </button>
                   )}
                   {link.children && (
@@ -343,7 +363,7 @@ export default function Navbar() {
               </button>
 
               <Button
-                className="bg-[#153C91] text-white font-medium rounded-3xl hover:bg-[#ffb700]"
+                className="bg-[#153C91] text-white font-medium rounded-3xl hover:bg-[#ffb700] text-[11px]"
                 onClick={() => redirect("/")}
               >
                 Kontak & Pengaduan
@@ -406,7 +426,7 @@ export default function Navbar() {
                 {!link.children && (
                   <NavLink href={link.href}>
                     <div
-                      className="py-3 px-2 rounded-lg border-b hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
+                      className="py-3 px-2 rounded-lg border-b hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all text-[13px]"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.name}
@@ -437,7 +457,7 @@ export default function Navbar() {
                       {link.children.map((child) => (
                         <NavLink key={child.name} href={child.href}>
                           <div
-                            className=" text-sm pl-6 pr-2 py-2 rounded-lg text-gray-600 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
+                            className=" text-[11px] pl-6 pr-2 py-2 rounded-lg text-gray-600 hover:bg-[#1A2CA3]/5 hover:text-[#1A2CA3] transition-all"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.name}
@@ -451,7 +471,7 @@ export default function Navbar() {
             ))}
 
             <Button
-              className="w-full mt-6 bg-[#1A2CA3] text-white rounded-3xl hover:bg-[#ffb700]"
+              className="w-full mt-6 bg-[#1A2CA3] text-white rounded-3xl hover:bg-[#ffb700] text-[11px]"
               onClick={() => {
                 setMobileOpen(false);
                 redirect("/");
@@ -461,7 +481,9 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
-        <div className="md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[15px] mx-auto px-0.5 md:px-0.5 py-0.5 md:h-0.5 bg-[#153C91]"></div>
+
+        {/* ===== YELLOW ACCENT LINE ===== */}
+        <div className="h-0.5 bg-gradient-to-r from-[#153C91] via-yellow-400 to-[#153C91]" />
       </nav>
 
       {/* ===== SEARCH MODAL ===== */}

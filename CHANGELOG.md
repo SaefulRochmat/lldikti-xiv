@@ -11,6 +11,7 @@
 - **Maintenance Pages** — 10 halaman dengan komponen `UnderDevelopment` yang estetik
 - **Navbar Search Modal** — Search dengan keyboard shortcuts dan filtered suggestions
 - **Improved Dropdown Menu** — Fixed flicker issue dengan invisible bridge
+- **Navbar UI Enhancement** — Konsisten typography, compact top bar, refined spacing
 
 ####  Fixed
 - `SurveyForm.js` — undefined `setOpen` variable
@@ -19,12 +20,17 @@
 - `AOSProvider.js` — CSS import error di Turbopack
 - `IoSearchOutline` — Wrong import from `react-icons/io` → fixed to `react-icons/io5`
 - Navbar dropdown — Hilang-hilangan saat hover (added invisible bridge)
+- Navbar fonts — Unified to 13px dengan font-semibold untuk menu items
 
 ####  Changed
 - Hero carousel → Video background dengan overlay
 - Button component → Sistem variant & size
 - Footer layout → More compact dan organized
-- Navbar → Gradient accent line, improved mobile menu
+- Navbar → Gradient accent line, improved mobile menu, consistent fonts
+- Navbar height → Fixed 68px untuk better visual balance
+- Top bar → Shortened month names (Jan, Feb, etc.) untuk space efficiency
+- Search modal → Cleaner border, better typography, adjusted positioning
+- Mobile drawer → Consistent 13px font size, improved padding
 - All section titles → Menggunakan `SectionHeading` component
 
 ####  File Structure
