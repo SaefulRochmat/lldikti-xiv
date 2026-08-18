@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-3">
+    <Link href="/" className="flex items-center gap-2">
       <Image
         src="/Logos/Logo_LLDIKTI14.png"
         alt="Logo LLDIKTI XIV"
         width={70}
         height={70}
-        className="w-[50px] md:w-[70px] h-auto object-contain"
+        className="w-[50px] md:w-[60px] h-auto object-contain"
         priority
       />
       <span className="hidden sm:inline-block text-sm md:text-sm font-semibold text-[#153C91] leading-tight">

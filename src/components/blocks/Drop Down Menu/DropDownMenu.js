@@ -1,23 +1,26 @@
 import Link from "next/link";
 
-export default function DropDownMenu ({ items, isOpen }) {
-    return (
-        <div className={`absolute top-full mt-4 bg-[#fffffff1] rounded-xl shadow-md min-w-62 transition-all duration-500 ease-in-out
-            ${isOpen 
+export default function DropDownMenu({ items, isOpen }) {
+  return (
+    <div
+      className={`absolute top-full mt-4 bg-[#fffffff1] rounded-xl shadow-md min-w-62 transition-all duration-500 ease-in-out
+            ${
+              isOpen
                 ? "opacity-100 translate-y-0 visible"
                 : "opacity-0 -translate-y-2 invisible"
             }
-        `}>
-            {items.map((item) => (
-                <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-4 py-2 hover:text-[#1A2CA3]"
-                >
-                    {item.name}
-                </Link>
-            ))}
-
-        </div>
-    ); 
+        `}
+    >
+      {items.map((item) => (
+        <Link
+          key={item.name}
+          href={item.href}
+          className="flex items-center gap-2 px-4 py-2 hover:text-[#1A2CA3]"
+        >
+          <span className="w-1 h-1 rounded-full bg-yellow-400 flex-shrink-0" />
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  );
 }

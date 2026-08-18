@@ -25,26 +25,33 @@ export default function VideoHero() {
 
       {/* Animated Dots Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-4xl">
           {/* Eyebrow */}
-          <div className="mb-4 animate-fade-in-down" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="mb-4 animate-fade-in-down"
+            style={{ animationDelay: "0.2s" }}
+          >
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-white/90">
               LLDIKTI Wilayah XIV Papua
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 
+          <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight animate-fade-in-up"
-            style={{ animationDelay: '0.4s' }}
+            style={{ animationDelay: "0.4s" }}
           >
             Selamat Datang di
             <br />
@@ -54,24 +61,27 @@ export default function VideoHero() {
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up"
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: "0.6s" }}
           >
-            Portal resmi layanan informasi, pelaporan, dan data pendidikan tinggi di Tanah Papua
+            Portal resmi layanan informasi, pelaporan, dan data pendidikan
+            tinggi di Tanah Papua
           </p>
 
           {/* CTA Buttons */}
-          <div 
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
-            style={{ animationDelay: '0.8s' }}
+            style={{ animationDelay: "0.8s" }}
           >
             <a
               href="#introduction"
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#153C91] rounded-full font-semibold text-sm hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
             >
               Jelajahi Layanan
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </a>
             <a
               href="/category/profil"
@@ -82,14 +92,15 @@ export default function VideoHero() {
           </div>
 
           {/* Stats Bar */}
-          <div 
+          <div
             className="mt-12 flex flex-wrap gap-6 justify-center items-center animate-fade-in-up"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: "1s" }}
           >
             {[
-              { value: "460+", label: "Perguruan Tinggi" },
-              { value: "1500+", label: "Dosen Aktif" },
-              { value: "50K+", label: "Mahasiswa" },
+              { value: "37+", label: "Perguruan Tinggi" },
+              { value: "369+", label: "Program Studi" },
+              { value: "2800+", label: "Dosen Aktif" },
+              { value: "67K+", label: "Mahasiswa" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-1">
@@ -147,7 +158,8 @@ export default function VideoHero() {
           }
         }
         @keyframes scroll {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0);
           }
           50% {

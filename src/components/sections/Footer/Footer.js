@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Social */}
           <div className="mt-8">
-            <p className="mb-4 font-semibold">Hubungi Kaaami!</p>
+            <p className="mb-4 font-semibold">Hubungi Kami!</p>
             <div className="flex gap-4 text-xl">
               <Link
                 href="https://instagram.com"
