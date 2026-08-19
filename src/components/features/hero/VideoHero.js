@@ -7,14 +7,14 @@ export default function VideoHero() {
   const [muted, setMuted] = useState(true);
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden">
+    <div className="relative w-full h-[650px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
         loop
         muted={muted}
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-top sm:object-center"
       >
         <source src="/Assets/video-cp.mp4" type="video/mp4" />
         Your browser does not support the video tag.

@@ -15,14 +15,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d
 function Logo() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
         href: "/",
-        className: "flex items-center gap-3",
+        className: "flex items-center gap-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 src: "/Logos/Logo_LLDIKTI14.png",
                 alt: "Logo LLDIKTI XIV",
                 width: 70,
                 height: 70,
-                className: "w-[50px] md:w-[70px] h-auto object-contain",
+                className: "w-[50px] md:w-[60px] h-auto object-contain",
                 priority: true
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/Logo.js",
@@ -162,17 +162,26 @@ function DropDownMenu({ items, isOpen }) {
         `,
         children: items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: item.href,
-                className: "block px-4 py-2 hover:text-[#1A2CA3]",
-                children: item.name
-            }, item.name, false, {
+                className: "flex items-center gap-2 px-4 py-2 hover:text-[#1A2CA3]",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "w-1 h-1 rounded-full bg-yellow-400 flex-shrink-0"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/blocks/Drop Down Menu/DropDownMenu.js",
+                        lineNumber: 20,
+                        columnNumber: 11
+                    }, this),
+                    item.name
+                ]
+            }, item.name, true, {
                 fileName: "[project]/src/components/blocks/Drop Down Menu/DropDownMenu.js",
-                lineNumber: 12,
-                columnNumber: 17
+                lineNumber: 15,
+                columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/blocks/Drop Down Menu/DropDownMenu.js",
         lineNumber: 5,
-        columnNumber: 9
+        columnNumber: 5
     }, this);
 }
 _c = DropDownMenu;
@@ -1736,7 +1745,7 @@ function Footer() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mb-4 font-semibold",
-                                        children: "Hubungi Kaaami!"
+                                        children: "Hubungi Kami!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Footer/Footer.js",
                                         lineNumber: 87,

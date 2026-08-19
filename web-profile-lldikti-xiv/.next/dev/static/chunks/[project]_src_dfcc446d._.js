@@ -24,19 +24,19 @@ function VideoHero() {
     _s();
     const [muted, setMuted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "jsx-8293298380d3ff06" + " " + "relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden",
+        className: "jsx-7d7cba1fedaa4b23" + " " + "relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                 autoPlay: true,
                 loop: true,
                 muted: muted,
                 playsInline: true,
-                className: "jsx-8293298380d3ff06" + " " + "absolute inset-0 w-full h-full object-cover",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 w-full h-full object-cover",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
                         src: "/Assets/video-cp.mp4",
                         type: "video/mp4",
-                        className: "jsx-8293298380d3ff06"
+                        className: "jsx-7d7cba1fedaa4b23"
                     }, void 0, false, {
                         fileName: "[project]/src/components/features/hero/VideoHero.js",
                         lineNumber: 19,
@@ -50,20 +50,20 @@ function VideoHero() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-8293298380d3ff06" + " " + "absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"
             }, void 0, false, {
                 fileName: "[project]/src/components/features/hero/VideoHero.js",
                 lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-8293298380d3ff06" + " " + "absolute inset-0 opacity-20",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 opacity-20",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
-                        backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                        backgroundSize: '50px 50px'
+                        backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                        backgroundSize: "50px 50px"
                     },
-                    className: "jsx-8293298380d3ff06" + " " + "absolute inset-0"
+                    className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0"
                 }, void 0, false, {
                     fileName: "[project]/src/components/features/hero/VideoHero.js",
                     lineNumber: 28,
@@ -75,212 +75,216 @@ function VideoHero() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-8293298380d3ff06" + " " + "absolute inset-0 flex flex-col items-center justify-center text-center px-6",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 flex flex-col items-center justify-center text-center px-6",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-8293298380d3ff06" + " " + "max-w-4xl",
+                    className: "jsx-7d7cba1fedaa4b23" + " " + "max-w-4xl",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                animationDelay: '0.2s'
+                                animationDelay: "0.2s"
                             },
-                            className: "jsx-8293298380d3ff06" + " " + "mb-4 animate-fade-in-down",
+                            className: "jsx-7d7cba1fedaa4b23" + " " + "mb-4 animate-fade-in-down",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "jsx-8293298380d3ff06" + " " + "inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-white/90",
+                                className: "jsx-7d7cba1fedaa4b23" + " " + "inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-white/90",
                                 children: "LLDIKTI Wilayah XIV Papua"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                lineNumber: 39,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                            lineNumber: 38,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                             style: {
-                                animationDelay: '0.4s'
+                                animationDelay: "0.4s"
                             },
-                            className: "jsx-8293298380d3ff06" + " " + "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight animate-fade-in-up",
+                            className: "jsx-7d7cba1fedaa4b23" + " " + "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight animate-fade-in-up",
                             children: [
                                 "Selamat Datang di",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
-                                    className: "jsx-8293298380d3ff06"
+                                    className: "jsx-7d7cba1fedaa4b23"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                    lineNumber: 50,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "jsx-8293298380d3ff06" + " " + "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500",
+                                    className: "jsx-7d7cba1fedaa4b23" + " " + "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500",
                                     children: "LLDIKTI Wilayah XIV"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                    lineNumber: 51,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                            lineNumber: 45,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             style: {
-                                animationDelay: '0.6s'
+                                animationDelay: "0.6s"
                             },
-                            className: "jsx-8293298380d3ff06" + " " + "text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up",
+                            className: "jsx-7d7cba1fedaa4b23" + " " + "text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up",
                             children: "Portal resmi layanan informasi, pelaporan, dan data pendidikan tinggi di Tanah Papua"
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                            lineNumber: 57,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                animationDelay: '0.8s'
+                                animationDelay: "0.8s"
                             },
-                            className: "jsx-8293298380d3ff06" + " " + "flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up",
+                            className: "jsx-7d7cba1fedaa4b23" + " " + "flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#introduction",
-                                    className: "jsx-8293298380d3ff06" + " " + "group inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#153C91] rounded-full font-semibold text-sm hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl",
+                                    className: "jsx-7d7cba1fedaa4b23" + " " + "group inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#153C91] rounded-full font-semibold text-sm hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl",
                                     children: [
                                         "Jelajahi Layanan",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "jsx-8293298380d3ff06" + " " + "group-hover:translate-x-1 transition-transform",
+                                            className: "jsx-7d7cba1fedaa4b23" + " " + "group-hover:translate-x-1 transition-transform",
                                             children: "→"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                            lineNumber: 74,
+                                            lineNumber: 82,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                    lineNumber: 69,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "/category/profil",
-                                    className: "jsx-8293298380d3ff06" + " " + "inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-full font-semibold text-sm hover:bg-white/20 hover:border-white/50 transition-all duration-300",
+                                    className: "jsx-7d7cba1fedaa4b23" + " " + "inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-full font-semibold text-sm hover:bg-white/20 hover:border-white/50 transition-all duration-300",
                                     children: "Tentang Kami"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                    lineNumber: 76,
+                                    lineNumber: 86,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                            lineNumber: 65,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                animationDelay: '1s'
+                                animationDelay: "1s"
                             },
-                            className: "jsx-8293298380d3ff06" + " " + "mt-12 flex flex-wrap gap-6 justify-center items-center animate-fade-in-up",
+                            className: "jsx-7d7cba1fedaa4b23" + " " + "mt-12 flex flex-wrap gap-6 justify-center items-center animate-fade-in-up",
                             children: [
                                 {
-                                    value: "460+",
+                                    value: "37+",
                                     label: "Perguruan Tinggi"
                                 },
                                 {
-                                    value: "1500+",
+                                    value: "369+",
+                                    label: "Program Studi"
+                                },
+                                {
+                                    value: "2800+",
                                     label: "Dosen Aktif"
                                 },
                                 {
-                                    value: "50K+",
+                                    value: "67K+",
                                     label: "Mahasiswa"
                                 }
                             ].map((stat, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-8293298380d3ff06" + " " + "text-center",
+                                    className: "jsx-7d7cba1fedaa4b23" + " " + "text-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-8293298380d3ff06" + " " + "text-2xl sm:text-3xl font-bold text-yellow-400 mb-1",
+                                            className: "jsx-7d7cba1fedaa4b23" + " " + "text-2xl sm:text-3xl font-bold text-yellow-400 mb-1",
                                             children: stat.value
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                            lineNumber: 95,
+                                            lineNumber: 106,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-8293298380d3ff06" + " " + "text-xs sm:text-sm text-white/60 uppercase tracking-wider",
+                                            className: "jsx-7d7cba1fedaa4b23" + " " + "text-xs sm:text-sm text-white/60 uppercase tracking-wider",
                                             children: stat.label
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                            lineNumber: 98,
+                                            lineNumber: 109,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                                    lineNumber: 94,
+                                    lineNumber: 105,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/hero/VideoHero.js",
-                            lineNumber: 85,
+                            lineNumber: 95,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                    lineNumber: 36,
+                    lineNumber: 40,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/features/hero/VideoHero.js",
-                lineNumber: 35,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: ()=>setMuted(!muted),
                 "aria-label": muted ? "Unmute video" : "Mute video",
-                className: "jsx-8293298380d3ff06" + " " + "absolute bottom-6 right-6 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 group",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute bottom-6 right-6 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 group",
                 children: muted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FiVolumeX, {
                     className: "text-lg group-hover:scale-110 transition-transform"
                 }, void 0, false, {
                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                    lineNumber: 114,
+                    lineNumber: 125,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FiVolume2, {
                     className: "text-lg group-hover:scale-110 transition-transform"
                 }, void 0, false, {
                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                    lineNumber: 116,
+                    lineNumber: 127,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/features/hero/VideoHero.js",
-                lineNumber: 108,
+                lineNumber: 119,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-8293298380d3ff06" + " " + "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-8293298380d3ff06" + " " + "w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2",
+                    className: "jsx-7d7cba1fedaa4b23" + " " + "w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-8293298380d3ff06" + " " + "w-1.5 h-3 bg-white/50 rounded-full animate-scroll"
+                        className: "jsx-7d7cba1fedaa4b23" + " " + "w-1.5 h-3 bg-white/50 rounded-full animate-scroll"
                     }, void 0, false, {
                         fileName: "[project]/src/components/features/hero/VideoHero.js",
-                        lineNumber: 123,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/features/hero/VideoHero.js",
-                    lineNumber: 122,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/features/hero/VideoHero.js",
-                lineNumber: 121,
+                lineNumber: 132,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "8293298380d3ff06",
-                children: "@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes scroll{0%,to{transform:translateY(0)}50%{transform:translateY(8px)}}.animate-fade-in-down.jsx-8293298380d3ff06{opacity:0;animation:.8s ease-out forwards fadeInDown}.animate-fade-in-up.jsx-8293298380d3ff06{opacity:0;animation:.8s ease-out forwards fadeInUp}.animate-scroll.jsx-8293298380d3ff06{animation:1.5s ease-in-out infinite scroll}"
+                id: "7d7cba1fedaa4b23",
+                children: "@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes scroll{0%,to{transform:translateY(0)}50%{transform:translateY(8px)}}.animate-fade-in-down.jsx-7d7cba1fedaa4b23{opacity:0;animation:.8s ease-out forwards fadeInDown}.animate-fade-in-up.jsx-7d7cba1fedaa4b23{opacity:0;animation:.8s ease-out forwards fadeInUp}.animate-scroll.jsx-7d7cba1fedaa4b23{animation:1.5s ease-in-out infinite scroll}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {

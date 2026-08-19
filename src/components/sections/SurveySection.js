@@ -27,10 +27,15 @@ export default function SurveySection() {
             <p className="text-sm sm:text-base text-gray-600 max-w-lg leading-relaxed mb-8">
               Kami mengundang Anda untuk berpartisipasi dalam survei online ini
               guna membantu kami memahami kebutuhan dan pengalaman pengguna
-              secara lebih mendalam. Data yang dikumpulkan dijaga kerahasiaannya.
+              secara lebih mendalam. Data yang dikumpulkan dijaga
+              kerahasiaannya.
             </p>
             <Link href="/survey" passHref>
-              <Button variant="primary" size="lg" className="rounded-full shadow-lg">
+              <Button
+                variant="primary"
+                size="lg"
+                className="rounded-full shadow-lg hover:bg-amber-500"
+              >
                 Isi Survey Sekarang →
               </Button>
             </Link>
