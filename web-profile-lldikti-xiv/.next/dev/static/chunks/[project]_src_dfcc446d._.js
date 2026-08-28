@@ -24,14 +24,14 @@ function VideoHero() {
     _s();
     const [muted, setMuted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "jsx-7d7cba1fedaa4b23" + " " + "relative w-full h-[380px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden",
+        className: "jsx-7d7cba1fedaa4b23" + " " + "relative w-full h-[650px] sm:h-[490px] md:h-[640px] lg:h-[850px] overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                 autoPlay: true,
                 loop: true,
                 muted: muted,
                 playsInline: true,
-                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 w-full h-full object-cover",
+                className: "jsx-7d7cba1fedaa4b23" + " " + "absolute inset-0 w-full h-full object-cover object-top sm:object-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
                         src: "/Assets/video-cp.mp4",

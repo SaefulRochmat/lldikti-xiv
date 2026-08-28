@@ -44,7 +44,7 @@ export default function VideoHero() {
             style={{ animationDelay: "0.2s" }}
           >
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-white/90">
-              LLDIKTI Wilayah XIV Papua
+              LLDIKTI Wilayah XIV
             </span>
           </div>
 

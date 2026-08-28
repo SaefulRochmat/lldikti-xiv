@@ -31,6 +31,7 @@ export const publikasi = [
   { name: "Berita LLDIKTI Wilayah XIV", href: "/berita-lldikti-wilayah-xiv" },
   { name: "Info LLDIKTI Wilayah XIV", href: "/info-lldikti-wilayah-xiv" },
   { name: "Buletin LLDIKTI Wilayah XIV", href: "/buletin-lldikti-wilayah-xiv" },
+  { name: "Direktori Perguruan Tinggi", href: "direktori-perguruan-tinggi" },
 ];
 
 export const informasiPublik = [

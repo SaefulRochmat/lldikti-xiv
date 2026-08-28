@@ -1508,6 +1508,10 @@ const publikasi = [
     {
         name: "Buletin LLDIKTI Wilayah XIV",
         href: "/buletin-lldikti-wilayah-xiv"
+    },
+    {
+        name: "Direktori Perguruan Tinggi",
+        href: "direktori-perguruan-tinggi"
     }
 ];
 const informasiPublik = [
