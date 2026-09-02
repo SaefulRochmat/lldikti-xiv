@@ -86,7 +86,7 @@ function VideoHero() {
                             className: "jsx-7d7cba1fedaa4b23" + " " + "mb-4 animate-fade-in-down",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "jsx-7d7cba1fedaa4b23" + " " + "inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-white/90",
-                                children: "LLDIKTI Wilayah XIV Papua"
+                                children: "LLDIKTI Wilayah XIV"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/hero/VideoHero.js",
                                 lineNumber: 46,

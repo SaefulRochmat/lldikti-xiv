@@ -6,21 +6,25 @@ export default function DirektoriHero() {
           Dokumentasi Resmi
         </p>
         <h1 className="text-4xl font-bold text-white leading-snug mb-4">
-          Dokumen & Publikasi LLDIKTI XIV
+          Akuntabilitas LLDIKTI XIV
         </h1>
         <p className="text-[#b8d4e8] text-base max-w-2xl leading-relaxed">
-          Akses dokumentasi resmi, kebijakan, laporan kinerja, dan rencana strategis LLDIKTI Wilayah XIV.
+          Akses dokumentasi resmi, kebijakan, laporan kinerja, dan rencana
+          strategis LLDIKTI Wilayah XIV.
         </p>
         <div className="flex items-center gap-2 mt-6 text-sm text-[#b8d4e8]">
           <a href="/" className="hover:text-white transition-colors">
             Beranda
           </a>
           <span>/</span>
-          <a href="/publikasi" className="hover:text-white transition-colors">
-            Publikasi
+          <a
+            href="/informasi-publik"
+            className="hover:text-white transition-colors"
+          >
+            Informasi Publik
           </a>
           <span>/</span>
-          <span className="text-white font-medium">Dokumen Publikasi</span>
+          <span className="text-white font-medium">Akuntabilitas</span>
         </div>
       </div>
     </section>

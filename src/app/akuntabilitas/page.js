@@ -3,7 +3,7 @@ import DirektoriList from "@/components/sections/DirektoriPage/DirektoriList";
 import FloatingWidgets from "@/components/features/widgets/FloatingWidgets";
 
 export const metadata = {
-  title: "Dokumen Publikasi - LLDikti Wilayah XIV Papua",
+  title: "Akuntabilitas - LLDikti Wilayah XIV Papua",
   description:
     "Akses dokumentasi resmi, kebijakan, laporan kinerja, dan rencana strategis LLDIKTI Wilayah XIV Papua dengan tampilan PDF interaktif.",
 };

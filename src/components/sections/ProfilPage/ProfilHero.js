@@ -9,7 +9,7 @@ export default function ProfilHero() {
           Profil LLDikti Wilayah XIV
         </h1>
         <p className="text-[#b8d4e8] text-base max-w-2xl leading-relaxed">
-          Lembaga Layanan Pendidikan Tinggi Wilayah XIV Papua — hadir untuk
+          Lembaga Layanan Pendidikan Tinggi Wilayah XIV — hadir untuk
           memfasilitasi, membina, dan meningkatkan mutu penyelenggaraan
           pendidikan tinggi di seluruh Tanah Papua.
         </p>
