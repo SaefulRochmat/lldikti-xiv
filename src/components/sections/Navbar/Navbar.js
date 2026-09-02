@@ -173,6 +173,7 @@ export default function Navbar() {
   const [waktu, setWaktu] = useState("");
   const [tanggal, setTanggal] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Realtime clock
   useEffect(() => {
@@ -224,11 +225,21 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <nav className="bg-[#ffffff] text-black shadow-md z-50  top-0 fixed w-full">
         {/* ===== TOP BAR ===== */}
-        <div className="w-full bg-[#153C91]">
+        <div
+          className={`w-full bg-[#153C91] overflow-hidden transition-all duration-300 ease-in-out ${isScrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"}`}
+        >
           <div
             className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[13px] mx-auto px-6 md:px-10 lg:px-16 py-4 md:h-10 max-w-7xl"
             data-aos="fade-down"
