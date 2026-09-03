@@ -375,7 +375,7 @@ export default function Navbar() {
               </button>
 
               <Button
-                className="bg-[#153C91] text-white font-semibold rounded-r-4xl hover:bg-[#153C91] text-sm px-5"
+                className="bg-[#153C91] text-white font-semibold rounded-r-4xl hover:bg-[#e6b800] text-sm px-5"
                 onClick={() => redirect("/ppid")}
               >
                 <span className="flex items-center gap-2">

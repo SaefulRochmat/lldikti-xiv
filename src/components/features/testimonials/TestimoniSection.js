@@ -30,7 +30,11 @@ function TestimoniCard({ data }) {
       <div className="flex items-center gap-3 pt-4 border-t border-[#f0f4f8]">
         <div className="w-11 h-11 rounded-full overflow-hidden bg-[#1A2CA3] flex items-center justify-center flex-shrink-0 border-2 border-yellow-400">
           {avatar ? (
-            <img src={avatar} alt={name} className="w-full h-full object-cover" />
+            <img
+              src={avatar}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
           ) : (
             <span className="text-white font-bold text-base">
               {name?.charAt(0) ?? "?"}
@@ -55,15 +59,15 @@ export default function TestimoniSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) =>
-        prev === testimoniData.length - 1 ? 0 : prev + 1
+        prev === testimoniData.length - 1 ? 0 : prev + 1,
       );
     }, 4500);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="w-full py-20 bg-[#f8fafc]">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+    <section className="w-full py-20 bg-[#f8fafc] border-b border-t border-yellow-400">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 items-center">
           {/* Left: Header */}
           <div data-aos="fade-right">

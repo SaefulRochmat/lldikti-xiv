@@ -17,10 +17,10 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-20 left-6 z-50 w-10 h-10 bg-[#153C91] hover:bg-yellow-400 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 border border-yellow-400/30"
+      className="fixed bottom-42 right-6 z-50 w-14 h-14 bg-[#1A2CA3] hover:bg-yellow-400 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-100 border border-yellow-400/30"
       aria-label="Kembali ke atas"
     >
-      <FaArrowUp size={14} />
+      <FaArrowUp size={17} />
     </button>
   );
 }

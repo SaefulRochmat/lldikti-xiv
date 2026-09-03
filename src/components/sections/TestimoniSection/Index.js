@@ -17,7 +17,7 @@ export default function TestimoniSection() {
   }, []);
 
   return (
-    <section className="w-full py-20">
+    <section className="max-w-7xl py-20 border-yellow-400">
       <div className="max-w-6xl mx-auto px-10 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-16 items-center">
         {/* Left: Header */}
         <div>
@@ -25,7 +25,7 @@ export default function TestimoniSection() {
             TESTIMONI
           </span>*/}
           <h2 className="text-4xl font-bold text-[#153C91] leading-snug mb-1.5">
-            Bersama Membangun Tanah Papua
+            Bersama Membangun Tanah Papuas
           </h2>
           <span className="w-20 md:w-28 lg:w-36 h-1 bg-yellow-400 rounded-full block mb-3" />
           <p className="text-[20px] text-[#6b7a8d] leading-relaxed mb-9 max-w-xs">

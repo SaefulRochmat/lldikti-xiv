@@ -3,7 +3,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function ApplicationSection() {
   return (
-    <section className="w-full px-6 sm:px-12 lg:px-24 py-20 bg-[#153C91]">
+    <section className="w-full px-6 sm:px-12 rounded-b-4xl lg:px-24 py-20 bg-[#153C91]">
       <div className="max-w-6xl mx-auto">
         <div
           className="mb-8 text-center"
