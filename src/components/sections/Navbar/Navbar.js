@@ -20,6 +20,7 @@ import {
   FaTiktok,
   FaYoutube,
   FaFacebookF,
+  FaRegFileAlt,
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -235,13 +236,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#ffffff] text-black shadow-md z-50  top-0 fixed w-full">
+      <nav className="fixed inset-x-0 top-0 z-50 bg-transparent text-black">
         {/* ===== TOP BAR ===== */}
         <div
-          className={`w-full bg-[#153C91] overflow-hidden transition-all duration-300 ease-in-out ${isScrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"}`}
+          className={`w-full overflow-hidden bg-[#153C91] transition-all duration-300 ease-in-out ${isScrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"}`}
         >
           <div
-            className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[13px] mx-auto px-6 md:px-10 lg:px-16 py-4 md:h-10 max-w-7xl"
+            className="hidden md:flex lg:flex justify-between items-center text-[#e0e0e0f1] text-[13px] mx-auto px-6 md:px-10 lg:px-16 py-4 md:h-10 max-w-8xl"
             data-aos="fade-down"
             data-aos-duration="500"
           >
@@ -254,10 +255,10 @@ export default function Navbar() {
               <Link
                 href="https://wa.me/6281223487355"
                 className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
-                aria-label="Contact us on Whatsapp"
+                aria-label="Contact us on WhatsApp"
               >
                 <FaWhatsapp className="text-green-400 text-lg" />
-                <p className="font-medium">Whatsapp</p>
+                <p className="font-medium">WhatsApp</p>
               </Link>
               <span className="text-white/30">|</span>
               <div className="flex items-center space-x-2 text-[13px] text-white/80">
@@ -313,20 +314,20 @@ export default function Navbar() {
         </div>
 
         {/* ===== MAIN NAV ===== */}
-        <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-7xl">
+        <div className="mx-auto mt-3 px-4 sm:px-6 lg:px-8 max-w-8xl">
           <div
-            className="flex justify-between items-center h-20"
+            className="flex min-h-20 items-center justify-between gap-4 rounded-2xl border border-white/70 bg-white/75 px-5 shadow-lg shadow-slate-900/10 backdrop-blur-md sm:px-7 lg:rounded-full"
             data-aos="fade-down"
             data-aos-duration="500"
           >
             <Logo />
 
             {/* ===== DESKTOP MENU ===== */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center gap-7">
               {MenuItems.map((link) => (
                 <div
                   key={link.name}
-                  className="relative text-[11px] font-semibold"
+                  className="relative text-sm font-semibold whitespace-nowrap"
                   onMouseEnter={() => setDropDownOpen(link.name)}
                   onMouseLeave={() => setDropDownOpen(null)}
                 >
@@ -344,7 +345,7 @@ export default function Navbar() {
                       </div>
                     </NavLink>
                   ) : (
-                    <button className="flex items-center gap-1.5 hover:text-[#153C91] transition-colors text-[11px]">
+                    <button className="flex items-center gap-1.5 hover:text-[#153C91] transition-colors text-sm">
                       {link.name}
                       {link.children && (
                         <SlArrowDown
@@ -367,17 +368,19 @@ export default function Navbar() {
               {/* Search Icon */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-gray-500 hover:bg-[#ffb700] transition-all duration-200 hover:scale-110"
+                className="w-11 h-11 rounded-full border border-gray-200 bg-white flex items-center justify-center font-bold text-gray-600 shadow-sm hover:bg-[#ffb700] transition-all duration-200 hover:scale-105"
                 aria-label="Cari"
               >
                 <IoSearchOutline className="text-xl" />
               </button>
 
               <Button
-                className="bg-[#153C91] text-white font-medium rounded-3xl hover:bg-[#ffb700] text-[11px]"
-                onClick={() => redirect("/")}
+                className="bg-[#153C91] text-white font-semibold rounded-r-4xl hover:bg-[#153C91] text-sm px-5"
+                onClick={() => redirect("/ppid")}
               >
-                Kontak & Pengaduan
+                <span className="flex items-center gap-2">
+                  Kontak & Pengaduan
+                </span>
               </Button>
             </div>
 
@@ -492,9 +495,6 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
-
-        {/* ===== YELLOW ACCENT LINE ===== */}
-        <div className="h-0.5 bg-gradient-to-r from-[#153C91] via-yellow-400 to-[#153C91]" />
       </nav>
 
       {/* ===== SEARCH MODAL ===== */}

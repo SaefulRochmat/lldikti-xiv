@@ -53,7 +53,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#153C91] text-white">
+    <footer className="bg-[#153C91] bg-[url('/Assets/footer-bg-1.png')] bg-cover bg-center text-white">
       {/* MAIN FOOTER */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-5">
         {/* LEFT SIDE */}
