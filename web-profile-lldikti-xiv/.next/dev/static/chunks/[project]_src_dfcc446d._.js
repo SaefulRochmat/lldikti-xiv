@@ -1150,7 +1150,7 @@ function TestimoniCard({ data }) {
                             children: name?.charAt(0) ?? "?"
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                            lineNumber: 35,
+                            lineNumber: 39,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
@@ -1165,7 +1165,7 @@ function TestimoniCard({ data }) {
                                 children: name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                lineNumber: 41,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1173,13 +1173,13 @@ function TestimoniCard({ data }) {
                                 children: role
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                lineNumber: 42,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                        lineNumber: 40,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1187,7 +1187,7 @@ function TestimoniCard({ data }) {
                         children: "”"
                     }, void 0, false, {
                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                        lineNumber: 44,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1222,9 +1222,9 @@ function TestimoniSection() {
         }
     }["TestimoniSection.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "w-full py-20 bg-[#f8fafc]",
+        className: "w-full py-20 bg-[#f8fafc] border-b border-t border-yellow-400",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-6xl mx-auto px-6 sm:px-10",
+            className: "max-w-7xl mx-auto px-6 sm:px-10",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 items-center",
                 children: [
@@ -1237,7 +1237,7 @@ function TestimoniSection() {
                                 subtitle: "Kepercayaan mitra, perguruan tinggi, dan masyarakat menjadi landasan kami."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                lineNumber: 70,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1248,18 +1248,18 @@ function TestimoniSection() {
                                         className: `h-2 rounded-full border-none cursor-pointer transition-all duration-400 ${i === activeIndex ? "w-6 bg-yellow-400" : "w-2 bg-[#d0dae8] hover:bg-[#b0bec5]"}`
                                     }, i, false, {
                                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                        lineNumber: 79,
+                                        lineNumber: 83,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                lineNumber: 77,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                        lineNumber: 69,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1276,38 +1276,38 @@ function TestimoniSection() {
                                         data: item
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                        lineNumber: 104,
+                                        lineNumber: 108,
                                         columnNumber: 19
                                     }, this)
                                 }, i, false, {
                                     fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                                    lineNumber: 103,
+                                    lineNumber: 107,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                            lineNumber: 98,
+                            lineNumber: 102,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                        lineNumber: 94,
+                        lineNumber: 98,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-                lineNumber: 67,
+                lineNumber: 71,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-            lineNumber: 66,
+            lineNumber: 70,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/features/testimonials/TestimoniSection.js",
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }

@@ -27,9 +27,13 @@ export default function IntroductionSection() {
           </div>
 
           <div className="flex items-center gap-4 pt-2">
-            <div className="w-11 h-11 bg-[#153C91] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-              XIV
-            </div>
+            <Image
+              src="/Assets/ketua-lldikti.jpeg"
+              alt="Ketua LLDIKTI Wilayah XIV"
+              width={44}
+              height={44}
+              className="w-11 h-11 rounded-full object-cover flex-shrink-0"
+            />
             <div>
               <p className="text-[#153C91] font-bold text-sm uppercase tracking-widest">
                 Kepala LLDIKTI Wilayah XIV
