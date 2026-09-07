@@ -1,18 +1,16 @@
-import UnderDevelopment from "@/components/ui/UnderDevelopment";
+import FaqContent from "@/components/features/faq/FaqContent";
 import FloatingWidgets from "@/components/features/widgets/FloatingWidgets";
 
 export const metadata = {
   title: "FAQ - LLDIKTI Wilayah XIV",
-  description: "Halaman FAQ sedang dalam tahap pengembangan.",
+  description:
+    "Temukan jawaban atas pertanyaan umum tentang layanan, PDDIKTI, dosen, dan informasi publik LLDIKTI Wilayah XIV.",
 };
 
 export default function FAQPage() {
   return (
     <>
-      <UnderDevelopment
-        title="Frequently Asked Questions (FAQ)"
-        description="Halaman FAQ sedang dalam pengembangan. Kami akan segera menyediakan jawaban atas pertanyaan yang sering diajukan tentang layanan LLDIKTI Wilayah XIV."
-      />
+      <FaqContent />
       <FloatingWidgets />
     </>
   );
