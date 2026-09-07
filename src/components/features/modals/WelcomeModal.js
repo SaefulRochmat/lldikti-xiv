@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { IoMdClose } from "react-icons/io";
@@ -11,6 +12,12 @@ export default function WelcomeModal({
   image = null,
 }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleSurveyClick = () => {
+    setOpen(false);
+    router.push("/survey");
+  };
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem("welcomeModal");
@@ -79,7 +86,7 @@ export default function WelcomeModal({
               variant="outline"
               size="md"
               className="rounded-full"
-              onClick={() => setOpen(false)}
+              onClick={handleSurveyClick}
             >
               Isi Survey
             </Button>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import ModalContainer from "@/components/ui/ModalsContainer";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
@@ -11,6 +12,12 @@ export default function WelcomeModal({
   image = null,
 }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleSurveyClick = () => {
+    setOpen(false);
+    router.push("/survey");
+  };
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem("welcomeModal");
@@ -64,7 +71,7 @@ export default function WelcomeModal({
           <br />
           <Button
             className="bg-[#1A2CA3] text-white mt-5 px-6 py-2 rounded-full hover:bg-[#ffb700] transition cursor-pointer"
-            onClick={() => setOpen(false)}
+            onClick={handleSurveyClick}
           >
             Isi Survey
           </Button>
