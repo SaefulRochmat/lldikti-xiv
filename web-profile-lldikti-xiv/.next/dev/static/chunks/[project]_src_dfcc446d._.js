@@ -1951,6 +1951,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/web-profile-lldikti-xiv/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/web-profile-lldikti-xiv/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/web-profile-lldikti-xiv/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/web-profile-lldikti-xiv/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/Button.js [app-client] (ecmascript)");
 (()=>{
@@ -1965,9 +1966,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function WelcomeModal({ title = "Selamat Datang", description = "Website resmi LLDIKTI Wilayah XIV", image = null }) {
     _s();
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const handleSurveyClick = ()=>{
+        setOpen(false);
+        router.push("/survey");
+    };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "WelcomeModal.useEffect": ()=>{
             const hasVisited = sessionStorage.getItem("welcomeModal");
@@ -1986,7 +1993,7 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                 onClick: ()=>setOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                lineNumber: 28,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2001,12 +2008,12 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                             className: "text-white text-lg"
                         }, void 0, false, {
                             fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                            lineNumber: 44,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                        lineNumber: 39,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this),
                     image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2019,20 +2026,20 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                                 className: "object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                lineNumber: 50,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                lineNumber: 56,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                        lineNumber: 49,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2043,7 +2050,7 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                lineNumber: 62,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2051,7 +2058,7 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                                 children: description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                lineNumber: 65,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2065,46 +2072,50 @@ function WelcomeModal({ title = "Selamat Datang", description = "Website resmi L
                                         children: "Masuk Website"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                        lineNumber: 70,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         variant: "outline",
                                         size: "md",
                                         className: "rounded-full",
-                                        onClick: ()=>setOpen(false),
+                                        onClick: handleSurveyClick,
                                         children: "Isi Survey"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                        lineNumber: 78,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                                lineNumber: 69,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                        lineNumber: 61,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-                lineNumber: 34,
+                lineNumber: 41,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/features/modals/WelcomeModal.js",
-        lineNumber: 26,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
-_s(WelcomeModal, "e27cRtNMdAs0U0o1oHlS6A8OEBo=");
+_s(WelcomeModal, "yV6DxSubyy4ZmDiTQIQFSXuuW1o=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$web$2d$profile$2d$lldikti$2d$xiv$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = WelcomeModal;
 var _c;
 __turbopack_context__.k.register(_c, "WelcomeModal");
