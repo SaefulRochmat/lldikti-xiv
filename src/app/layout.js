@@ -1,10 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import Navbar from "@/components/sections/Navbar/Navbar";
-import Footer from "@/components/sections/Footer/Footer";
-import ScrollToTop from "@/components/layout/ScrollToTop";
-import AOSProvider from "@/components/AOSProvider";
+import SiteShell from "@/components/layout/SiteShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,12 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#f8fafc]`}
       >
-        <AOSProvider>
-          <Navbar />
-          <main>{children}</main>
-          <ScrollToTop />
-          <Footer />
-        </AOSProvider>
+        <SiteShell>{children}</SiteShell>
         <Analytics />
       </body>
     </html>
