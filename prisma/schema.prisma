@@ -1,0 +1,72 @@
+// Prisma Schema for LLDIKTI XIV Website
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Admin User Model
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // bcrypt hashed
+  name      String
+  role      String   @default("admin") // admin, super_admin
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+// Survey Response Model
+model SurveyResponse {
+  id        String   @id @default(cuid())
+  age       Int
+  gender    String
+  job       String
+  otherJob  String?
+  services  String[] // Array of selected services
+  
+  // Ratings stored as JSON
+  persyaratan  Int
+  prosedur     Int
+  waktu        Int
+  biaya        Int
+  produk       Int
+  kompetensi   Int
+  perilaku     Int
+  pengaduan    Int
+  fasilitas    Int
+  
+  feedback  String?
+  createdAt DateTime @default(now())
+
+  @@map("survey_responses")
+}
+
+// Contact Message Model
+model ContactMessage {
+  id        String   @id @default(cuid())
+  nama      String
+  email     String
+  pesan     String
+  status    String   @default("unread") // unread, read, replied
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("contact_messages")
+}
+
+// Session Model (for authentication)
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@map("sessions")
+}

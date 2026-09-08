@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import Image from "next/image";
+import { useMemo, useState, useEffect } from "react";
 import {
   FiActivity,
   FiBell,
@@ -27,8 +28,8 @@ import { applicationData } from "@/data/applications";
 
 const navigation = [
   { label: "Ringkasan", icon: FiGrid, active: true },
-  { label: "Konten", icon: FiFileText, count: newsList.length },
-  { label: "Layanan", icon: FiBookOpen, count: applicationData.length },
+  { label: "Survey", icon: FiFileText },
+  { label: "Pesan", icon: FiBookOpen },
   { label: "FAQ", icon: FiHelpCircle, count: faqItems.length },
   { label: "Pengguna", icon: FiUsers },
 ];
@@ -43,41 +44,14 @@ const barData = [
   { label: "Min", value: 66 },
 ];
 
-const activities = [
-  {
-    type: "content",
-    title: "Berita baru dipublikasikan",
-    detail: "Pengumuman LLDIKTI Wilayah XIV",
-    time: "12 menit lalu",
-  },
-  {
-    type: "service",
-    title: "Layanan diperbarui",
-    detail: "Validasi data PDDIKTI",
-    time: "45 menit lalu",
-  },
-  {
-    type: "faq",
-    title: "FAQ ditambahkan",
-    detail: "Informasi layanan publik",
-    time: "2 jam lalu",
-  },
-  {
-    type: "user",
-    title: "Akun editor dibuat",
-    detail: "editor@lldikti14.go.id",
-    time: "Kemarin",
-  },
-];
-
 const activityIcons = {
-  content: FiFileText,
-  service: FiActivity,
+  survey: FiFileText,
+  contact: FiActivity,
   faq: FiHelpCircle,
   user: FiUsers,
 };
 
-function StatCard({ label, value, caption, icon: Icon, tone }) {
+function StatCard({ label, value, caption, icon: Icon, tone, loading }) {
   return (
     <div className="rounded-2xl border border-[#e7ebf3] bg-white p-5 shadow-[0_4px_18px_rgba(25,42,77,0.04)]">
       <div className="flex items-start justify-between gap-4">
@@ -85,9 +59,13 @@ function StatCard({ label, value, caption, icon: Icon, tone }) {
           <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#7f8ba3]">
             {label}
           </p>
-          <p className="mt-3 text-3xl font-bold tracking-tight text-[#17233d]">
-            {value}
-          </p>
+          {loading ? (
+            <div className="mt-3 h-9 w-16 bg-gray-200 rounded animate-pulse"></div>
+          ) : (
+            <p className="mt-3 text-3xl font-bold tracking-tight text-[#17233d]">
+              {value}
+            </p>
+          )}
         </div>
         <span
           className={`flex h-10 w-10 items-center justify-center rounded-xl ${tone}`}
@@ -100,7 +78,7 @@ function StatCard({ label, value, caption, icon: Icon, tone }) {
   );
 }
 
-function AdminSidebar({ open, onClose }) {
+function AdminSidebar({ open, onClose, onLogout, activeTab, onTabChange }) {
   return (
     <>
       {open && (
@@ -120,8 +98,14 @@ function AdminSidebar({ open, onClose }) {
             onClick={onClose}
             className="flex items-center gap-3"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f5c842] text-sm font-black text-[#101936]">
-              XIV
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl text-sm font-black text-[#101936]">
+              <Image
+                src="/Logos/logo-tutwuri1.png"
+                alt="Admin"
+                width={36}
+                height={36}
+                className="rounded-full object-cover"
+              />
             </span>
             <span>
               <span className="block text-sm font-bold tracking-wide">
@@ -147,24 +131,53 @@ function AdminSidebar({ open, onClose }) {
             Workspace
           </p>
           <nav className="mt-3 space-y-1">
-            {navigation.map(({ label, icon: Icon, active, count }) => (
-              <button
-                key={label}
-                type="button"
-                onClick={onClose}
-                className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm transition-colors ${active ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:bg-white/5 hover:text-white"}`}
-              >
-                <Icon
-                  className={`text-base ${active ? "text-[#f5c842]" : ""}`}
-                />
-                <span className="flex-1">{label}</span>
-                {count && (
-                  <span className="rounded-md bg-white/10 px-2 py-0.5 text-[10px] text-white/60">
-                    {count}
-                  </span>
-                )}
-              </button>
-            ))}
+            <Link
+              href="/admin"
+              onClick={() => {
+                onTabChange("ringkasan");
+                onClose();
+              }}
+              className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm transition-colors ${activeTab === "ringkasan" ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:bg-white/5 hover:text-white"}`}
+            >
+              <FiGrid className={`text-base ${activeTab === "ringkasan" ? "text-[#f5c842]" : ""}`} />
+              <span className="flex-1">Ringkasan</span>
+            </Link>
+            
+            <Link
+              href="/admin/surveys"
+              onClick={() => {
+                onTabChange("survey");
+                onClose();
+              }}
+              className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm transition-colors ${activeTab === "survey" ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:bg-white/5 hover:text-white"}`}
+            >
+              <FiFileText className={`text-base ${activeTab === "survey" ? "text-[#f5c842]" : ""}`} />
+              <span className="flex-1">Survey</span>
+            </Link>
+            
+            <Link
+              href="/admin/messages"
+              onClick={() => {
+                onTabChange("pesan");
+                onClose();
+              }}
+              className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm transition-colors ${activeTab === "pesan" ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:bg-white/5 hover:text-white"}`}
+            >
+              <FiBookOpen className={`text-base ${activeTab === "pesan" ? "text-[#f5c842]" : ""}`} />
+              <span className="flex-1">Pesan</span>
+            </Link>
+            
+            <Link
+              href="/faq"
+              onClick={() => {
+                onTabChange("faq");
+                onClose();
+              }}
+              className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm transition-colors ${activeTab === "faq" ? "bg-white/10 font-semibold text-white" : "text-white/60 hover:bg-white/5 hover:text-white"}`}
+            >
+              <FiHelpCircle className={`text-base ${activeTab === "faq" ? "text-[#f5c842]" : ""}`} />
+              <span className="flex-1">FAQ</span>
+            </Link>
           </nav>
         </div>
 
@@ -181,11 +194,24 @@ function AdminSidebar({ open, onClose }) {
           >
             <FiHome /> Lihat website
           </Link>
+          <button
+            type="button"
+            onClick={onLogout}
+            className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm text-white/60 hover:bg-white/5 hover:text-red-400"
+          >
+            <FiX /> Logout
+          </button>
           <div className="mt-4 flex items-center gap-3 border-t border-white/10 px-3 pt-5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dbe5ff] text-xs font-bold text-[#1A2CA3]">
-              AD
+            <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white flex-shrink-0">
+              <Image
+                src="/Logos/logo-tutwuri1.png"
+                alt="Admin"
+                width={36}
+                height={36}
+                className="rounded-full object-cover"
+              />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1">
               <p className="truncate text-xs font-semibold">Admin LLDIKTI</p>
               <p className="truncate text-[10px] text-white/45">
                 Administrator
@@ -203,6 +229,110 @@ export default function AdminDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [period, setPeriod] = useState("7 hari terakhir");
+  const [activeTab, setActiveTab] = useState("ringkasan");
+  
+  // State for real data from API
+  const [stats, setStats] = useState({
+    surveys: 0,
+    contacts: 0,
+    unreadContacts: 0,
+  });
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch dashboard data
+  useEffect(() => {
+    async function fetchDashboardData() {
+      try {
+        setLoading(true);
+        
+        // Fetch surveys and contacts in parallel
+        const [surveysRes, contactsRes] = await Promise.all([
+          fetch("/api/admin/survey?perPage=5", { credentials: "include" }),
+          fetch("/api/admin/contact?perPage=5", { credentials: "include" }),
+        ]);
+
+        if (surveysRes.ok) {
+          const surveysData = await surveysRes.json();
+          if (surveysData.success) {
+            setStats((prev) => ({
+              ...prev,
+              surveys: surveysData.data.pagination?.total || 0,
+            }));
+            
+            // Add survey activities
+            const surveyActivities = surveysData.data.data.slice(0, 3).map((s) => ({
+              type: "survey",
+              title: "Survey baru diterima",
+              detail: `${s.job} - ${s.gender}`,
+              time: formatTime(s.createdAt),
+            }));
+            
+            setActivities((prev) => [...prev, ...surveyActivities]);
+          }
+        }
+
+        if (contactsRes.ok) {
+          const contactsData = await contactsRes.json();
+          if (contactsData.success) {
+            const messages = contactsData.data.messages || [];
+            const unread = messages.filter((m) => m.status === "unread").length;
+            
+            setStats((prev) => ({
+              ...prev,
+              contacts: messages.length,
+              unreadContacts: unread,
+            }));
+            
+            // Add contact activities
+            const contactActivities = messages.slice(0, 3).map((c) => ({
+              type: "contact",
+              title: "Pesan baru diterima",
+              detail: `${c.nama} - ${c.email}`,
+              time: formatTime(c.createdAt),
+            }));
+            
+            setActivities((prev) => [...prev, ...contactActivities]);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch dashboard data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchDashboardData();
+  }, []);
+
+  // Format time helper
+  function formatTime(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 1) return "Baru saja";
+    if (diffMins < 60) return `${diffMins} menit lalu`;
+    if (diffHours < 24) return `${diffHours} jam lalu`;
+    if (diffDays === 1) return "Kemarin";
+    if (diffDays < 7) return `${diffDays} hari lalu`;
+    return date.toLocaleDateString("id-ID");
+  }
+
+  const handleLogout = async () => {
+    try {
+      await fetch("/api/auth/logout", { 
+        method: "POST",
+        credentials: "include",
+      });
+      window.location.href = "/admin/login";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
   const filteredActivities = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -214,7 +344,13 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-[#f5f7fb] text-[#17233d] lg:flex">
-      <AdminSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <AdminSidebar 
+        open={sidebarOpen} 
+        onClose={() => setSidebarOpen(false)} 
+        onLogout={handleLogout}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
       <main className="min-w-0 flex-1">
         <header className="sticky top-0 z-20 flex h-[76px] items-center justify-between border-b border-[#e7ebf3] bg-[#f5f7fb]/95 px-5 backdrop-blur md:px-8">
           <div className="flex items-center gap-3">
@@ -282,32 +418,36 @@ export default function AdminDashboard() {
 
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <StatCard
-              label="Total konten"
-              value={newsList.length}
-              caption="Konten berita tersimpan"
+              label="Total Survey"
+              value={stats.surveys}
+              caption="Response survey tersimpan"
               icon={FiFileText}
               tone="bg-[#e9edff] text-[#4458c7]"
+              loading={loading}
             />
             <StatCard
-              label="Layanan aktif"
-              value={applicationData.length}
-              caption="Aplikasi layanan terhubung"
+              label="Pesan Masuk"
+              value={stats.contacts}
+              caption="Pesan dari contact form"
               icon={FiActivity}
               tone="bg-[#e6f7f2] text-[#27936e]"
+              loading={loading}
             />
             <StatCard
-              label="FAQ tersedia"
+              label="Belum Dibaca"
+              value={stats.unreadContacts}
+              caption="Pesan yang belum dibaca"
+              icon={FiBell}
+              tone="bg-[#fff4d9] text-[#bd8512]"
+              loading={loading}
+            />
+            <StatCard
+              label="FAQ Tersedia"
               value={faqItems.length}
               caption="Pertanyaan siap dijawab"
               icon={FiHelpCircle}
-              tone="bg-[#fff4d9] text-[#bd8512]"
-            />
-            <StatCard
-              label="Pengunjung"
-              value="2.4k"
-              caption="Naik 12% dari minggu lalu"
-              icon={FiUsers}
               tone="bg-[#fce9ee] text-[#d65c79]"
+              loading={false}
             />
           </div>
 
@@ -369,13 +509,23 @@ export default function AdminDashboard() {
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <Link
-                  href="/category/berita"
+                  href="/admin/surveys"
                   className="group rounded-xl border border-[#edf0f5] p-4 hover:border-[#b7c2ea] hover:bg-[#f8f9ff]"
                 >
                   <FiFileText className="text-[#1A2CA3]" />
-                  <p className="mt-3 text-xs font-bold">Kelola berita</p>
+                  <p className="mt-3 text-xs font-bold">Lihat Survey</p>
                   <p className="mt-1 text-[10px] text-[#8c98ac]">
-                    {newsList.length} konten
+                    {stats.surveys} response
+                  </p>
+                </Link>
+                <Link
+                  href="/admin/messages"
+                  className="group rounded-xl border border-[#edf0f5] p-4 hover:border-[#b7c2ea] hover:bg-[#f8f9ff]"
+                >
+                  <FiActivity className="text-[#27936e]" />
+                  <p className="mt-3 text-xs font-bold">Lihat Pesan</p>
+                  <p className="mt-1 text-[10px] text-[#8c98ac]">
+                    {stats.contacts} pesan
                   </p>
                 </Link>
                 <Link
@@ -386,16 +536,6 @@ export default function AdminDashboard() {
                   <p className="mt-3 text-xs font-bold">Kelola FAQ</p>
                   <p className="mt-1 text-[10px] text-[#8c98ac]">
                     {faqItems.length} pertanyaan
-                  </p>
-                </Link>
-                <Link
-                  href="/layanan"
-                  className="group rounded-xl border border-[#edf0f5] p-4 hover:border-[#b7c2ea] hover:bg-[#f8f9ff]"
-                >
-                  <FiBookOpen className="text-[#27936e]" />
-                  <p className="mt-3 text-xs font-bold">Kelola layanan</p>
-                  <p className="mt-1 text-[10px] text-[#8c98ac]">
-                    {applicationData.length} layanan
                   </p>
                 </Link>
                 <button
@@ -428,30 +568,41 @@ export default function AdminDashboard() {
               </button>
             </div>
             <div className="divide-y divide-[#f0f2f6]">
-              {filteredActivities.map((activity) => {
-                const Icon = activityIcons[activity.type];
-                return (
-                  <div
-                    key={`${activity.title}-${activity.time}`}
-                    className="flex items-center gap-4 px-5 py-4 md:px-6"
-                  >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#f1f4ff] text-[#5266d2]">
-                      <Icon />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-semibold text-[#25324d]">
-                        {activity.title}
-                      </p>
-                      <p className="mt-1 truncate text-xs text-[#8995aa]">
-                        {activity.detail}
-                      </p>
+              {loading ? (
+                <div className="px-5 py-8 text-center">
+                  <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#1A2CA3] border-r-transparent"></div>
+                  <p className="mt-3 text-sm text-gray-500">Memuat aktivitas...</p>
+                </div>
+              ) : activities.length === 0 ? (
+                <div className="px-5 py-10 text-center text-gray-400 text-sm">
+                  Belum ada aktivitas
+                </div>
+              ) : (
+                filteredActivities.map((activity, index) => {
+                  const Icon = activityIcons[activity.type];
+                  return (
+                    <div
+                      key={`${activity.title}-${index}`}
+                      className="flex items-center gap-4 px-5 py-4 md:px-6"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#f1f4ff] text-[#5266d2]">
+                        <Icon />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-sm font-semibold text-[#25324d]">
+                          {activity.title}
+                        </p>
+                        <p className="mt-1 truncate text-xs text-[#8995aa]">
+                          {activity.detail}
+                        </p>
+                      </div>
+                      <span className="flex shrink-0 items-center gap-1 text-[10px] text-[#a0aabc]">
+                        <FiClock /> {activity.time}
+                      </span>
                     </div>
-                    <span className="flex shrink-0 items-center gap-1 text-[10px] text-[#a0aabc]">
-                      <FiClock /> {activity.time}
-                    </span>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )}
             </div>
           </section>
         </div>

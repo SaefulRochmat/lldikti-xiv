@@ -202,9 +202,48 @@ export default function SurveyPage() {
     if (validateStep())
       setStep((current) => Math.min(current + 1, steps.length - 1));
   };
-  const submitSurvey = (event) => {
+  const submitSurvey = async (event) => {
     event.preventDefault();
-    if (validateStep()) setSubmitted(true);
+    if (!validateStep()) return;
+
+    setError("");
+    try {
+      // Prepare survey data
+      const surveyData = {
+        age: parseInt(form.age, 10),
+        gender: form.gender,
+        job: form.job,
+        otherJob: form.otherJob || undefined,
+        services: form.services,
+        persyaratan: form.ratings.persyaratan,
+        prosedur: form.ratings.prosedur,
+        waktu: form.ratings.waktu,
+        biaya: form.ratings.biaya,
+        produk: form.ratings.produk,
+        kompetensi: form.ratings.kompetensi,
+        perilaku: form.ratings.perilaku,
+        pengaduan: form.ratings.pengaduan,
+        fasilitas: form.ratings.fasilitas,
+        feedback: form.feedback || undefined,
+      };
+
+      // Submit to API
+      const response = await fetch("/api/survey/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(surveyData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Gagal mengirim survey");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err.message || "Terjadi kesalahan. Silakan coba lagi.");
+    }
   };
 
   if (submitted)
