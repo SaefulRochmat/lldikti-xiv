@@ -38,17 +38,30 @@ export default function Footer() {
     e.preventDefault();
     setStatus("sending");
     try {
-      // TODO: ganti "/api/contact" dengan endpoint backend kamu
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      if (!res.ok) throw new Error("Gagal mengirim");
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        console.error("Contact form error:", data);
+        throw new Error(data.error || "Gagal mengirim pesan");
+      }
+      
       setStatus("sent");
       setFormData({ nama: "", email: "", pesan: "" });
+      
+      // Auto reset after 3 seconds
+      setTimeout(() => setStatus("idle"), 3000);
     } catch (err) {
+      console.error("Submit error:", err);
       setStatus("error");
+      
+      // Auto reset after 3 seconds
+      setTimeout(() => setStatus("idle"), 3000);
     }
   };
 
