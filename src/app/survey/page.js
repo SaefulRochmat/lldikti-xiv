@@ -249,7 +249,7 @@ export default function SurveyPage() {
   if (submitted)
     return (
       <main className="min-h-screen bg-[#f6f9fd] px-4">
-        <div className="mx-auto flex max-w-2xl flex-col items-center rounded-3xl border border-[#e2eaf5] bg-white px-6 py-14 text-center shadow-[0_20px_60px_rgba(21,60,145,0.1)] sm:px-12">
+        <div className="mx-auto flex max-w-2xl flex-col items-center rounded-3xl border border-[#e2eaf5] bg-white px-6 pt-32 mt-32 py-14 text-center shadow-[0_20px_60px_rgba(21,60,145,0.1)] sm:px-12">
           <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#e9f8ef] text-4xl text-[#218b51]">
             <FaCheck />
           </div>
