@@ -21,7 +21,7 @@ function NewsCard({ item }) {
       {/* Image */}
       <div className="relative w-full h-48 overflow-hidden flex-shrink-0">
         <Image
-          src="/Assets/Gedung-lldikti.jpg"
+          src={item.image || "/Assets/Gedung-lldikti.jpg"}
           alt={item.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -144,6 +144,7 @@ export default function NewsSection() {
             date: item.tanggal,
             description: item.ringkasan,
             tag: item.kategori,
+            image: item.gambar,
           })),
         );
         setCurrentPage(1);
