@@ -46,9 +46,12 @@ export function handleApiError(error) {
     return errorResponse("Validasi gagal", 400, errors);
   }
 
-  // Errors thrown by application code are client errors; unexpected errors are server errors.
   if (error?.name === "Error" && error.message) {
     return errorResponse(error.message, 400);
+  }
+
+  if (process.env.NODE_ENV !== "production" && error?.message) {
+    return errorResponse(`Server error: ${error.message}`, 500);
   }
 
   // Generic error

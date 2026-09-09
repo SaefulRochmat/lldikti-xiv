@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, unlink, writeFile } from "node:fs/promises";
 import { randomUUID } from "node:crypto";
 import path from "node:path";
 import prisma from "@/lib/prisma";
@@ -52,7 +52,7 @@ function normalizeNews(payload) {
 }
 
 async function saveImage(file) {
-  if (!file || file.size === 0) return null;
+  if (!file || file.size === 0) return { path: null, filePath: null };
   if (!file.type.startsWith("image/")) {
     throw new Error("File gambar harus berupa gambar.");
   }
@@ -64,11 +64,9 @@ async function saveImage(file) {
   const filename = `${Date.now()}-${randomUUID()}${extension}`;
   const directory = path.join(process.cwd(), "public", "Assets", "Berita");
   await mkdir(directory, { recursive: true });
-  await writeFile(
-    path.join(directory, filename),
-    Buffer.from(await file.arrayBuffer()),
-  );
-  return `/Assets/Berita/${filename}`;
+  const filePath = path.join(directory, filename);
+  await writeFile(filePath, Buffer.from(await file.arrayBuffer()));
+  return { path: `/Assets/Berita/${filename}`, filePath };
 }
 
 export async function GET(request) {
@@ -95,7 +93,7 @@ export async function POST(request) {
     }
 
     const formData = await request.formData();
-    const imagePath = await saveImage(formData.get("gambarFile"));
+    const savedImage = await saveImage(formData.get("gambarFile"));
     const normalized = normalizeNews({
       judul: formData.get("judul"),
       ringkasan: formData.get("ringkasan"),
@@ -103,13 +101,19 @@ export async function POST(request) {
       kategori: formData.get("kategori"),
       tanggal: formData.get("tanggal"),
       penulis: formData.get("penulis"),
-      gambar: imagePath,
+      gambar: savedImage.path,
       featured: formData.get("featured"),
     });
     if (normalized.error) return errorResponse(normalized.error);
 
-    const news = await prisma.news.create({ data: normalized.data });
-    return successResponse({ news }, 201);
+    try {
+      const news = await prisma.news.create({ data: normalized.data });
+      return successResponse({ news }, 201);
+    } catch (error) {
+      if (savedImage.filePath)
+        await unlink(savedImage.filePath).catch(() => {});
+      throw error;
+    }
   } catch (error) {
     console.error("POST /api/admin/news failed:", error);
     return handleApiError(error);
