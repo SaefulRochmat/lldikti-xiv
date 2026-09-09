@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { newsList, announcementList } from "@/data/news";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 function NewsCard({ item }) {
-  const [day, month] = item.date?.split(" ") || [];
+  const date = new Date(item.date);
+  const day = Number.isNaN(date.getTime()) ? "" : date.getDate();
+  const month = Number.isNaN(date.getTime())
+    ? ""
+    : date.toLocaleDateString("id-ID", { month: "short" });
 
   return (
     <div
@@ -27,7 +31,9 @@ function NewsCard({ item }) {
         </div>
         <div className="absolute bottom-0 left-0 bg-[#153C91] text-white px-4 py-2 text-center rounded-tr-lg">
           <div className="text-lg font-black leading-none">{day}</div>
-          <div className="text-[9px] uppercase font-bold tracking-tight">{month}</div>
+          <div className="text-[9px] uppercase font-bold tracking-tight">
+            {month}
+          </div>
         </div>
       </div>
 
@@ -40,7 +46,7 @@ function NewsCard({ item }) {
           {item.description}
         </p>
         <Link
-          href="/#"
+          href={`/berita/${item.id}`}
           className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1A2CA3] hover:text-yellow-500 transition-colors mt-auto"
         >
           Baca Selengkapnya »
@@ -101,9 +107,10 @@ function Pagination({ total, perPage, currentPage, setPage }) {
           key={i}
           onClick={() => setPage(i + 1)}
           className={`w-9 h-9 flex items-center justify-center rounded-lg text-sm font-bold transition-all duration-200 cursor-pointer
-            ${currentPage === i + 1
-              ? "bg-yellow-400 text-[#1A2CA3] shadow-md scale-110"
-              : "bg-white text-gray-500 border border-[#e8eef5] hover:bg-[#153C91] hover:text-white hover:border-[#153C91]"
+            ${
+              currentPage === i + 1
+                ? "bg-yellow-400 text-[#1A2CA3] shadow-md scale-110"
+                : "bg-white text-gray-500 border border-[#e8eef5] hover:bg-[#153C91] hover:text-white hover:border-[#153C91]"
             }`}
           aria-label={`Halaman ${i + 1}`}
           aria-current={currentPage === i + 1 ? "page" : undefined}
@@ -117,9 +124,36 @@ function Pagination({ total, perPage, currentPage, setPage }) {
 
 export default function NewsSection() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [news, setNews] = useState(newsList);
   const perPage = 2;
   const start = (currentPage - 1) * perPage;
-  const selectedNews = newsList.slice(start, start + perPage);
+  const selectedNews = news.slice(start, start + perPage);
+
+  useEffect(() => {
+    let mounted = true;
+
+    fetch("/api/news")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((result) => {
+        if (!mounted || !result?.success || !result.data.news.length) return;
+
+        setNews(
+          result.data.news.map((item) => ({
+            id: item.id,
+            title: item.judul,
+            date: item.tanggal,
+            description: item.ringkasan,
+            tag: item.kategori,
+          })),
+        );
+        setCurrentPage(1);
+      })
+      .catch(() => {});
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   return (
     <section className="py-20 px-4 sm:px-6">
@@ -150,7 +184,7 @@ export default function NewsSection() {
         </div>
 
         <Pagination
-          total={newsList.length}
+          total={news.length}
           perPage={perPage}
           currentPage={currentPage}
           setPage={setCurrentPage}

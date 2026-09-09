@@ -40,8 +40,8 @@ export default async function NewsDetailPage({ params }) {
 
   return (
     <>
-      <main className="min-h-screen bg-[#f8fafc] py-12 md:py-16">
-        <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-[#f8fafc] py-12 pt-32 md:py-16">
+        <article className="mx-auto max-w-4xl pt-32 px-4 sm:px-6 lg:px-8">
           <Link
             href="/category/berita"
             className="text-sm font-semibold text-[#1A2CA3] hover:underline"
