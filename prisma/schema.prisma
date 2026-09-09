@@ -70,3 +70,21 @@ model Session {
 
   @@map("sessions")
 }
+
+model News {
+  id        String   @id @default(cuid())
+  judul     String
+  ringkasan String
+  isi       String
+  kategori  String
+  tanggal   DateTime @default(now())
+  penulis   String
+  gambar    String?
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tanggal])
+  @@index([kategori])
+  @@map("news")
+}

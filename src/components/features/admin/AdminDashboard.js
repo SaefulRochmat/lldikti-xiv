@@ -23,7 +23,6 @@ import {
   FiX,
 } from "react-icons/fi";
 import { faqItems } from "@/data/faq";
-import { newsList } from "@/data/news";
 import { applicationData } from "@/data/applications";
 
 const navigation = [
@@ -409,10 +408,10 @@ export default function AdminDashboard() {
               </p>
             </div>
             <Link
-              href="/category/berita"
+              href="/admin/news"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#1A2CA3] px-4 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-[#153C91]"
             >
-              <FiPlus /> Konten baru
+              <FiPlus /> Tambah berita
             </Link>
           </div>
 
@@ -537,6 +536,14 @@ export default function AdminDashboard() {
                   <p className="mt-1 text-[10px] text-[#8c98ac]">
                     {faqItems.length} pertanyaan
                   </p>
+                </Link>
+                <Link
+                  href="/admin/news"
+                  className="group rounded-xl border border-[#edf0f5] p-4 hover:border-[#b7c2ea] hover:bg-[#f8f9ff]"
+                >
+                  <FiPlus className="text-[#1A2CA3]" />
+                  <p className="mt-3 text-xs font-bold">Tambah Berita</p>
+                  <p className="mt-1 text-[10px] text-[#8c98ac]">Terbitkan konten baru</p>
                 </Link>
                 <button
                   type="button"

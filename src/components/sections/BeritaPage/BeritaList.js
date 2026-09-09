@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { beritaData, kategoriList } from "@/components/sections/BeritaPage/BeritaData";
 import { IoSearchOutline } from "react-icons/io5";
@@ -82,8 +82,26 @@ function BeritaCard({ berita, featured = false }) {
 export default function BeritaList() {
   const [aktifKategori, setAktifKategori] = useState("Semua");
   const [query, setQuery] = useState("");
+  const [berita, setBerita] = useState(beritaData);
 
-  const filtered = beritaData.filter((b) => {
+  useEffect(() => {
+    let mounted = true;
+
+    fetch("/api/news")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((result) => {
+        if (mounted && result?.success && result.data.news.length > 0) {
+          setBerita(result.data.news);
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const filtered = berita.filter((b) => {
     const cocokKategori =
       aktifKategori === "Semua" || b.kategori === aktifKategori;
     const cocokQuery =
