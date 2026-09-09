@@ -26,7 +26,9 @@ export async function generateMetadata({ params }) {
   const news = await getNews(id);
 
   return {
-    title: news ? `${news.judul} - LLDIKTI Wilayah XIV` : "Berita - LLDIKTI Wilayah XIV",
+    title: news
+      ? `${news.judul} - LLDIKTI Wilayah XIV`
+      : "Berita - LLDIKTI Wilayah XIV",
     description: news?.ringkasan || "Berita LLDIKTI Wilayah XIV Papua.",
   };
 }
