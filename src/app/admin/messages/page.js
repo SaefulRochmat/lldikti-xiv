@@ -3,12 +3,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiArrowLeft, FiMail, FiCheckCircle } from "react-icons/fi";
+import { FiArrowLeft, FiMail, FiCheckCircle, FiX } from "react-icons/fi";
 
 export default function AdminMessagesPage() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("all"); // all, unread, read, replied
+  const [selectedMessage, setSelectedMessage] = useState(null);
+  const [actionError, setActionError] = useState("");
+  const [reply, setReply] = useState("");
+  const [replySending, setReplySending] = useState(false);
 
   useEffect(() => {
     fetchMessages();
@@ -68,6 +72,42 @@ export default function AdminMessagesPage() {
     return <FiCheckCircle className="text-green-600" />;
   }
 
+  async function markAsRead(message) {
+    const response = await fetch("/api/admin/contact", {
+      method: "PATCH",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: message.id, status: "read" }),
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || "Pesan gagal diperbarui.");
+    setMessages((current) => current.map((item) => item.id === message.id ? { ...item, status: "read" } : item));
+    setSelectedMessage((current) => current?.id === message.id ? { ...current, status: "read" } : current);
+  }
+
+  async function sendReply() {
+    if (!selectedMessage || !reply.trim()) return;
+    setReplySending(true);
+    setActionError("");
+    try {
+      const response = await fetch("/api/admin/contact", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: selectedMessage.id, reply }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Balasan gagal dikirim.");
+      setMessages((current) => current.map((item) => item.id === selectedMessage.id ? { ...item, status: "replied" } : item));
+      setSelectedMessage((current) => ({ ...current, status: "replied" }));
+      setReply("");
+    } catch (error) {
+      setActionError(error.message);
+    } finally {
+      setReplySending(false);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#f5f7fb]">
       {/* Header */}
@@ -125,6 +165,7 @@ export default function AdminMessagesPage() {
         </div>
       </div>
 
+      {actionError && <p className="mx-auto max-w-7xl px-6 pt-5 text-sm text-red-600">{actionError}</p>}
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
         {loading ? (
@@ -170,11 +211,11 @@ export default function AdminMessagesPage() {
 
                       <div className="mt-4 flex items-center gap-4 text-xs text-gray-500">
                         <span>{formatDate(message.createdAt)}</span>
-                        <button className="text-[#1A2CA3] hover:underline font-semibold">
+                          <button onClick={() => setSelectedMessage(message)} className="text-[#1A2CA3] hover:underline font-semibold">
                           Lihat Detail
                         </button>
                         {message.status === "unread" && (
-                          <button className="text-blue-600 hover:underline font-semibold">
+                          <button onClick={() => markAsRead(message).catch((error) => setActionError(error.message))} className="text-blue-600 hover:underline font-semibold">
                             Tandai Sudah Dibaca
                           </button>
                         )}
@@ -187,6 +228,26 @@ export default function AdminMessagesPage() {
           </div>
         )}
       </div>
+      {selectedMessage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setSelectedMessage(null)}>
+          <div className="w-full max-w-lg rounded-2xl bg-white p-6" onClick={(event) => event.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold text-[#17233d]">Detail Pesan</h2>
+              <button onClick={() => setSelectedMessage(null)} aria-label="Tutup detail"><FiX /></button>
+            </div>
+            <p className="mt-5 text-sm"><b>Nama:</b> {selectedMessage.nama}</p>
+            <p className="mt-2 text-sm"><b>Email:</b> {selectedMessage.email}</p>
+            <p className="mt-2 text-sm"><b>Tanggal:</b> {formatDate(selectedMessage.createdAt)}</p>
+            <p className="mt-5 whitespace-pre-wrap rounded-xl bg-gray-50 p-4 text-sm text-gray-700">{selectedMessage.pesan}</p>
+            {selectedMessage.status === "unread" && <button onClick={() => markAsRead(selectedMessage).catch((error) => setActionError(error.message))} className="mt-5 rounded-lg bg-[#1A2CA3] px-4 py-2 text-sm font-semibold text-white">Tandai Sudah Dibaca</button>}
+            <div className="mt-6 border-t border-gray-200 pt-5">
+              <label className="text-sm font-semibold text-gray-800" htmlFor="reply">Balas ke {selectedMessage.email}</label>
+              <textarea id="reply" value={reply} onChange={(event) => setReply(event.target.value)} rows={5} maxLength={5000} placeholder="Tulis balasan email..." className="mt-2 w-full rounded-lg border border-gray-300 p-3 text-sm outline-none focus:border-[#1A2CA3]" />
+              <button type="button" onClick={sendReply} disabled={replySending || !reply.trim()} className="mt-3 rounded-lg bg-[#1A2CA3] px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50">{replySending ? "Mengirim..." : "Kirim Balasan Email"}</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

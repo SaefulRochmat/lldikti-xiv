@@ -15,11 +15,12 @@ export async function DELETE(request, { params }) {
     if (!authorized)
       return forbiddenError("Akses ditolak. Hanya admin yang dapat mengakses.");
 
-    const existing = await prisma.news.findUnique({ where: { id: params.id } });
+    const { id } = await params;
+    const existing = await prisma.news.findUnique({ where: { id } });
     if (!existing) return errorResponse("Berita tidak ditemukan.", 404);
 
-    await prisma.news.delete({ where: { id: params.id } });
-    return successResponse({ id: params.id });
+    await prisma.news.delete({ where: { id } });
+    return successResponse({ id });
   } catch (error) {
     return handleApiError(error);
   }

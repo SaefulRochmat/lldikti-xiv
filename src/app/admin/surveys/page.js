@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiArrowLeft, FiDownload, FiEye, FiMenu } from "react-icons/fi";
+import { FiArrowLeft, FiDownload, FiEye, FiX } from "react-icons/fi";
 
 export default function AdminSurveysPage() {
   const [surveys, setSurveys] = useState([]);
   const [loading, setLoading] = useState(true);
   const [pagination, setPagination] = useState({ page: 1, total: 0, totalPages: 0 });
+  const [selectedSurvey, setSelectedSurvey] = useState(null);
 
   useEffect(() => {
     fetchSurveys();
@@ -62,6 +63,23 @@ export default function AdminSurveysPage() {
     return avg.toFixed(1);
   }
 
+  function exportCsv() {
+    const headers = ["Tanggal", "Usia", "Gender", "Pekerjaan", "Layanan", "Rata-rata"];
+    const rows = surveys.map((survey) => [
+      new Date(survey.createdAt).toISOString(), survey.age, survey.gender,
+      survey.job, survey.services.join("; "), getAverageRating(survey),
+    ]);
+    const csv = [headers, ...rows]
+      .map((row) => row.map((value) => `"${String(value ?? "").replaceAll('"', '""')}"`).join(","))
+      .join("\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8;" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `survey-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <div className="min-h-screen bg-[#f5f7fb]">
       {/* Header */}
@@ -84,7 +102,7 @@ export default function AdminSurveysPage() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 px-4 py-2 bg-[#1A2CA3] text-white rounded-lg text-sm font-semibold hover:bg-[#153C91]">
+            <button onClick={exportCsv} disabled={surveys.length === 0} className="flex items-center gap-2 px-4 py-2 bg-[#1A2CA3] text-white rounded-lg text-sm font-semibold hover:bg-[#153C91] disabled:cursor-not-allowed disabled:opacity-50">
               <FiDownload /> Export CSV
             </button>
             <div className="flex items-center gap-2 border-l border-gray-200 pl-4">
@@ -162,7 +180,7 @@ export default function AdminSurveysPage() {
                         </span>
                       </td>
                       <td className="px-6 py-4">
-                        <button className="flex items-center gap-2 text-sm text-[#1A2CA3] hover:underline">
+                        <button onClick={() => setSelectedSurvey(survey)} className="flex items-center gap-2 text-sm text-[#1A2CA3] hover:underline">
                           <FiEye /> Detail
                         </button>
                       </td>
@@ -203,6 +221,28 @@ export default function AdminSurveysPage() {
           </div>
         )}
       </div>
+      {selectedSurvey && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setSelectedSurvey(null)}>
+          <div className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6" onClick={(event) => event.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold text-[#17233d]">Detail Survey</h2>
+              <button onClick={() => setSelectedSurvey(null)} aria-label="Tutup detail"><FiX /></button>
+            </div>
+            <div className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+              <p><b>Usia:</b> {selectedSurvey.age} tahun</p>
+              <p><b>Gender:</b> {selectedSurvey.gender}</p>
+              <p><b>Pekerjaan:</b> {selectedSurvey.job}</p>
+              <p><b>Layanan:</b> {selectedSurvey.services.join(", ")}</p>
+              <p className="sm:col-span-2"><b>Feedback:</b> {selectedSurvey.feedback || "-"}</p>
+            </div>
+            <div className="mt-5 grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
+              {["persyaratan", "prosedur", "waktu", "biaya", "produk", "kompetensi", "perilaku", "pengaduan", "fasilitas"].map((key) => (
+                <div key={key} className="rounded-lg bg-gray-50 p-3"><span className="capitalize">{key}</span>: <b>{selectedSurvey[key]}/4</b></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

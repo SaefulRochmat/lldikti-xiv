@@ -24,7 +24,11 @@ export const contactRepository = {
   async findAll(options = {}) {
     const { skip = 0, take = 50, status } = options;
     
-    const where = status ? { status } : {};
+    const where = status === 'read'
+      ? { status: { in: ['read', 'replied'] } }
+      : status
+        ? { status }
+        : {};
     
     return await prisma.contactMessage.findMany({
       where,
@@ -42,6 +46,10 @@ export const contactRepository = {
       where: { id },
       data: { status },
     });
+  },
+
+  async findById(id) {
+    return await prisma.contactMessage.findUnique({ where: { id } });
   },
 
   /**

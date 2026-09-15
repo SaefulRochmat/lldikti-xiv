@@ -311,12 +311,17 @@ export default function Footer() {
                   id="pesan"
                   name="pesan"
                   required
+                  minLength={10}
+                  maxLength={1000}
                   value={formData.pesan}
                   onChange={handleChange}
                   placeholder="Tulis pesan Anda..."
                   rows={4}
                   className="w-full h-full min-h-[96px] rounded-md bg-white/10 border border-white/20 px-3 py-2 text-sm placeholder:text-white/50 focus:outline-none focus:border-yellow-400 transition-colors resize-none"
                 />
+                <p className="mt-1 text-[11px] text-white/60">
+                  Minimal 10 karakter, maksimal 1000 karakter.
+                </p>
               </div>
 
               <button

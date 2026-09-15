@@ -44,13 +44,14 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Image
-              src="/Logos/Logo2.png"
-              alt="Logo LLDIKTI XIV"
-              width={120}
-              height={40}
-              className="h-auto"
+          <div className="mb-5 flex items-center justify-center rounded-xl bg-white px-5 py-3 shadow-lg">
+              <Image
+                src="/Logos/logo2.jpg"
+              alt="Logo LLDIKTI Wilayah XIV Papua"
+              width={260}
+              height={65}
+              priority
+              className="h-auto w-full max-w-[260px] object-contain"
             />
           </div>
           <h1 className="text-2xl font-bold text-white">Admin Login</h1>

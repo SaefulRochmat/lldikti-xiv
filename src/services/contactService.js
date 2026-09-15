@@ -44,6 +44,10 @@ export const contactService = {
     return await contactRepository.updateStatus(id, status);
   },
 
+  async getMessage(id) {
+    return await contactRepository.findById(id);
+  },
+
   /**
    * Get message counts
    */

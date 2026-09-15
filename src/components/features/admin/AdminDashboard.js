@@ -229,6 +229,15 @@ export default function AdminDashboard() {
   const [query, setQuery] = useState("");
   const [period, setPeriod] = useState("7 hari terakhir");
   const [activeTab, setActiveTab] = useState("ringkasan");
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [dismissedNotificationIds, setDismissedNotificationIds] = useState(() => {
+    if (typeof window === "undefined") return [];
+    try {
+      return JSON.parse(window.localStorage.getItem("admin-dismissed-notifications") || "[]");
+    } catch {
+      return [];
+    }
+  });
   
   // State for real data from API
   const [stats, setStats] = useState({
@@ -261,13 +270,18 @@ export default function AdminDashboard() {
             
             // Add survey activities
             const surveyActivities = surveysData.data.data.slice(0, 3).map((s) => ({
+              id: `survey:${s.id}`,
               type: "survey",
               title: "Survey baru diterima",
               detail: `${s.job} - ${s.gender}`,
               time: formatTime(s.createdAt),
             }));
             
-            setActivities((prev) => [...prev, ...surveyActivities]);
+            setActivities((prev) => {
+              const byId = new Map(prev.map((activity) => [activity.id, activity]));
+              surveyActivities.forEach((activity) => byId.set(activity.id, activity));
+              return [...byId.values()];
+            });
           }
         }
 
@@ -285,13 +299,18 @@ export default function AdminDashboard() {
             
             // Add contact activities
             const contactActivities = messages.slice(0, 3).map((c) => ({
+              id: `contact:${c.id}`,
               type: "contact",
               title: "Pesan baru diterima",
               detail: `${c.nama} - ${c.email}`,
               time: formatTime(c.createdAt),
             }));
             
-            setActivities((prev) => [...prev, ...contactActivities]);
+            setActivities((prev) => {
+              const byId = new Map(prev.map((activity) => [activity.id, activity]));
+              contactActivities.forEach((activity) => byId.set(activity.id, activity));
+              return [...byId.values()];
+            });
           }
         }
       } catch (error) {
@@ -339,7 +358,19 @@ export default function AdminDashboard() {
     return activities.filter((item) =>
       `${item.title} ${item.detail}`.toLowerCase().includes(normalizedQuery),
     );
-  }, [query]);
+  }, [activities, query]);
+
+  const visibleNotifications = activities.filter(
+    (activity) => !dismissedNotificationIds.includes(activity.id),
+  );
+
+  function dismissNotification(id) {
+    setDismissedNotificationIds((current) => {
+      const next = [...new Set([...current, id])];
+      window.localStorage.setItem("admin-dismissed-notifications", JSON.stringify(next));
+      return next;
+    });
+  }
 
   return (
     <div className="min-h-screen bg-[#f5f7fb] text-[#17233d] lg:flex">
@@ -380,14 +411,44 @@ export default function AdminDashboard() {
                 className="w-52 rounded-xl border border-[#e7ebf3] bg-white py-2.5 pl-9 pr-3 text-xs outline-none transition focus:border-[#9aa8c8]"
               />
             </label>
-            <button
-              type="button"
-              aria-label="Notifikasi"
-              className="relative rounded-xl border border-[#e7ebf3] bg-white p-2.5 text-[#64708a] hover:text-[#1A2CA3]"
-            >
-              <FiBell />
-              <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-[#e85d75]" />
-            </button>
+            <div className="relative">
+              <button
+                type="button"
+                aria-label="Notifikasi"
+                aria-expanded={notificationsOpen}
+                onClick={() => setNotificationsOpen((current) => !current)}
+                className="relative rounded-xl border border-[#e7ebf3] bg-white p-2.5 text-[#64708a] hover:text-[#1A2CA3]"
+              >
+                <FiBell />
+                {visibleNotifications.length > 0 && <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-[#e85d75]" />}
+              </button>
+              {notificationsOpen && (
+                <div className="absolute right-0 top-12 z-30 w-80 overflow-hidden rounded-xl border border-[#e7ebf3] bg-white shadow-xl">
+                  <div className="flex items-center justify-between border-b border-[#edf0f5] px-4 py-3">
+                    <p className="text-sm font-bold">Notifikasi terbaru</p>
+                    <span className="text-xs text-[#7f8ba3]">{visibleNotifications.length}</span>
+                  </div>
+                  {visibleNotifications.length === 0 ? (
+                    <p className="px-4 py-6 text-center text-xs text-[#7f8ba3]">Belum ada notifikasi</p>
+                  ) : (
+                    <div className="max-h-80 divide-y divide-[#f0f2f6] overflow-y-auto">
+                      {visibleNotifications.slice(0, 8).map((activity) => (
+                        <button type="button" key={activity.id} onClick={() => dismissNotification(activity.id)} className="flex w-full gap-3 px-4 py-3 text-left hover:bg-[#f8f9ff]">
+                          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f1f4ff] text-[#5266d2]">
+                            {activity.type === "survey" ? <FiFileText /> : <FiActivity />}
+                          </span>
+                          <div className="min-w-0">
+                            <p className="text-xs font-semibold text-[#25324d]">{activity.title}</p>
+                            <p className="mt-1 truncate text-[11px] text-[#8995aa]">{activity.detail}</p>
+                            <p className="mt-1 text-[10px] text-[#a0aabc]">{activity.time}</p>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
             <div className="hidden h-8 w-px bg-[#e1e6ef] md:block" />
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dbe5ff] text-xs font-bold text-[#1A2CA3]">
               AD

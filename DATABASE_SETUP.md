@@ -28,9 +28,19 @@ SESSION_EXPIRY_HOURS=24
 
 # App
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
+
+# Email reply dari dashboard admin
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER="alamat-email-pengirim@gmail.com"
+SMTP_PASS="app-password-email"
+EMAIL_FROM="LLDIKTI XIV <alamat-email-pengirim@gmail.com>"
 ```
 
 **Important:** Replace `username`, `password`, and database name with your actual PostgreSQL credentials.
+
+Untuk fitur balas pesan, isi konfigurasi SMTP di `.env`. Jika menggunakan Gmail, aktifkan 2-Step Verification lalu buat **App Password**; jangan gunakan password login Gmail biasa. `SMTP_USER` adalah alamat email pengirim dan `SMTP_PASS` adalah App Password.
 
 ### 3. Generate Prisma Client
 
