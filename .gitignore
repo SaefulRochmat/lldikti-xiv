@@ -43,3 +43,8 @@ node_modules/.prisma
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Environment files
+.env
+.env.*
+!.env.example
