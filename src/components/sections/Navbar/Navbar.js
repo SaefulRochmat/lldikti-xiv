@@ -31,7 +31,7 @@ const searchSuggestions = [
   { label: "Sejarah Lembaga", href: "/profil#sejarah" },
   { label: "Tugas & Fungsi", href: "/profil#tugas-fungsi" },
   { label: "Struktur Organisasi", href: "/profil#struktur-organisasi" },
-  { label: "Berita Terbaru", href: "/berita" },
+  { label: "Berita Terbaru", href: "/category/berita" },
   { label: "Pengumuman", href: "/pengumuman" },
   { label: "Akreditasi Program Studi", href: "/layanan/akreditasi" },
   { label: "KIP Kuliah", href: "/layanan/kip-kuliah" },
