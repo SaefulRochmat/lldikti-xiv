@@ -1,7 +1,7 @@
 export const tautanData = [
   {
     id: 1,
-    name: "Kemdiktisaintek",
+    name: "Kementerian Pendidikan Tinggi, Sains dan Teknologi",
     url: "https://kemdiktisaintek.go.id/",
     logo: "/Logos/kemendikbudristek.jpg",
   },

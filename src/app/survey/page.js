@@ -167,9 +167,7 @@ export default function SurveyPage() {
   const toggleService = (service) =>
     setForm((current) => ({
       ...current,
-      services: current.services.includes(service)
-        ? current.services.filter((item) => item !== service)
-        : [...current.services, service],
+      services: [service],
     }));
   const validateStep = () => {
     if (
@@ -182,8 +180,8 @@ export default function SurveyPage() {
       setError("Lengkapi profil responden terlebih dahulu.");
       return false;
     }
-    if (step === 1 && form.services.length === 0) {
-      setError("Pilih minimal satu layanan yang pernah digunakan.");
+    if (step === 1 && form.services.length !== 1) {
+      setError("Pilih 1 layanan yang pernah digunakan.");
       return false;
     }
     if (
@@ -460,7 +458,7 @@ export default function SurveyPage() {
                   Layanan yang pernah digunakan
                 </h2>
                 <p className="mt-2 text-sm text-slate-500">
-                  Pilih satu atau beberapa layanan yang pernah Anda terima.
+                  Pilih satu layanan yang pernah Anda terima.
                 </p>
               </div>
               <div className="relative mb-4">
@@ -482,11 +480,12 @@ export default function SurveyPage() {
                 {filteredServices.map((service) => (
                   <label
                     key={service}
-                    className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3.5 text-sm leading-5 transition ${form.services.includes(service) ? "border-[#1A2CA3] bg-[#eef2ff] text-[#153C91]" : "border-[#e3eaf4] text-slate-600 hover:border-[#9db2d8]"}`}
+                    className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3.5 text-sm leading-5 transition ${form.services[0] === service ? "border-[#1A2CA3] bg-[#eef2ff] text-[#153C91]" : "border-[#e3eaf4] text-slate-600 hover:border-[#9db2d8]"}`}
                   >
                     <input
-                      type="checkbox"
-                      checked={form.services.includes(service)}
+                      type="radio"
+                      name="selectedService"
+                      checked={form.services[0] === service}
                       onChange={() => toggleService(service)}
                       className="mt-0.5 h-4 w-4 shrink-0 accent-[#1A2CA3]"
                     />

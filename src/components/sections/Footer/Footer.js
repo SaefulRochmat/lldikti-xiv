@@ -43,23 +43,23 @@ export default function Footer() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await res.json();
-      
+
       if (!res.ok) {
         console.error("Contact form error:", data);
         throw new Error(data.error || "Gagal mengirim pesan");
       }
-      
+
       setStatus("sent");
       setFormData({ nama: "", email: "", pesan: "" });
-      
+
       // Auto reset after 3 seconds
       setTimeout(() => setStatus("idle"), 3000);
     } catch (err) {
       console.error("Submit error:", err);
       setStatus("error");
-      
+
       // Auto reset after 3 seconds
       setTimeout(() => setStatus("idle"), 3000);
     }
@@ -355,7 +355,7 @@ export default function Footer() {
             <div className="flex-1 overflow-hidden rounded-lg border border-white/20 bg-white/10 shadow-lg min-h-[220px]">
               <iframe
                 title="Peta lokasi LLDIKTI Wilayah XIV"
-                src="https://www.google.com/maps?q=LLDIKTI+Wilayah+XIV+Biak+Papua&output=embed"
+                src="https://www.google.com/maps?q=LLDikti%20Wilayah%20XIV&z=15&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -363,7 +363,7 @@ export default function Footer() {
             </div>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=LLDIKTI+Wilayah+XIV+Biak+Papua"
+              href="https://maps.app.goo.gl/7xNQbXxAYMDbLLFTA"
               target="_blank"
               rel="noreferrer"
               className="mt-3 block text-xs text-white/80 hover:text-yellow-400 transition-colors"
